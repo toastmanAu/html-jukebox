@@ -15,7 +15,9 @@ The deployment test fixture contains exact serialized public transactions captur
 
 The browser-signed single-witness HTML proof passed on Pudge: transaction `0xe60b95a87a3f040c2a4b50caa226f682afac3d31c4dda23c5dddc112c44a9998` is committed, and all 159 bytes match the fixture exactly. Adler32 and CKB Blake2b both match. Evidence: `evidence/pudge-browser-small.json`.
 
-The multi-witness HTML, append sequence and empty-file browser proofs remain required. The offline signer/chain integration tests do not establish Pudge contract acceptance of newly built transactions. The workbench implements these remaining proof operations and evidence export; their signed transaction evidence is still pending.
+The browser-signed multi-witness HTML proof also passed: transaction `0x319bf794b020d58c88782a81e550867e382ef748ec6f983753f58e5d99234677` is committed. Its four witnesses reconstruct all 49,666 fixture bytes exactly; Adler32 and CKB Blake2b both match. Evidence: `evidence/pudge-browser-multi.json`.
+
+The append sequence and empty-file browser proofs remain required. The offline signer/chain integration tests do not establish Pudge contract acceptance of newly built transactions. The workbench implements these remaining proof operations and evidence export; their signed transaction evidence is still pending.
 
 Registry, manifests, production sandbox player, complete admin pipeline, Three.js cabinet and Cloudflare production deployment are not implemented. Those phases remain gated by the handoff's storage proof requirement.
 

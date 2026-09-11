@@ -1,0 +1,35 @@
+{
+  "protocol": "20250821.4ee6689bf7ec",
+  "network": "testnet",
+  "typeId": "0x003869738be2448b4bffed5832db211da876516ca07e1aba3b7e34d9a4da6e6b",
+  "filename": "jukebox-proof-multi.html",
+  "contentType": "text/html; charset=utf-8",
+  "size": 66697,
+  "checksum": 2109432030,
+  "checksumValid": true,
+  "currentOutPoint": {
+    "txHash": "0x1c2bcafc117191a4bb2f1094f0b0b652e579eeec7fbfbf92b438bb7bb9334c96",
+    "index": "0x0"
+  },
+  "history": [
+    {
+      "txHash": "0x319bf794b020d58c88782a81e550867e382ef748ec6f983753f58e5d99234677",
+      "headWitnessIndex": 1,
+      "chunkCount": 4,
+      "byteLength": 49666
+    },
+    {
+      "txHash": "0x1c2bcafc117191a4bb2f1094f0b0b652e579eeec7fbfbf92b438bb7bb9334c96",
+      "headWitnessIndex": 2,
+      "chunkCount": 2,
+      "byteLength": 17031
+    }
+  ],
+  "txHash": "0x1c2bcafc117191a4bb2f1094f0b0b652e579eeec7fbfbf92b438bb7bb9334c96",
+  "contentHash": "0x22ef2f62a16286fe89e37ee3f65e93d79109325914e6f5c8e9092114c0922455",
+  "expectedHash": "0x22ef2f62a16286fe89e37ee3f65e93d79109325914e6f5c8e9092114c0922455",
+  "exactBytesMatch": true,
+  "typeIdPreserved": true,
+  "historyMatches": true,
+  "checkedAt": "2026-09-11T11:21:24.594Z"
+}

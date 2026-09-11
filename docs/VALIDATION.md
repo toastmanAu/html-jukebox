@@ -19,7 +19,9 @@ The browser-signed multi-witness HTML proof also passed: transaction `0x319bf794
 
 The first browser-signed append passed: transaction `0x1c2bcafc117191a4bb2f1094f0b0b652e579eeec7fbfbf92b438bb7bb9334c96` is committed and preserves the original Type ID. The two-transaction history reconstructs exactly 66,697 bytes across six witnesses, with matching cumulative Adler32 and CKB Blake2b. The append head is at witness index 2, confirming correct placement with multiple inputs. Evidence: `evidence/pudge-browser-append-1.json`.
 
-The second append and empty-file browser proofs remain required. The offline signer/chain integration tests do not establish Pudge contract acceptance of newly built transactions. The workbench implements these remaining proof operations and evidence export; their signed transaction evidence is still pending.
+The second browser-signed append passed: transaction `0xd47bcdbf1c79217821ac94070d940f1a5232ea9c8190309bc222cdaee0a36315` is committed and preserves the same Type ID. All 83,728 bytes across eight witnesses and three transactions match the cumulative fixture exactly. Both backlinks, cumulative Adler32 and CKB Blake2b verify. Evidence: `evidence/pudge-browser-append-2.json`.
+
+Only the empty-file browser proof remains required for this Phase 1 proof sequence. The offline signer/chain integration tests do not establish Pudge contract acceptance of newly built transactions. The workbench implements these remaining proof operations and evidence export; their signed transaction evidence is still pending.
 
 Registry, manifests, production sandbox player, complete admin pipeline, Three.js cabinet and Cloudflare production deployment are not implemented. Those phases remain gated by the handoff's storage proof requirement.
 

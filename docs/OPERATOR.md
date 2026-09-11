@@ -1,0 +1,59 @@
+# Pudge storage proof operator guide
+
+This is the Phase 0/1 workbench. It does not yet provide the public jukebox, registry, arbitrary demo upload, production player or full admin state machine. Do not deploy it as the finished product.
+
+## Run locally
+
+Use Node 22.14 or newer and npm. Run `npm ci`, then `npm run dev`. The default URL is http://127.0.0.1:5173/. JoyID needs a normal browser with passkey/popup support. Localhost or HTTPS is required. The journal additionally requires IndexedDB and Web Locks; unsupported contexts show an explicit error.
+
+The wallet selector only offers JoyID, and only Pudge is configured. The module verifies both the `ckt` address prefix and the public Pudge genesis hash; labeling a mainnet RPC “testnet” is insufficient.
+
+## Mandatory signed proof
+
+1. Run **Verify Pudge deployment**. Both the locked V3 code cell and Adler32 code cell must match. Do not change the constants to make a failed check pass.
+2. Connect a funded Pudge JoyID wallet using dedicated test funds. Keep enough available capacity for multiple file cells plus change. The exact locked capacity and fee appear before each signature.
+3. Select **Single-witness HTML**, then **Prepare & estimate**. Review the network, file operation, bytes, chunk count, locked capacity and fee. Select **Sign & broadcast on Pudge** to request the wallet signature.
+4. After broadcast, use the transaction explorer link. Once committed, choose **Verify committed bytes**. Verification uses a fresh RPC client and checks byte-for-byte equality, cumulative Adler32 and CKB Blake2b.
+5. Repeat for **Multi-witness HTML**. Then verify **Append to the same Type ID**, followed by **Append a second segment**. Each append requires its predecessor to be verified and unchanged on chain.
+6. Run the empty-file proof. Export proof evidence after all five entries show `verified`.
+7. Place the exported JSON in `evidence/pudge-browser-proof.json` and review the on-chain transactions before accepting Phase 1 and proceeding to the registry phase.
+
+The signatures are real transactions. Newly created CKBFS cells remain on-chain. The program does not generate, request, log or store private keys.
+
+## Interrupted or uncertain broadcast
+
+The full signed transaction, expected bytes, hash and Type ID are atomically persisted before broadcast. If the browser closes or the RPC times out after signing, reload the same origin and use **Recover same transaction**. Recovery first queries the known hash. Committed, pending or proposed transactions are not resent; otherwise it rebroadcasts the identical signed transaction without another upload or signature. Then verify committed bytes.
+
+Do not clear browser site data during a proof. Switching between `localhost` and `127.0.0.1`, ports or browsers changes the journal origin. Keep the same origin and browser until evidence is exported. The journal blocks replacing an already signed proof with a new transaction. There is intentionally no automatic “start over” upload action.
+
+The phase-1 journal is not the later `ADMIN_STATE_MACHINE.md` catalog pipeline. Registry concurrency, manifest recovery and rollback must be added in their gated phases.
+
+## Public API
+
+Import from `src/ckbfs/index.ts`:
+
+- `verifyV3Deployment(client)` fetches committed transactions without CCC transaction-cache fallback, decodes the dep group, checks live cells and hashes code bytes.
+- `parseCKBFSIdentifier(input)` accepts a bare 32-byte Type ID, `ckbfs://testnet/<TypeID>`, or explicit `txHash:index`. A bare transaction hash is not guessed to be a transaction. Outpoints must still be live; use Type ID to resolve the latest appended state.
+- `resolveV3(identifier, { client, maxDepth?, maxChunks?, maxBytes? })` returns bytes, metadata and oldest-first provenance. Defaults: 128 segments, 4,096 chunks, 32 MiB. All historical output metadata, input consumption, checksums and immutable filename/MIME fields are checked.
+- `estimateV3Publish(content, lock, opts)` requires a signer plus filename/contentType in `opts`, because it builds the real witness-bearing transaction. It collects inputs but does not sign, broadcast or reserve them on chain. All capacity/fee values are decimal shannon strings.
+- `publishV3({ content, filename, contentType, signer, persistSigned, beforeSign?, ...limits })` builds, signs, persists and broadcasts. A result reports **broadcast**, not confirmed. Independently resolve after commitment.
+- `appendV3({ identifier, content, signer, persistSigned, beforeSign?, ...limits })` resolves and checks the current state, consumes that cell, preserves its exact Type ID/lock/filename/MIME and appends a backlink segment.
+
+`persistSigned` is mandatory and must durably save its record before returning. Throwing prevents broadcast. `beforeSign` permits a caller to present the final estimate. The workbench instead uses exported `prepareV3`/`broadcastPreparedV3` to separate estimate and signature UI actions.
+
+A conservative 100,000-byte limit applies to the serialized transaction including wallet witness preparation and fee/change completion; it cannot be raised above the ceiling through options. A second check runs after signing. Large automatic multi-transaction splitting is not implemented: the module rejects an oversized segment before signature, and explicit append operations retain the same Type ID. Default chunk payload is 16 KiB. A single witness containing empty content is supported.
+
+## Read-only verification
+
+`npm run verify:pudge` refreshes `evidence/pudge-deployment.json`. `PUDGE_RPC=https://... npm run verify:pudge` checks another RPC against the same Pudge genesis and deployment pins. This environment variable is for the Node diagnostic only; browser endpoint preferences belong to a later phase.
+
+`npx tsx scripts/resolve-existing.ts` samples five existing V3 live cells and writes checksums/hashes/provenance to `evidence/pudge-existing-files.json`. This does not publish and does not execute their content.
+
+## Tests and next phases
+
+- `npm test`: codec, malformed-chain, actual CCC transaction-builder, deployment-fixture and IndexedDB recovery tests.
+- `npm run test:e2e`: desktop/mobile unsigned proof UI tests. Live RPC test is opt-in.
+- `PUDGE_LIVE=1 npm run test:e2e -- --grep 'live Pudge' --project=chromium`: live browser preflight and resolution.
+- `npm run build`: strict TypeScript check and static Vite build into `dist`.
+
+Once the signed proof passes, implement Phase 2 registry/manifest, Phase 3 isolated player, Phase 4 complete admin pipeline, Phase 5 cabinet UX, then Phase 6 Cloudflare Pages headers/CSP and full production tests. Generate the registry Type ID from the first real registry transaction; never invent it. No Cloudflare deployment or registry creation has been performed in this checkpoint.

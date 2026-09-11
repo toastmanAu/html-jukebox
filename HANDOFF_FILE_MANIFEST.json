@@ -1,0 +1,70 @@
+{
+  "ADMIN_STATE_MACHINE.md": {
+    "sha256": "0b280ef7feb63cda236cc279772fd35f4421d8e31f8762733ea50b22bad42bc3",
+    "bytes": 1801
+  },
+  "AGENT_MASTER_PROMPT.md": {
+    "sha256": "31e147039996452a8a568b91cefeb3fde41d16e49fe25a8d099c4c8a278feae6",
+    "bytes": 3941
+  },
+  "ARCHITECTURE.md": {
+    "sha256": "7c39052badde50d4765e7d929a5cb749d0e9517784868fb7cefde12775b4725e",
+    "bytes": 2081
+  },
+  "CACHE_AND_OFFLINE.md": {
+    "sha256": "fb8ec46ee90fa22e8ff0c54d770a0a38e2ddbc750bc5e59746201ea8ee11c27d",
+    "bytes": 1111
+  },
+  "HANDOFF_SUMMARY.txt": {
+    "sha256": "e2dcb82d7e22ec79cda830f0e6dc066b228fcf4b7aa8ca895d09a70eb0df65d1",
+    "bytes": 581
+  },
+  "IMPLEMENTATION_CHECKLIST.md": {
+    "sha256": "b3bd6e18bfe623b44034eccd03386b396e578a7a06745062d1fdc0284e71462a",
+    "bytes": 1752
+  },
+  "PLAYER_SECURITY.md": {
+    "sha256": "16864f310660edc4a4559c8ee2de7fd12e57431ae24ec8a4af05e70528d7a196",
+    "bytes": 1617
+  },
+  "PROTOCOL_REPAIR.md": {
+    "sha256": "a10b06e371be379c6d0d7b733330fd7056ffd999b8afb3e1b5a96323506ab184",
+    "bytes": 3281
+  },
+  "README.md": {
+    "sha256": "5e6b124bd4e7450fda2b3e0a368bc96918fd410ab94bca67ad1abca6b1b65264",
+    "bytes": 1973
+  },
+  "REGISTRY_AND_MANIFEST.md": {
+    "sha256": "881cc0a7624e81a13c97d398332fc4f3c0f333df85b7c652df50ad1cf65b0a94",
+    "bytes": 3439
+  },
+  "SOURCE_NOTES.md": {
+    "sha256": "c52f75c9a6066c774da0e5686166ce650b4f649073f37f0be8e7f63c736b997f",
+    "bytes": 1972
+  },
+  "TEST_PLAN.md": {
+    "sha256": "7f5a2b14a88d866d0654d20c03373cf54688f98d23ccef5f7012d39adc91b267",
+    "bytes": 2262
+  },
+  "UI_UX_SPEC.md": {
+    "sha256": "09fef0a72ce7aa066db09c0512d33d8e6ca96de11efd519f7f199e31ca8bd237",
+    "bytes": 2499
+  },
+  "VERSION_LOCK.md": {
+    "sha256": "21855ec6a34d6b2fa78848af8de1a2b6ee6445210fbd7fc5cc4a50203af73004",
+    "bytes": 4561
+  },
+  "config/ckbfs-v3.ts": {
+    "sha256": "9e2ba049514935437a79c34a18e390690e3fd0392cf658893e826a35ffde9059",
+    "bytes": 898
+  },
+  "schemas/jukebox_registry.mol": {
+    "sha256": "bdcfa0d66a222096a1160ff8cdc50598c26ee92aa6e1116b85565d7d7e36563a",
+    "bytes": 206
+  },
+  "schemas/manifest.schema.json": {
+    "sha256": "53c431fb9b67cd3af44e3a2798422293af8a88df440d6240b5990ee7d959772b",
+    "bytes": 3915
+  }
+}

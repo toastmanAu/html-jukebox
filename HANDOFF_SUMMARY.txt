@@ -1,0 +1,18 @@
+CKBFS AI HTML JUKEBOX
+
+LOCKED:
+- Nervos CKB testnet / Pudge
+- CKBFS V3 protocol: 20250821.4ee6689bf7ec
+- browser-native CCC publishing
+- JoyID admin wallet
+- immutable CKBFS demos
+- immutable CKBFS manifest revisions
+- singleton built-in Type ID registry
+- cryptographic content hashes above CKBFS Adler32
+- sandboxed iframe demo execution
+- IndexedDB caching
+- Vite + React + TypeScript + Three.js/R3F
+- Cloudflare Pages static hosting
+
+FIRST CODE TASK:
+Repair/replace the CKBFS V3 resolver and prove byte-for-byte round trip on Pudge BEFORE building the elaborate jukebox scene.

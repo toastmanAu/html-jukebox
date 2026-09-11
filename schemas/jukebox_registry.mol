@@ -1,0 +1,10 @@
+array Byte32 [byte; 32];
+array Uint32 [byte; 4];
+array Uint64 [byte; 8];
+
+table JukeboxRegistryDataV1 {
+    version: Uint32,
+    revision: Uint64,
+    manifest_type_id: Byte32,
+    manifest_hash: Byte32,
+}

@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CKBFS AI Jukebox Manifest v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "revision",
+    "createdAt",
+    "collection",
+    "items"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "collection": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "previous": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "typeId": {
+          "type": "string"
+        },
+        "contentHash": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "typeId",
+        "contentHash"
+      ],
+      "additionalProperties": false
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "ckbfs",
+          "contentHash",
+          "filename",
+          "bytes",
+          "capabilities"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "enum": [
+              "active",
+              "hidden",
+              "archived"
+            ]
+          },
+          "ckbfs": {
+            "type": "object",
+            "required": [
+              "protocol",
+              "typeId"
+            ],
+            "properties": {
+              "protocol": {
+                "const": "20250821.4ee6689bf7ec"
+              },
+              "typeId": {
+                "type": "string"
+              },
+              "txHash": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "contentHash": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "contentType": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "featured": {
+            "type": "boolean"
+          },
+          "sort": {
+            "type": "number"
+          },
+          "capabilities": {
+            "type": "object",
+            "required": [
+              "network",
+              "audio",
+              "fullscreen",
+              "pointerLock",
+              "geolocation",
+              "clipboard"
+            ],
+            "properties": {
+              "network": {
+                "type": "boolean"
+              },
+              "audio": {
+                "type": "boolean"
+              },
+              "fullscreen": {
+                "type": "boolean"
+              },
+              "pointerLock": {
+                "type": "boolean"
+              },
+              "geolocation": {
+                "type": "boolean"
+              },
+              "clipboard": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

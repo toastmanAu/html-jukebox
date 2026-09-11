@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "network": "testnet",
+  "protocol": "20250821.4ee6689bf7ec",
+  "depGroupTxHash": "0x47cfa8d554cccffe7796f93b58437269de1f98f029d0a52b6b146381f3e95e61",
+  "checkedAt": "2026-09-11T09:51:51.424Z",
+  "codeCells": [
+    {
+      "txHash": "0x1488b592b0946589730c906c6d9a46fb82c1181156fc1a4251adce14002a9cfb",
+      "index": 0,
+      "dataHash": "0xb5d13ffe0547c78021c01fe24dce2e959a1ed8edbca3cb93dd2e9f57fb56d695",
+      "typeHash": "0xaebf5a7b541da9603c2066a9768d3d18fea2e7f3c1943821611545155fecc671"
+    },
+    {
+      "txHash": "0x8d6bd7ea704f9b19af5b83b81544c34982515a825e6185d88faf47583a542671",
+      "index": 0,
+      "dataHash": "0xbd944c8c5aa127270b591d50ab899c9a2a3e4429300db4ea3d7523aa592c1db1",
+      "typeHash": "0x552e2a5e679f45bca7834b03a1f8613f2a910b64a7bafb51986cfc6f1b6cb31c"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "receiptTx": "0xc8930ce588d8937b7f1c5d6a83fe0297369d56077eb49ee13bc045ecc3a6eba0",
+  "receiptStatus": "committed",
+  "registryTx": "0xf7209e71bcca7ac24a594bf23025fa4e2edaacdbafb05516eca360c93920db56",
+  "registryTypeId": "0x82c99d7df1c19baa0cedacaafb72f4118fd8e4ba5eab9bc953d08fef72954f15",
+  "revision": "6",
+  "ownerLockHash": "0x21ea19b046900321550056f32138001015b58ba6d5d84484df09821da89b3fdc",
+  "manifest": {
+    "pointer": {
+      "typeId": "0xa2d7c1efdf120e6cccd7a8e1db019dbf18baefeb17f0d08132684c31c12dce38",
+      "contentHash": "0xce17894909d77d96c3efcb0b0096ca40c041e7dca40c10abc367a08fa6f5dadf"
+    },
+    "txHash": "0xd6e864c06b8a6807a5364619d031c0aca3dc60c6151e64770d8388b4b879b79b",
+    "value": {
+      "schema": 1,
+      "revision": 6,
+      "createdAt": "2026-09-12T13:45:29.720Z",
+      "collection": {
+        "id": "ai-html-jukebox",
+        "name": "AI HTML Jukebox",
+        "description": "Interactive HTML demos stored through CKBFS."
+      },
+      "previous": {
+        "typeId": "0x244adabbd60debe922a52ac743aa67365ef2464ddadbfd14370e9c8ef4990cce",
+        "contentHash": "0xf04ac4ac78e7461f9ea4ff42af2d47c758b291964d43206f8323e17651172ff1"
+      },
+      "items": [
+        {
+          "id": "7df7aea1-29e0-4c60-bba3-12cb5a5b163e",
+          "title": "orbit-study",
+          "description": "",
+          "category": "Experiments",
+          "tags": [],
+          "status": "active",
+          "ckbfs": {
+            "protocol": "20250821.4ee6689bf7ec",
+            "typeId": "0xa43bdc0482a4a94aa1f7b167b2189379dd8c41dee5b61d6b9f76d1613a9ed9be",
+            "txHash": "0x0ec1967e7fd9b0489ffb969269a2c3752541455f13d7c63c52a3d255121f061c"
+          },
+          "contentHash": "0x3311855c9b1aa7d743b5e15fa326c61929a4e4ac017aa4f8402eacd8ede6bb87",
+          "filename": "orbit-study.html",
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 2999,
+          "createdAt": "2026-09-11T16:18:59.285Z",
+          "capabilities": {
+            "network": false,
+            "audio": false,
+            "fullscreen": true,
+            "pointerLock": false,
+            "geolocation": false,
+            "clipboard": false
+          }
+        },
+        {
+          "id": "fe06e0fb-296b-43cf-a787-3edb3db497d7",
+          "title": "astra-prisoner",
+          "description": "CKB cell visualisation page, new cells visualised as prisoners entering and leaving cells in an animated cellblock. Built with GPT 6 Astra.",
+          "category": "Experiments",
+          "tags": [
+            "cell",
+            "ckb",
+            "nervos",
+            "block",
+            "visualizer",
+            "visualiser",
+            "prison"
+          ],
+          "status": "active",
+          "ckbfs": {
+            "protocol": "20250821.4ee6689bf7ec",
+            "typeId": "0xde65205fd3ec098a115202f1c9d357dba07aa9d4129ff92857ba630e16f121ab",
+            "txHash": "0xac33bceeea98972401a9933b7829cddb7f508f71e7ad4fde39b69e407f2eb3be"
+          },
+          "contentHash": "0xf2ae80e7b8e92e68d25c5094c8df4379acd8c5d9ea418d3c935f478ac0217c4c",
+          "filename": "astra-prisoner.html",
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 711510,
+          "createdAt": "2026-09-12T09:39:31.535Z",
+          "capabilities": {
+            "network": true,
+            "audio": true,
+            "fullscreen": true,
+            "pointerLock": false,
+            "geolocation": false,
+            "clipboard": true
+          }
+        },
+        {
+          "id": "b1a7d2fa-f27b-4ad9-b1f8-348c20c15e54",
+          "title": "glm53f-cryptoAnalyser",
+          "description": "Crypto Currency Signal analysis tool, top 1000 assets. Built with GLM 5.3 Flash",
+          "category": "Experiments",
+          "tags": [
+            "cryptocurrency",
+            "trading",
+            "signal",
+            "tool",
+            "glm 5.3 flash"
+          ],
+          "status": "active",
+          "ckbfs": {
+            "protocol": "20250821.4ee6689bf7ec",
+            "typeId": "0x1f0dad693afa6d22ce57d4129f8aada9a9af635784b39e15331374f761e71e72",
+            "txHash": "0xc60292e3c64acd3df3c1f13f1e18a0df60dea31ded2c4eb73332c1fba1b1cbc1"
+          },
+          "contentHash": "0xddee30b400f6d1984a2de794b18afd3ce488c05156f68f932a3f16a3d7999690",
+          "filename": "glm53f-cryptoAnalyser.html",
+          "contentType": "text/html; charset=utf-8",
+          "bytes": 149517,
+          "createdAt": "2026-09-12T13:45:29.720Z",
+          "capabilities": {
+            "network": true,
+            "audio": false,
+            "fullscreen": true,
+            "pointerLock": false,
+            "geolocation": true,
+            "clipboard": true
+          }
+        }
+      ]
+    }
+  },
+  "demos": [
+    {
+      "title": "orbit-study",
+      "protocol": "20250821.4ee6689bf7ec",
+      "network": "testnet",
+      "typeId": "0xa43bdc0482a4a94aa1f7b167b2189379dd8c41dee5b61d6b9f76d1613a9ed9be",
+      "filename": "orbit-study.html",
+      "contentType": "text/html; charset=utf-8",
+      "size": 2999,
+      "checksum": 1266817074,
+      "checksumValid": true,
+      "currentOutPoint": {
+        "txHash": "0x0ec1967e7fd9b0489ffb969269a2c3752541455f13d7c63c52a3d255121f061c",
+        "index": "0x0"
+      },
+      "history": [
+        {
+          "txHash": "0x0ec1967e7fd9b0489ffb969269a2c3752541455f13d7c63c52a3d255121f061c",
+          "headWitnessIndex": 1,
+          "chunkCount": 1,
+          "byteLength": 2999
+        }
+      ],
+      "contentHash": "0x3311855c9b1aa7d743b5e15fa326c61929a4e4ac017aa4f8402eacd8ede6bb87",
+      "manifestHashMatched": true
+    },
+    {
+      "title": "astra-prisoner",
+      "protocol": "20250821.4ee6689bf7ec",
+      "network": "testnet",
+      "typeId": "0xde65205fd3ec098a115202f1c9d357dba07aa9d4129ff92857ba630e16f121ab",
+      "filename": "astra-prisoner.html",
+      "contentType": "text/html; charset=utf-8",
+      "size": 711510,
+      "checksum": 1157988345,
+      "checksumValid": true,
+      "currentOutPoint": {
+        "txHash": "0xac33bceeea98972401a9933b7829cddb7f508f71e7ad4fde39b69e407f2eb3be",
+        "index": "0x0"
+      },
+      "history": [
+        {
+          "txHash": "0x36a7d0e6b000884e71392854a9356efeadb841be5b77ad93b073e422df3df594",
+          "headWitnessIndex": 1,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0x46ec4b027bfe788dcaafe1f0e8bc448782cda8d1f3344958b7a1c7d4cf0ce742",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0x77c563573c553048c09bec9c644ddb53c7340e8e6cb05fd284ef7bb6473aaf32",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0xf0cb77ce34fcfc4698e77d490a0d9c3ac8aa6c9d51418749d4133e1f41aa1b4d",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0x3f5237cee033bfc5ae0301183eb8e79bd95787f723a577377d14988fe6f7a910",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0x4f0c65286edd866116a9bc50988f113475927ae5f8bffbd5f0b33d070ad92943",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0xf0387628b46486cf7f541fed013b063d5ed4bcb0051ad46c2d9523909fdf2bf7",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0x5a5eff1972b8d217ce08460b530e804a07efcf9f5d3068bfc7a174f54088b306",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0xac33bceeea98972401a9933b7829cddb7f508f71e7ad4fde39b69e407f2eb3be",
+          "headWitnessIndex": 2,
+          "chunkCount": 4,
+          "byteLength": 56150
+        }
+      ],
+      "contentHash": "0xf2ae80e7b8e92e68d25c5094c8df4379acd8c5d9ea418d3c935f478ac0217c4c",
+      "manifestHashMatched": true
+    },
+    {
+      "title": "glm53f-cryptoAnalyser",
+      "protocol": "20250821.4ee6689bf7ec",
+      "network": "testnet",
+      "typeId": "0x1f0dad693afa6d22ce57d4129f8aada9a9af635784b39e15331374f761e71e72",
+      "filename": "glm53f-cryptoAnalyser.html",
+      "contentType": "text/html; charset=utf-8",
+      "size": 149517,
+      "checksum": 4165388250,
+      "checksumValid": true,
+      "currentOutPoint": {
+        "txHash": "0xc60292e3c64acd3df3c1f13f1e18a0df60dea31ded2c4eb73332c1fba1b1cbc1",
+        "index": "0x0"
+      },
+      "history": [
+        {
+          "txHash": "0x93c36a91c1e957489e79245928fae59d5a593675dcf8bd1ddd4ff3c813cec863",
+          "headWitnessIndex": 1,
+          "chunkCount": 5,
+          "byteLength": 81920
+        },
+        {
+          "txHash": "0xc60292e3c64acd3df3c1f13f1e18a0df60dea31ded2c4eb73332c1fba1b1cbc1",
+          "headWitnessIndex": 2,
+          "chunkCount": 5,
+          "byteLength": 67597
+        }
+      ],
+      "contentHash": "0xddee30b400f6d1984a2de794b18afd3ce488c05156f68f932a3f16a3d7999690",
+      "manifestHashMatched": true
+    }
+  ],
+  "checkedAt": "2026-09-12T14:18:10.936Z",
+  "transitions": [
+    {
+      "txHash": "0xf7209e71bcca7ac24a594bf23025fa4e2edaacdbafb05516eca360c93920db56",
+      "revision": "6",
+      "previousTxHash": "0x41e3b382fca299be6582440e6c49089425468f17a30630caa4dc437cab5544fc",
+      "manifestTx": "0xd6e864c06b8a6807a5364619d031c0aca3dc60c6151e64770d8388b4b879b79b",
+      "typeIdPreserved": true,
+      "ownerLockPreserved": true,
+      "manifestHashVerified": true,
+      "previousPointerVerified": true
+    },
+    {
+      "txHash": "0x41e3b382fca299be6582440e6c49089425468f17a30630caa4dc437cab5544fc",
+      "revision": "5",
+      "previousTxHash": "0xa8508575bbda7794cbcaee556b963ef55517ee9f016e88822248a795408fdc47",
+      "manifestTx": "0xc8930ce588d8937b7f1c5d6a83fe0297369d56077eb49ee13bc045ecc3a6eba0",
+      "typeIdPreserved": true,
+      "ownerLockPreserved": true,
+      "manifestHashVerified": true,
+      "previousPointerVerified": true
+    }
+  ]
+}

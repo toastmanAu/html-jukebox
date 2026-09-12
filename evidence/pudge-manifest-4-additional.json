@@ -1,0 +1,41 @@
+{
+  "protocol": "20250821.4ee6689bf7ec",
+  "network": "testnet",
+  "typeId": "0xc18eb4f9df61ef09c6970876d88b003573d320442b40d16f060bbd5e00424066",
+  "filename": "jukebox-manifest-4.json",
+  "contentType": "application/json; charset=utf-8",
+  "size": 373,
+  "checksum": 3654119858,
+  "checksumValid": true,
+  "currentOutPoint": {
+    "txHash": "0x3ef75953993c36190875ff3d90e72a20110df77904061f7791c684387cc0b29a",
+    "index": "0x0"
+  },
+  "history": [
+    {
+      "txHash": "0x3ef75953993c36190875ff3d90e72a20110df77904061f7791c684387cc0b29a",
+      "headWitnessIndex": 1,
+      "chunkCount": 1,
+      "byteLength": 373
+    }
+  ],
+  "txHash": "0x3ef75953993c36190875ff3d90e72a20110df77904061f7791c684387cc0b29a",
+  "contentHash": "0x77e0ffe832c98365875591e03ff3e64827dc9bd67f771b74f5664545ceb759b4",
+  "manifest": {
+    "schema": 1,
+    "revision": 4,
+    "createdAt": "2026-09-11T23:46:46.400Z",
+    "collection": {
+      "id": "ai-html-jukebox",
+      "name": "AI HTML Jukebox",
+      "description": "Interactive HTML demos stored through CKBFS."
+    },
+    "previous": {
+      "typeId": "0xead4892552e64592eb816881fc3f2d506e63b1bf03f11aa049d4dd662c6417f8",
+      "contentHash": "0xc0dfd9389225e92d8108df8e38b4e2cbbbd439dbd04e555e40bc8ac37e25e7b8"
+    },
+    "items": []
+  },
+  "sameBytesAsFirstManifest": false,
+  "checkedAt": "2026-09-11T23:49:28.131Z"
+}

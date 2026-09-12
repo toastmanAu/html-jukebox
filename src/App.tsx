@@ -8,6 +8,8 @@ import { invariant, formatDiagnostic } from './ckbfs/errors';
 import { proofKinds, records, rebroadcastRecord, saveRecord, verifyRecord, type ProofKind, type ProofRecord } from './proof/journal';
 import { proofBytes, proofLabels } from './proof/fixtures';
 import './style.css';
+import { AdminPanel } from './admin/AdminPanel';
+import { RegistryPanel } from './registry/RegistryPanel';
 const explorer = 'https://pudge.explorer.nervos.org/transaction/';
 const money = (value: string) => ckb.fixedPointToString(BigInt(value));
 export default function App() {
@@ -91,8 +93,11 @@ export default function App() {
   }
   return <main>
     <header><a className="brand" href="/">CKBFS <span>JUKEBOX</span></a><span className="network">● TESTNET / PUDGE</span><button onClick={() => wallet.open()} disabled={busy}>{signer ? 'JoyID connection' : 'Connect JoyID'}</button></header>
-    <section className="intro"><p className="eyebrow">AI HTML JUKEBOX · ENGINEERING PREVIEW</p><h1>Prove the storage.<br/><em>Then turn up the music.</em></h1><p className="lede">The V3 chain proof comes first. Verify the pinned deployment, publish exact HTML bytes, and reconstruct them independently from Pudge.</p></section>
-    <div className="gate"><strong>Phase 1 acceptance gate</strong><span>Registry, catalog, player and cabinet work remain pending until browser publish and append round trips pass.</span></div>
+    <section className="intro"><p className="eyebrow">AI HTML JUKEBOX · ENGINEERING PREVIEW</p><h1>Storage proven.<br/><em>Build the catalog.</em></h1><p className="lede">Five browser-signed Pudge proofs passed. The catalog is live. Publish demos below; the Phase 2 tools are retained for registry diagnostics and history.</p></section>
+    <div className="gate"><strong>Phase 1 complete</strong><span>Single-witness, multi-witness, two appends and empty-file round trips verified on Pudge. Registry creation, update, rollback and the first complete demo publication are verified.</span></div>
+    <AdminPanel/>
+    <RegistryPanel/>
+    <h2>Storage diagnostics & completed proof sequence</h2>
     <div role="status" aria-live="polite" className="status">{busy ? '◌ ' : '● '}{status}</div>
     {error && <div role="alert" className="error">{error}</div>}
     {!contextSupported && <p role="alert">Unsupported browser context. Open this app at localhost or HTTPS in a browser with Web Locks and IndexedDB.</p>}
@@ -115,6 +120,6 @@ export default function App() {
         <ol className="proofs">{proofKinds.map(kind => { const record = journal.find(r => r.id === kind); return <li key={kind}><div><strong>{proofLabels[kind]}</strong><span className={record?.status === 'verified' ? 'pass' : 'muted'}>{record?.status ?? 'Not started'}</span>{record && <a href={explorer + record.txHash} target="_blank" rel="noreferrer">View transaction ↗</a>}</div>{record && record.status !== 'verified' && <div className="actions"><button disabled={busy} onClick={() => action(async () => { await verifyRecord(record); setStatus(`${proofLabels[kind]}: exact bytes, Adler32 and Blake2b verified from a fresh RPC client.`); })}>Verify committed bytes</button><button disabled={busy} onClick={() => action(async () => { const client = createPudgeClient(); await assertPudge(client); const result = await rebroadcastRecord(record, client); setStatus(`Recovery: transaction is ${result}. Verify after confirmation.`); })}>Recover same transaction</button></div>}</li>; })}</ol>
         <button disabled={busy || !journal.length} onClick={exportEvidence}>Export proof evidence</button>
       </section>
-    </div><footer><span>CKBFS AI HTML JUKEBOX</span><span>V3 storage proof · No registry configured yet</span></footer>
+    </div><footer><span>CKBFS AI HTML JUKEBOX</span><span>V3 storage verified · Owner-controlled registry configured</span></footer>
   </main>;
 }

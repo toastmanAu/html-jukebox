@@ -1,0 +1,70 @@
+{
+  "protocol": "20250821.4ee6689bf7ec",
+  "network": "testnet",
+  "typeId": "0xbb9f3b5fb311925b646019b3da5be07194599f01785de61dcc0fc7e8e2274113",
+  "filename": "jukebox-manifest-4.json",
+  "contentType": "application/json; charset=utf-8",
+  "size": 1040,
+  "checksum": 3038986259,
+  "checksumValid": true,
+  "currentOutPoint": {
+    "txHash": "0x9babfec8aeed1fe66a66fdb65a329bfca3fc86efaed861e838ba01f929f98cc3",
+    "index": "0x0"
+  },
+  "history": [
+    {
+      "txHash": "0x9babfec8aeed1fe66a66fdb65a329bfca3fc86efaed861e838ba01f929f98cc3",
+      "headWitnessIndex": 1,
+      "chunkCount": 1,
+      "byteLength": 1040
+    }
+  ],
+  "txHash": "0x9babfec8aeed1fe66a66fdb65a329bfca3fc86efaed861e838ba01f929f98cc3",
+  "contentHash": "0xc4158e9abb9e026d0e066f9c648646dc898167e0f8d5fb9ae64de3c4dfd3282e",
+  "manifest": {
+    "schema": 1,
+    "revision": 4,
+    "createdAt": "2026-09-11T16:18:59.285Z",
+    "collection": {
+      "id": "ai-html-jukebox",
+      "name": "AI HTML Jukebox",
+      "description": "Interactive HTML demos stored through CKBFS."
+    },
+    "previous": {
+      "typeId": "0xead4892552e64592eb816881fc3f2d506e63b1bf03f11aa049d4dd662c6417f8",
+      "contentHash": "0xc0dfd9389225e92d8108df8e38b4e2cbbbd439dbd04e555e40bc8ac37e25e7b8"
+    },
+    "items": [
+      {
+        "id": "7df7aea1-29e0-4c60-bba3-12cb5a5b163e",
+        "title": "orbit-study",
+        "description": "",
+        "category": "Experiments",
+        "tags": [],
+        "status": "active",
+        "ckbfs": {
+          "protocol": "20250821.4ee6689bf7ec",
+          "typeId": "0xa43bdc0482a4a94aa1f7b167b2189379dd8c41dee5b61d6b9f76d1613a9ed9be",
+          "txHash": "0x0ec1967e7fd9b0489ffb969269a2c3752541455f13d7c63c52a3d255121f061c"
+        },
+        "contentHash": "0x3311855c9b1aa7d743b5e15fa326c61929a4e4ac017aa4f8402eacd8ede6bb87",
+        "filename": "orbit-study.html",
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 2999,
+        "createdAt": "2026-09-11T16:18:59.285Z",
+        "capabilities": {
+          "network": false,
+          "audio": false,
+          "fullscreen": true,
+          "pointerLock": false,
+          "geolocation": false,
+          "clipboard": false
+        }
+      }
+    ]
+  },
+  "historyValid": true,
+  "demoVerified": true,
+  "registryRevisionBeforeUpdate": "3",
+  "checkedAt": "2026-09-11T16:20:44.560Z"
+}

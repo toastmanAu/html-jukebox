@@ -1,0 +1,27 @@
+{
+  "protocol": "20250821.4ee6689bf7ec",
+  "network": "testnet",
+  "typeId": "0xa43bdc0482a4a94aa1f7b167b2189379dd8c41dee5b61d6b9f76d1613a9ed9be",
+  "filename": "orbit-study.html",
+  "contentType": "text/html; charset=utf-8",
+  "size": 2999,
+  "checksum": 1266817074,
+  "checksumValid": true,
+  "currentOutPoint": {
+    "txHash": "0x0ec1967e7fd9b0489ffb969269a2c3752541455f13d7c63c52a3d255121f061c",
+    "index": "0x0"
+  },
+  "history": [
+    {
+      "txHash": "0x0ec1967e7fd9b0489ffb969269a2c3752541455f13d7c63c52a3d255121f061c",
+      "headWitnessIndex": 1,
+      "chunkCount": 1,
+      "byteLength": 2999
+    }
+  ],
+  "txHash": "0x0ec1967e7fd9b0489ffb969269a2c3752541455f13d7c63c52a3d255121f061c",
+  "contentHash": "0x3311855c9b1aa7d743b5e15fa326c61929a4e4ac017aa4f8402eacd8ede6bb87",
+  "expectedHash": "0x3311855c9b1aa7d743b5e15fa326c61929a4e4ac017aa4f8402eacd8ede6bb87",
+  "exactBytesMatch": true,
+  "checkedAt": "2026-09-11T16:17:54.277Z"
+}

@@ -1,0 +1,15 @@
+{
+  "txHash": "0xcd7519fe6d88550b444aa1e7ff4bdf7d8a47995082d197f677dab80be46e6576",
+  "typeId": "0x82c99d7df1c19baa0cedacaafb72f4118fd8e4ba5eab9bc953d08fef72954f15",
+  "status": "committed",
+  "revision": "2",
+  "manifestTypeId": "0x67964f29b3cb8bb34be30f726f82771f8de0c32abfe48532f1a0750dfda351cc",
+  "manifestHash": "0x651aab96a43ee0eb9d5a293b46755c00a747a54a7b93b1e358504295b97390bb",
+  "ownerLockHash": "0x21ea19b046900321550056f32138001015b58ba6d5d84484df09821da89b3fdc",
+  "previousTxHash": "0xc4f6689092e6e821e42822cedec1c17104c6832d175f3c746024aafcbedad9fc",
+  "typeIdPreserved": true,
+  "ownerLockPreserved": true,
+  "exactPreviousConsumed": true,
+  "manifestVerified": true,
+  "checkedAt": "2026-09-11T15:54:05.430Z"
+}

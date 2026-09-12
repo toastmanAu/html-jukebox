@@ -1,13 +1,13 @@
-# Implementation status — Phase 1 proof workbench
+# CKBFS AI HTML Jukebox — implementation checkpoint
 
-The Vite + React + TypeScript bootstrap and canonical V3 module are implemented. **The complete jukebox is not built yet.** The mandatory browser-signed Pudge publish/append proof is pending; registry, player, admin catalog pipeline and cabinet phases remain gated.
+Canonical V3 storage is proven on Pudge, including empty, multi-witness and two-append browser-signed round trips. Registry creation, a Type ID-preserving revision 2 update, and revision 3 rollback are verified. The isolated player, persistent admin pipeline, cache and Three.js gallery are implemented; the complete Orbit Study demo → manifest → registry publication is now independently verified on Pudge.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open the printed localhost URL. Use a funded **Pudge JoyID** wallet for the proof transactions. No private key is requested or stored.
+Open the printed localhost URL for the jukebox. Use the Service panel link (or `#service`) to publish and inspect chain diagnostics. Use a funded **Pudge JoyID** wallet for signing. No private key is requested or stored.
 
 See [operator instructions](docs/OPERATOR.md), [validation evidence](docs/VALIDATION.md), and [source attribution](ATTRIBUTION.md).
 

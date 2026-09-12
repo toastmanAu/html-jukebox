@@ -57,3 +57,41 @@ A conservative 100,000-byte limit applies to the serialized transaction includin
 - `npm run build`: strict TypeScript check and static Vite build into `dist`.
 
 Once the signed proof passes, implement Phase 2 registry/manifest, Phase 3 isolated player, Phase 4 complete admin pipeline, Phase 5 cabinet UX, then Phase 6 Cloudflare Pages headers/CSP and full production tests. Generate the registry Type ID from the first real registry transaction; never invent it. No Cloudflare deployment or registry creation has been performed in this checkpoint.
+
+## Registry and complete demo publishing
+
+The Pudge singleton Type ID is already saved in `config/jukebox.ts`. Do not create a second registry. Creation, update to revision 2, and rollback to revision 3 have independently verified evidence under `evidence/`. Revision 3 points to the original empty manifest; registry and manifest revision numbers need not match after rollback.
+
+For the first complete demo acceptance run:
+
+1. In the immutable demo service panel, choose **Load & authorize owner registry** with the owner JoyID connected.
+2. Select `examples/orbit-study.html` (or a self-contained HTML file), review metadata and capabilities, and choose **Save inspected publish draft**.
+3. Open the production sandbox preview, test it, return, and choose **Preview works — approve these exact bytes**.
+4. **Continue next safe step** prepares the demo transaction. Review the capacity/fee and sign it.
+5. After commitment, continue to independently resolve and verify it. Continue again to prepare, review, and sign the immutable manifest.
+6. After commitment, continue to verify that manifest, then prepare, review, and sign the registry update.
+7. Continue once more to re-query the registry until the draft reports **COMPLETE**. Open `#jukebox` to load and play the verified title.
+
+Every signed transaction is persisted before broadcast. Reloading the page restores drafts. **Recover known transaction** re-queries its hash before considering rebroadcast of the same signed transaction. Never create a new draft merely because a later transaction failed. A changed registry is an explicit conflict and does not authorize uploading the same demo again.
+
+## Player and Cloudflare Pages
+
+Build with `npm run build`; configure Cloudflare Pages with build command `npm run build` and output directory `dist`. The application needs no server-side wallet secrets. No public deployment is included in the current validation checkpoint.
+
+Deploy `public/_headers`, `sandbox.html`, and `sandbox.js` together with the build. The host CSP keeps scripts restricted to self. Only the dedicated sandbox page permits demo script execution; its response is itself sandboxed, and the nested demo iframe uses capability-specific CSP with no same-origin permission. Cloudflare redirects `/sandbox.html` to `/sandbox`, so both paths require their scoped headers. Do not collapse their rules into the main page's policy.
+
+Previously verified catalog and demo bytes are stored in IndexedDB. Offline cache entries are checked against the manifest content hash before playback. Browser storage can be evicted; Settings offers a persistence request, whose result depends on the browser. There is no shell service worker yet, so offline use requires an already loaded app shell.
+
+## Public gallery entry point
+
+The root URL now opens the jukebox. The Service panel link opens `#service` and loads wallet/admin code on demand. The publishing panel appears before historical registry proof controls. Use the saved demo draft for publishing; the registry proof panel can publish catalog-only revisions and should not be used as a substitute for the demo workflow.
+
+The title list supports arrows, Home/End, and Enter to play. Search, categories, favorites and reduced-motion settings are available in the DOM. Downloaded means bytes are stored locally; they are cryptographically checked again at launch. Use Settings → Refresh on-chain catalog to check for updates or retry after reconnecting. RPC failure can show OFFLINE / LAST VERIFIED and allow downloaded titles. No shell service worker is installed, so keep the app loaded for offline use.
+
+## Service panel authorization
+
+Opening `#service` now shows a JoyID login gate. The actual service UI is mounted only after the connected recommended JoyID lock is checked against Pudge and the live registry owner. Disconnecting or changing signer removes access. Registry lookup failures fail closed.
+
+The current on-chain owner is automatically admitted. Additional panel-access lock hashes can be explicitly configured in `config/admin.ts`; five operator-supplied Pudge JoyID addresses are configured, including the existing owner. Decode each approved `ckt` address with the pinned CCC client and store its full script hash, not just its args. This list controls app UI access, not on-chain authority: those accounts cannot consume the owner-locked registry. Supporting several independent registry-signing accounts requires an explicitly designed ownership/delegation change.
+
+The public gallery remains wallet-free. No private keys or authentication credentials are stored in admin configuration.

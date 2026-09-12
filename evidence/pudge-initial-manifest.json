@@ -1,0 +1,39 @@
+{
+  "protocol": "20250821.4ee6689bf7ec",
+  "network": "testnet",
+  "typeId": "0xead4892552e64592eb816881fc3f2d506e63b1bf03f11aa049d4dd662c6417f8",
+  "filename": "jukebox-manifest-1.json",
+  "contentType": "application/json; charset=utf-8",
+  "size": 215,
+  "checksum": 4213851404,
+  "checksumValid": true,
+  "currentOutPoint": {
+    "txHash": "0x3efd389c33d6804ed5c12f25dc2d391653736dce19aa39a031ecb204a58f1125",
+    "index": "0x0"
+  },
+  "history": [
+    {
+      "txHash": "0x3efd389c33d6804ed5c12f25dc2d391653736dce19aa39a031ecb204a58f1125",
+      "headWitnessIndex": 1,
+      "chunkCount": 1,
+      "byteLength": 215
+    }
+  ],
+  "txHash": "0x3efd389c33d6804ed5c12f25dc2d391653736dce19aa39a031ecb204a58f1125",
+  "contentHash": "0xc0dfd9389225e92d8108df8e38b4e2cbbbd439dbd04e555e40bc8ac37e25e7b8",
+  "expectedHash": "0xc0dfd9389225e92d8108df8e38b4e2cbbbd439dbd04e555e40bc8ac37e25e7b8",
+  "exactInitialManifestMatch": true,
+  "manifest": {
+    "schema": 1,
+    "revision": 1,
+    "createdAt": "2026-09-11T15:25:55.053Z",
+    "collection": {
+      "id": "ai-html-jukebox",
+      "name": "AI HTML Jukebox",
+      "description": "Interactive HTML demos stored through CKBFS."
+    },
+    "previous": null,
+    "items": []
+  },
+  "checkedAt": "2026-09-11T15:28:59.223Z"
+}

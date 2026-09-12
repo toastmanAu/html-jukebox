@@ -1,0 +1,42 @@
+import { expect, test } from '@playwright/test';
+// Uses the deployed registry and real Pudge bytes; intentionally opt-in.
+test('live catalog resolves Orbit Study and replays verified cached bytes', async ({ page }) => {
+  test.skip(process.env.PUDGE_LIVE !== '1', 'Requires the live Pudge catalog');
+  test.setTimeout(120_000);
+  const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
+  await page.goto('/');
+  await expect(page.getByRole('option', { name: /orbit-study/ })).toBeVisible({ timeout: 90_000 });
+  await expect(page.getByText('REGISTRY REV. 4 · CKBFS V3')).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+  await page.getByRole('button', { name: /PLAY THIS DEMO/ }).click();
+  const demo = page.frameLocator('iframe[title="orbit-study"]').frameLocator('#demo');
+  await expect(demo.getByRole('heading', { name: 'Orbit Study.' })).toBeVisible({ timeout: 60_000 });
+  await expect(page.getByText('ON-CHAIN / VERIFIED', { exact: true })).toBeAttached();
+  await expect(page.getByRole('button', { name: 'Back to Jukebox' })).toBeFocused();
+  await demo.getByRole('button', { name: 'Pause motion' }).click();
+  await expect(demo.getByRole('button', { name: 'Resume motion' })).toBeVisible();
+  await page.getByRole('button', { name: 'Back to Jukebox' }).click();
+  await expect(page.locator('iframe')).toHaveCount(0);
+  // Interrupt chain transport while leaving the already-loaded shell and sandbox reachable.
+  await expect(page.getByRole('button', { name: /PLAY THIS DEMO/ })).toBeFocused();
+  await expect(page.getByText('DOWNLOADED', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Settings', exact: true }).click();
+  await page.getByLabel('Reduced motion', { exact: true }).check();
+  await page.getByLabel('Favorites only', { exact: true }).check();
+  await expect(page.getByText('No matching selections', { exact: true })).toBeVisible();
+  await page.getByLabel('Favorites only', { exact: true }).uncheck();
+  await page.getByRole('button', { name: 'Add favorite', exact: true }).click();
+  await page.getByLabel('Favorites only', { exact: true }).check();
+  await expect(page.getByRole('option', { name: /orbit-study/ })).toBeVisible();
+  await page.getByRole('searchbox', { name: 'Search demos' }).fill('no such title');
+  await expect(page.getByRole('button', { name: /WAITING FOR THE FIRST DEMO/ })).toBeDisabled();
+  await page.getByRole('searchbox', { name: 'Search demos' }).fill('orbit');
+  await page.route('https://testnet.ckb.dev/**', route => route.abort());
+  await page.getByRole('button', { name: 'Refresh on-chain catalog' }).click();
+  await expect(page.getByText('OFFLINE / LAST VERIFIED', { exact: false })).toBeVisible({ timeout: 60_000 });
+  await page.getByRole('button', { name: /PLAY THIS DEMO/ }).click();
+  await expect(page.getByText('CACHED / VERIFIED', { exact: true })).toBeAttached();
+  await expect(page.frameLocator('iframe[title="orbit-study"]').frameLocator('#demo').getByRole('heading', { name: 'Orbit Study.' })).toBeVisible();
+  await page.getByRole('button', { name: 'Back to Jukebox' }).click();
+  expect(errors).toEqual([]);
+});

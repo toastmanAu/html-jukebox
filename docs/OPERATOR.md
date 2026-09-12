@@ -76,7 +76,7 @@ Every signed transaction is persisted before broadcast. Reloading the page resto
 
 ## Player and Cloudflare Pages
 
-Build with `npm run build`; configure Cloudflare Pages with build command `npm run build` and output directory `dist`. The application needs no server-side wallet secrets. The production build is deployed at https://html-jukebox.pages.dev. The custom domain htmljukebox.online is attached; DNS activation was pending at initial release.
+Build with `npm run build`; configure Cloudflare Pages with build command `npm run build` and output directory `dist`. The application needs no server-side wallet secrets. The production build is deployed at https://html-jukebox.pages.dev. The custom domain https://htmljukebox.online is active with HTTPS.
 
 Deploy `public/_headers`, `sandbox.html`, and `sandbox.js` together with the build. The host CSP keeps scripts restricted to self. Only the dedicated sandbox page permits demo script execution; its response is itself sandboxed, and the nested demo iframe uses capability-specific CSP with no same-origin permission. Cloudflare redirects `/sandbox.html` to `/sandbox`, so both paths require their scoped headers. Do not collapse their rules into the main page's policy.
 
@@ -115,6 +115,6 @@ Test the hosted release:
 PUDGE_LIVE=1 E2E_BASE_URL=https://html-jukebox.pages.dev npm run test:e2e
 ```
 
-The custom domain has a Pages binding. Its DNS record should be a proxied apex CNAME (`@`) targeting `html-jukebox.pages.dev`; assigned authoritative nameservers are `alexia.ns.cloudflare.com` and `arnold.ns.cloudflare.com`. At initial release, nameserver propagation and the apex record remained pending. Recheck the final domain and TLS before announcing it as live.
+The custom domain has a Pages binding. Its DNS record should be a proxied apex CNAME (`@`) targeting `html-jukebox.pages.dev`; assigned authoritative nameservers are `alexia.ns.cloudflare.com` and `arnold.ns.cloudflare.com`. Cloudflare subsequently confirmed the zone and custom domain active, and HTTPS was verified. Some recursive DNS caches may temporarily retain the former registrar address.
 
 Each origin has separate IndexedDB storage. The live site reads the same on-chain registry, but localhost drafts and cached demo bytes do not migrate automatically. Connect JoyID again on the public origin; do not restart a completed local publish draft to migrate it.

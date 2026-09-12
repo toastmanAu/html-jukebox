@@ -118,3 +118,11 @@ PUDGE_LIVE=1 E2E_BASE_URL=https://html-jukebox.pages.dev npm run test:e2e
 The custom domain has a Pages binding. Its DNS record should be a proxied apex CNAME (`@`) targeting `html-jukebox.pages.dev`; assigned authoritative nameservers are `alexia.ns.cloudflare.com` and `arnold.ns.cloudflare.com`. Cloudflare subsequently confirmed the zone and custom domain active, and HTTPS was verified. Some recursive DNS caches may temporarily retain the former registrar address.
 
 Each origin has separate IndexedDB storage. The live site reads the same on-chain registry, but localhost drafts and cached demo bytes do not migrate automatically. Connect JoyID again on the public origin; do not restart a completed local publish draft to migrate it.
+
+## Large single-file HTML (including inlined Three.js)
+
+The demo workflow automatically publishes files above 80 KiB as an initial V3 segment followed by appends to the same Type ID. The 80 KiB budget is a starting point; every prepared transaction is serialized and checked against the unchanged 100,000-byte ceiling. If wallet/input overhead exceeds that ceiling, the candidate segment is reduced before signing. Total file size is capped at the resolver's 32 MiB limit.
+
+An existing draft that failed with CONTENT_TOO_LARGE before broadcast can be resumed: refresh the same site/origin, select that saved draft, and choose Continue next safe step. No new draft or file edit is necessary. Review and sign each segment, wait for commitment, then continue to verify its cumulative bytes. Continue again to prepare the next append. Around 712 KB normally requires nine demo signatures, plus the manifest and registry signatures.
+
+Every signed segment is persisted before broadcast. Recover known transaction re-queries the most recent receipt; it never starts the file again. The manifest is created only after independently resolving the complete witness history and matching every byte and the original cryptographic hash. Published segments remain on-chain if a later step fails; keep the draft to resume them.

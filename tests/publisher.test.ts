@@ -83,3 +83,26 @@ describe('real CCC transaction builder with offline signer/chain', () => {
     const o = options(); await expect(estimateV3Publish(content, { ...lock, args: '0xab' }, o)).rejects.toThrow('OWNER_LOCK_MISMATCH');
   });
 });
+
+describe('serialized-size-aware segmentation', () => {
+  it('round-trips a 712 KB file under one Type ID with every serialized transaction below the limit', async () => {
+    const { prepareV3Segment, SEGMENT_BYTES } = await import('../src/ckbfs/segments');
+    const o = options(); const large = Uint8Array.from({length:712_000},(_,i)=>i%251);
+    let end=0, id:string|undefined;
+    while(end<large.length) {
+      const segment=await prepareV3Segment({...o,content:large,chunkBytes:16_384},end,id?o.latestCell():undefined);
+      expect(segment.start).toBe(end); expect(segment.end-end).toBeLessThanOrEqual(SEGMENT_BYTES);
+      expect(segment.prepared.transaction.toBytes().length+4).toBeLessThanOrEqual(100_000);
+      if(id)expect(segment.prepared.typeId).toBe(id);
+      const result=await broadcastPreparedV3(segment.prepared,o);id=result.typeId;end=segment.end;
+      const resolved=await resolveV3(id,o); expect(ccc.hexFrom(resolved.fileBytes)).toBe(ccc.hexFrom(large.slice(0,end)));
+    }
+    expect(o.transactions).toHaveLength(9);expect(ccc.hexFrom((await resolveV3(id!,o)).fileBytes)).toBe(ccc.hexFrom(large));
+  }, 30_000);
+  it('shrinks a segment when wallet witnesses make the final transaction too large', async () => {
+    const {prepareV3Segment}=await import('../src/ckbfs/segments');const o=options();
+    vi.mocked(o.signer.prepareTransaction).mockImplementation(async txLike=>{const tx=ccc.Transaction.from(txLike);tx.setWitnessArgs(0,{lock:'0x'+'00'.repeat(30_000)});return tx;});
+    const result=await prepareV3Segment({...o,content:new Uint8Array(100_000),chunkBytes:16_384},0);
+    expect(result.end).toBe(40_960);expect(result.prepared.estimate.transactionBytes).toBeLessThanOrEqual(100_000);expect(o.signer.signTransaction).not.toHaveBeenCalled();
+  });
+});

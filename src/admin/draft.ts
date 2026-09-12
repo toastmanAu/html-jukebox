@@ -2,9 +2,10 @@ import * as ccc from '@ckb-ccc/core';
 import { z } from 'zod';
 import { CKBFS_PROTOCOL_V3 } from '../../config/ckbfs-v3';
 import { proofDB } from '../proof/journal';
-import { createPudgeClient } from '../ckbfs/client';
+import { createPudgeClient, findLiveV3 } from '../ckbfs/client';
 import { invariant, formatDiagnostic } from '../ckbfs/errors';
 import { prepareV3, broadcastPreparedV3, type PreparedV3 } from '../ckbfs/publisher';
+import { prepareV3Segment, SEGMENT_BYTES, MAX_FILE_BYTES } from '../ckbfs/segments';
 import { resolveV3 } from '../ckbfs/resolver';
 import { inspectHTML, type PortabilityReport } from '../player/portability';
 import { capabilitiesSchema, manifestBytes, nextManifest, resolveManifest, type ManifestPointer } from '../registry/manifest';
@@ -18,22 +19,30 @@ export const draftSchema = z.object({
     metadata: z.object({ id: z.string().min(1), title: z.string().min(1), description: z.string(), category: z.string().min(1), tags: z.array(z.string()), capabilities: capabilitiesSchema }) }),
   inspected: z.boolean(), previewed: z.boolean(),
   expected: z.object({ typeId: hash, txHash: hash, index: z.string(), revision: z.string(), lockHash: hash, manifestTypeId: hash, manifestHash: hash }),
+  demoSegments: z.array(receiptSchema.extend({ start: z.number().int().nonnegative(), end: z.number().int().positive() })).optional(),
   demo: receiptSchema.optional(), manifest: z.object({ content: hex, contentHash: hash, revision: z.number(), receipt: receiptSchema.optional() }).optional(),
   registry: z.object({ txHash: hash, typeId: hash, transaction: hex, data: z.object({ version: z.literal(1), revision: z.string(), manifestTypeId: hash, manifestHash: hash }), previousOutPoint: z.object({ txHash: hash, index: z.string() }).optional() }).optional(), error: z.string().optional(),
 });
 export type PublishDraft = z.infer<typeof draftSchema>;
 export type DraftMetadata = PublishDraft['local']['metadata'];
-export type DraftAction = { kind: 'demo' | 'manifest'; draftId: string; prepared: PreparedV3 } | { kind: 'registry'; draftId: string; prepared: PreparedRegistry };
+export type DraftAction = { kind: 'demo-segment'; draftId: string; prepared: PreparedV3; start: number; end: number; segmentIndex: number } | { kind: 'demo' | 'manifest'; draftId: string; prepared: PreparedV3 } | { kind: 'registry'; draftId: string; prepared: PreparedRegistry };
 export async function allDrafts(): Promise<PublishDraft[]> { return z.array(draftSchema).parse(await (await proofDB()).get('adminDrafts', 'publish-drafts') ?? []); }
 export async function getDraft(id: string) { const draft = (await allDrafts()).find(d => d.draftId === id); invariant(draft, 'MISSING_DRAFT', 'Publish draft is not available on this browser origin.'); return draft; }
 export async function saveDraft(draft: PublishDraft): Promise<PublishDraft> {
   draftSchema.parse(draft); const tx = (await proofDB()).transaction('adminDrafts', 'readwrite'); const all = z.array(draftSchema).parse(await tx.store.get('publish-drafts') ?? []); const prior = all.find(d => d.draftId === draft.draftId);
   invariant(!prior || prior.version === draft.version, 'DRAFT_CHANGED', 'Another action changed this draft. Reload it before continuing.');
   for (const [oldReceipt, newReceipt] of [[prior?.demo, draft.demo], [prior?.manifest?.receipt, draft.manifest?.receipt], [prior?.registry, draft.registry]]) invariant(!oldReceipt || oldReceipt.txHash === newReceipt?.txHash, 'DUPLICATE_UPLOAD_BLOCKED', 'A signed transaction cannot be discarded or replaced during recovery.');
+  const segments = draft.demoSegments ?? [];
+  for (let i = 0; i < (prior?.demoSegments?.length ?? 0); i++) {
+    const old = prior!.demoSegments![i], next = segments[i];
+    invariant(next && old.txHash === next.txHash && old.typeId === next.typeId && old.transaction === next.transaction && old.start === next.start && old.end === next.end && (!old.verified || next.verified), 'DUPLICATE_UPLOAD_BLOCKED', 'Signed segments cannot be discarded, replaced or unverified.');
+  }
+  segments.forEach((segment, i) => invariant(segment.start === (i ? segments[i - 1].end : 0) && segment.end > segment.start && segment.end <= draft.local.bytes && (!i || segments[i - 1].verified && segment.typeId === segments[0].typeId), 'INVALID_SEGMENT', 'Segments must form a contiguous, verified history under one Type ID.'));
   const next = { ...draft, version: draft.version + 1, updatedAt: new Date().toISOString() }; await tx.store.put([...all.filter(d => d.draftId !== draft.draftId), next], 'publish-drafts'); await tx.done; return next;
 }
 export async function createDraft(filename: string, bytes: Uint8Array, metadata: DraftMetadata, registry: RegistryState) {
   invariant(/\.html?$/i.test(filename), 'UNSUPPORTED_CONTENT_TYPE', 'Select a single HTML file.');
+  invariant(bytes.length <= MAX_FILE_BYTES, 'CONTENT_TOO_LARGE', 'The complete HTML file exceeds the 32 MiB resolver limit.');
   new TextDecoder('utf-8', { fatal: true }).decode(bytes);
   return saveDraft({ draftId: crypto.randomUUID(), stage: 'FILE_SELECTED', version: 0, updatedAt: new Date().toISOString(), local: { filename, content: ccc.hexFrom(bytes), contentHash: ccc.hashCkb(bytes), bytes: bytes.length, metadata }, inspected: false, previewed: false,
     expected: { typeId: registry.typeId, txHash: registry.cell.outPoint.txHash, index: ccc.numToHex(registry.cell.outPoint.index), revision: registry.data.revision.toString(), lockHash: registry.cell.cellOutput.lock.hash(), manifestTypeId: registry.data.manifestTypeId, manifestHash: registry.data.manifestHash } });
@@ -57,6 +66,29 @@ export async function advanceDraft(id: string, signer: ccc.Signer): Promise<{ dr
     invariant(draft.previewed && draft.inspected, 'PREVIEW_REQUIRED', 'Inspect and approve the production-sandbox preview first.');
     const content = ccc.bytesFrom(draft.local.content); invariant(ccc.hashCkb(content) === draft.local.contentHash, 'DRAFT_CORRUPT', 'Draft source bytes do not match their hash.');
     if (draft.stage === 'COMPLETE') return { draft };
+    if (!draft.demo && (content.length > SEGMENT_BYTES || draft.demoSegments?.length)) {
+      await currentRegistry(draft, signer);
+      const segments = draft.demoSegments ?? [], latest = segments.at(-1);
+      if (latest && !latest.verified) {
+        draft = await saveDraft({ ...draft, stage: 'DEMO_VERIFYING', error: undefined });
+        const result = await resolveV3(latest.typeId, { client: createPudgeClient() });
+        invariant(result.currentOutPoint.txHash === latest.txHash && ccc.hexFrom(result.fileBytes) === ccc.hexFrom(content.slice(0, latest.end)), 'CONTENT_HASH_MISMATCH', 'Resolved segment history differs from the selected file prefix.');
+        const complete = latest.end === content.length;
+        invariant(!complete || ccc.hashCkb(result.fileBytes) === draft.local.contentHash, 'CONTENT_HASH_MISMATCH', 'Complete file hash does not match the selected HTML.');
+        const verified = { ...latest, verified: true };
+        return { draft: await saveDraft({ ...draft, demoSegments: [...segments.slice(0, -1), verified], demo: complete ? verified : undefined, stage: complete ? 'DEMO_VERIFIED' : 'DEMO_PUBLISHED' }) };
+      }
+      let prior: ccc.Cell | undefined;
+      if (latest) {
+        const result = await resolveV3(latest.typeId, { client: createPudgeClient() });
+        invariant(result.currentOutPoint.txHash === latest.txHash && ccc.hexFrom(result.fileBytes) === ccc.hexFrom(content.slice(0, latest.end)), 'CELL_CHANGED', 'The uploaded prefix changed. Keep this draft and inspect its transaction history.');
+        prior = await findLiveV3(signer.client, latest.typeId);
+        invariant(prior.outPoint.txHash === latest.txHash && prior.outPoint.index === 0n, 'CELL_CHANGED', 'CKBFS head changed while preparing the next append.');
+      }
+      draft = await saveDraft({ ...draft, stage: 'DEMO_PUBLISHING', error: undefined });
+      const segment = await prepareV3Segment({ signer, content, filename: draft.local.filename, contentType: 'text/html; charset=utf-8' }, latest?.end ?? 0, prior);
+      return { draft, action: { kind: 'demo-segment', draftId: id, ...segment, segmentIndex: segments.length } };
+    }
     if (!draft.demo) {
       await currentRegistry(draft, signer); draft = await saveDraft({ ...draft, stage: 'DEMO_PUBLISHING', error: undefined });
       return { draft, action: { kind: 'demo', draftId: id, prepared: await prepareV3({ signer, content, filename: draft.local.filename, contentType: 'text/html; charset=utf-8' }) } };
@@ -101,6 +133,17 @@ export async function signDraftAction(action: DraftAction, signer: ccc.Signer) {
   if (action.kind === 'registry') {
     invariant(!draft.registry, 'DUPLICATE_UPLOAD_BLOCKED', 'Recover the already-signed registry transaction.');
     await broadcastRegistry(action.prepared, signer, async signed => { draft = await saveDraft({ ...draft, registry: signed, stage: 'REGISTRY_VERIFYING' }); });
+  } else if (action.kind === 'demo-segment') {
+    const segments = draft.demoSegments ?? [], latest = segments.at(-1);
+    invariant(!draft.demo && !draft.manifest && segments.length === action.segmentIndex && action.start === (latest?.end ?? 0) && action.end > action.start && action.end <= draft.local.bytes && (!latest || latest.verified && action.prepared.typeId === latest.typeId), 'DUPLICATE_UPLOAD_BLOCKED', 'This segment was already signed or the draft changed. Recover the saved transaction.');
+    if (latest) {
+      const live = await findLiveV3(signer.client, latest.typeId);
+      invariant(live.outPoint.txHash === latest.txHash && live.outPoint.index === 0n && action.prepared.transaction.inputs.some(input => input.previousOutput.eq(live.outPoint)), 'CELL_CHANGED', 'CKBFS head changed before append signing.');
+    }
+    await broadcastPreparedV3(action.prepared, { signer, persistSigned: async signed => {
+      const segment = { typeId: signed.typeId, txHash: signed.txHash, transaction: signed.transaction, verified: false, start: action.start, end: action.end };
+      draft = await saveDraft({ ...draft, demoSegments: [...segments, segment], stage: 'DEMO_PUBLISHED' });
+    } });
   } else {
     invariant(action.kind === 'demo' ? !draft.demo : !draft.manifest?.receipt, 'DUPLICATE_UPLOAD_BLOCKED', 'This content was already signed. Resolve or recover the known transaction.');
     await broadcastPreparedV3(action.prepared, { signer, persistSigned: async signed => {
@@ -112,7 +155,7 @@ export async function signDraftAction(action: DraftAction, signer: ccc.Signer) {
 }
 export async function recoverDraftTransaction(id: string, signer: ccc.Signer) {
   const draft = await getDraft(id); await assertRegistryOwner(signer);
-  const receipt = draft.registry ?? draft.manifest?.receipt ?? draft.demo; invariant(receipt, 'MISSING_TRANSACTION', 'No signed transaction to recover. Prepare the next action.');
+  const receipt = draft.registry ?? draft.manifest?.receipt ?? draft.demo ?? draft.demoSegments?.at(-1); invariant(receipt, 'MISSING_TRANSACTION', 'No signed transaction to recover. Prepare the next action.');
   const tx = ccc.Transaction.fromBytes(receipt.transaction); invariant(tx.hash() === receipt.txHash, 'DRAFT_CORRUPT', 'Signed transaction hash does not match persisted bytes.');
   const response = await signer.client.getTransactionNoCache(receipt.txHash);
   if (draft.registry) {

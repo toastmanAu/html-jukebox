@@ -76,7 +76,7 @@ Every signed transaction is persisted before broadcast. Reloading the page resto
 
 ## Player and Cloudflare Pages
 
-Build with `npm run build`; configure Cloudflare Pages with build command `npm run build` and output directory `dist`. The application needs no server-side wallet secrets. No public deployment is included in the current validation checkpoint.
+Build with `npm run build`; configure Cloudflare Pages with build command `npm run build` and output directory `dist`. The application needs no server-side wallet secrets. The production build is deployed at https://html-jukebox.pages.dev. The custom domain htmljukebox.online is attached; DNS activation was pending at initial release.
 
 Deploy `public/_headers`, `sandbox.html`, and `sandbox.js` together with the build. The host CSP keeps scripts restricted to self. Only the dedicated sandbox page permits demo script execution; its response is itself sandboxed, and the nested demo iframe uses capability-specific CSP with no same-origin permission. Cloudflare redirects `/sandbox.html` to `/sandbox`, so both paths require their scoped headers. Do not collapse their rules into the main page's policy.
 
@@ -95,3 +95,26 @@ Opening `#service` now shows a JoyID login gate. The actual service UI is mounte
 The current on-chain owner is automatically admitted. Additional panel-access lock hashes can be explicitly configured in `config/admin.ts`; five operator-supplied Pudge JoyID addresses are configured, including the existing owner. Decode each approved `ckt` address with the pinned CCC client and store its full script hash, not just its args. This list controls app UI access, not on-chain authority: those accounts cannot consume the owner-locked registry. Supporting several independent registry-signing accounts requires an explicitly designed ownership/delegation change.
 
 The public gallery remains wallet-free. No private keys or authentication credentials are stored in admin configuration.
+
+
+## Production release
+
+Public source: https://github.com/toastmanAu/html-jukebox (branch `master`). Pages project: `html-jukebox`. This is a Direct Upload project; pushing GitHub commits does not automatically deploy it.
+
+To release a checked build using an authenticated local Wrangler session:
+
+```sh
+npm ci
+npm run build
+npx --yes wrangler@4.45.0 pages deploy dist --project-name html-jukebox --branch master
+```
+
+Test the hosted release:
+
+```sh
+PUDGE_LIVE=1 E2E_BASE_URL=https://html-jukebox.pages.dev npm run test:e2e
+```
+
+The custom domain has a Pages binding. Its DNS record should be a proxied apex CNAME (`@`) targeting `html-jukebox.pages.dev`; assigned authoritative nameservers are `alexia.ns.cloudflare.com` and `arnold.ns.cloudflare.com`. At initial release, nameserver propagation and the apex record remained pending. Recheck the final domain and TLS before announcing it as live.
+
+Each origin has separate IndexedDB storage. The live site reads the same on-chain registry, but localhost drafts and cached demo bytes do not migrate automatically. Connect JoyID again on the public origin; do not restart a completed local publish draft to migrate it.

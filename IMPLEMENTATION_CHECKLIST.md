@@ -74,6 +74,7 @@
 - [x] operator documentation.
 
 ## Remaining release work
-- [ ] Public Cloudflare Pages deployment and hosted smoke test.
+- [x] Public Cloudflare Pages deployment and hosted smoke test.
+- [ ] Custom domain DNS/TLS activation and wallet-holder public-origin JoyID sign-in.
 - [ ] Physical mobile-device GPU profiling (DPR capped; demand rendering enabled).
 - [ ] Optional offline shell service worker.

@@ -1,6 +1,8 @@
-# CKBFS AI HTML Jukebox — implementation checkpoint
+# CKBFS AI HTML Jukebox
 
 Canonical V3 storage is proven on Pudge, including empty, multi-witness and two-append browser-signed round trips. Registry creation, a Type ID-preserving revision 2 update, and revision 3 rollback are verified. The isolated player, persistent admin pipeline, cache and Three.js gallery are implemented; the complete Orbit Study demo → manifest → registry publication is now independently verified on Pudge.
+
+Live deployment: [html-jukebox.pages.dev](https://html-jukebox.pages.dev). Custom domain: `htmljukebox.online` (DNS activation pending at the initial release).
 
 ```sh
 npm ci

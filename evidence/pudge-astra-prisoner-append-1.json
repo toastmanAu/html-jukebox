@@ -1,0 +1,34 @@
+{
+  "protocol": "20250821.4ee6689bf7ec",
+  "network": "testnet",
+  "typeId": "0xde65205fd3ec098a115202f1c9d357dba07aa9d4129ff92857ba630e16f121ab",
+  "filename": "astra-prisoner.html",
+  "contentType": "text/html; charset=utf-8",
+  "size": 163840,
+  "checksum": 4031807483,
+  "checksumValid": true,
+  "currentOutPoint": {
+    "txHash": "0x46ec4b027bfe788dcaafe1f0e8bc448782cda8d1f3344958b7a1c7d4cf0ce742",
+    "index": "0x0"
+  },
+  "history": [
+    {
+      "txHash": "0x36a7d0e6b000884e71392854a9356efeadb841be5b77ad93b073e422df3df594",
+      "headWitnessIndex": 1,
+      "chunkCount": 5,
+      "byteLength": 81920
+    },
+    {
+      "txHash": "0x46ec4b027bfe788dcaafe1f0e8bc448782cda8d1f3344958b7a1c7d4cf0ce742",
+      "headWitnessIndex": 2,
+      "chunkCount": 5,
+      "byteLength": 81920
+    }
+  ],
+  "txHash": "0x46ec4b027bfe788dcaafe1f0e8bc448782cda8d1f3344958b7a1c7d4cf0ce742",
+  "contentHash": "0xe39ddeee22483f25a6706319f0560df45ec33d735e87d625564f59f6fbf7154c",
+  "typeIdPreserved": true,
+  "previousConsumed": true,
+  "checkedAt": "2026-09-12T09:01:49.317Z",
+  "note": "Protocol verification of uploaded prefix; complete local source is verified by the persisted browser draft."
+}

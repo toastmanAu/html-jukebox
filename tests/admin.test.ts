@@ -17,6 +17,7 @@ vi.mock('../src/registry/registry', async original => ({ ...await original<typeo
 vi.mock('../src/ckbfs/publisher', () => ({ prepareV3: vi.fn(), broadcastPreparedV3: vi.fn() }));
 vi.mock('../src/ckbfs/client',async original=>({...await original<typeof import('../src/ckbfs/client')>(),findLiveV3:vi.fn()}));
 vi.mock('../src/ckbfs/resolver', () => ({ resolveV3: vi.fn() }));
+vi.mock('../src/admin/resolve-upload',()=>({resolveUploadedFile:(receipt: {typeId:string},client: unknown)=>resolveV3(receipt.typeId,{client:client as never})}));
 vi.mock('../src/registry/manifest', async original => ({ ...await original<typeof import('../src/registry/manifest')>(), resolveManifest: vi.fn() }));
 const bytes = utf8.encode('<h1>Demo</h1>'); const fixture = chainFixture([bytes]);
 const registry: RegistryState = { typeId, cell: fixture.cell(), data: { version: 1, revision: 1n, manifestTypeId: typeId, manifestHash: typeId } };

@@ -62,3 +62,9 @@ All eight custom-domain desktop/mobile acceptance tests passed: real Orbit Study
 ## Automatic large-demo segmentation
 
 Added resumable initial publication and same-Type-ID appends for large HTML demos. A 712,000-byte offline integration fixture built nine real CCC transactions, each serialized below 100,000 bytes, and independently resolved every cumulative prefix and the final exact file. A large-wallet-witness case forced the segment budget to shrink based on final serialized size. Draft tests cover resuming the old CONTENT_TOO_LARGE failure, uncertain first/append broadcasts, duplicate-signature blocking, immutable segment receipts, and checksum/hash failure blocking manifest publication. All 110 unit/integration tests pass. The underlying V3 append contract was proven earlier on Pudge; this new automatic nine-segment UI workflow still requires wallet-holder live acceptance.
+
+## First large-file segment and indexer timing
+
+The first astra-prisoner.html segment is committed at transaction `0x36a7d0e6b000884e71392854a9356efeadb841be5b77ad93b073e422df3df594`, Type ID `0xde65205fd3ec098a115202f1c9d357dba07aa9d4129ff92857ba630e16f121ab`. Independent resolution returned 81,920 bytes across five witnesses with a valid Adler32 checksum. The complete local source was not available to this verifier; full source equality remains enforced by the user's persisted draft. Evidence: `evidence/pudge-astra-prisoner-prefix.json`.
+
+A reported MISSING_CKBFS lookup later became resolvable, consistent with confirmation/indexer delay. Upload verification now diagnoses the saved transaction when a live-Type-ID lookup misses: pending confirmation, unavailable/rejected transaction, or committed live output awaiting indexing. It never substitutes an unverified result or signs a fresh upload. Content hashes and transaction receipts now have explicit UI labels. Five new tests cover waiting/error distinctions; all 115 unit/integration tests pass.

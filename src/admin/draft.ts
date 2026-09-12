@@ -6,7 +6,7 @@ import { createPudgeClient, findLiveV3 } from '../ckbfs/client';
 import { invariant, formatDiagnostic } from '../ckbfs/errors';
 import { prepareV3, broadcastPreparedV3, type PreparedV3 } from '../ckbfs/publisher';
 import { prepareV3Segment, SEGMENT_BYTES, MAX_FILE_BYTES } from '../ckbfs/segments';
-import { resolveV3 } from '../ckbfs/resolver';
+import { resolveUploadedFile } from './resolve-upload';
 import { inspectHTML, type PortabilityReport } from '../player/portability';
 import { capabilitiesSchema, manifestBytes, nextManifest, resolveManifest, type ManifestPointer } from '../registry/manifest';
 import { assertRegistryOwner, assertRegistryUnchanged, broadcastRegistry, findRegistry, prepareRegistryUpdate, registryPointer, verifyRegistryCommit, type RegistryState, type PreparedRegistry, type SignedRegistry } from '../registry/registry';
@@ -71,7 +71,7 @@ export async function advanceDraft(id: string, signer: ccc.Signer): Promise<{ dr
       const segments = draft.demoSegments ?? [], latest = segments.at(-1);
       if (latest && !latest.verified) {
         draft = await saveDraft({ ...draft, stage: 'DEMO_VERIFYING', error: undefined });
-        const result = await resolveV3(latest.typeId, { client: createPudgeClient() });
+        const result = await resolveUploadedFile(latest, createPudgeClient());
         invariant(result.currentOutPoint.txHash === latest.txHash && ccc.hexFrom(result.fileBytes) === ccc.hexFrom(content.slice(0, latest.end)), 'CONTENT_HASH_MISMATCH', 'Resolved segment history differs from the selected file prefix.');
         const complete = latest.end === content.length;
         invariant(!complete || ccc.hashCkb(result.fileBytes) === draft.local.contentHash, 'CONTENT_HASH_MISMATCH', 'Complete file hash does not match the selected HTML.');
@@ -80,7 +80,7 @@ export async function advanceDraft(id: string, signer: ccc.Signer): Promise<{ dr
       }
       let prior: ccc.Cell | undefined;
       if (latest) {
-        const result = await resolveV3(latest.typeId, { client: createPudgeClient() });
+        const result = await resolveUploadedFile(latest, createPudgeClient());
         invariant(result.currentOutPoint.txHash === latest.txHash && ccc.hexFrom(result.fileBytes) === ccc.hexFrom(content.slice(0, latest.end)), 'CELL_CHANGED', 'The uploaded prefix changed. Keep this draft and inspect its transaction history.');
         prior = await findLiveV3(signer.client, latest.typeId);
         invariant(prior.outPoint.txHash === latest.txHash && prior.outPoint.index === 0n, 'CELL_CHANGED', 'CKBFS head changed while preparing the next append.');
@@ -95,7 +95,7 @@ export async function advanceDraft(id: string, signer: ccc.Signer): Promise<{ dr
     }
     if (!draft.demo.verified) {
       draft = await saveDraft({ ...draft, stage: 'DEMO_VERIFYING', error: undefined });
-      const result = await resolveV3(draft.demo!.typeId, { client: createPudgeClient() });
+      const result = await resolveUploadedFile(draft.demo!, createPudgeClient());
       invariant(result.currentOutPoint.txHash === draft.demo!.txHash && ccc.hexFrom(result.fileBytes) === draft.local.content && ccc.hashCkb(result.fileBytes) === draft.local.contentHash, 'CONTENT_HASH_MISMATCH', 'Independently resolved demo differs from the selected bytes.');
       return { draft: await saveDraft({ ...draft, demo: { ...draft.demo!, verified: true }, stage: 'DEMO_VERIFIED' }) };
     }

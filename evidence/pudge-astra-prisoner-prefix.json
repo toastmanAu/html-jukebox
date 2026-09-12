@@ -1,0 +1,25 @@
+{
+  "protocol": "20250821.4ee6689bf7ec",
+  "network": "testnet",
+  "typeId": "0xde65205fd3ec098a115202f1c9d357dba07aa9d4129ff92857ba630e16f121ab",
+  "filename": "astra-prisoner.html",
+  "contentType": "text/html; charset=utf-8",
+  "size": 81920,
+  "checksum": 3974947682,
+  "checksumValid": true,
+  "currentOutPoint": {
+    "txHash": "0x36a7d0e6b000884e71392854a9356efeadb841be5b77ad93b073e422df3df594",
+    "index": "0x0"
+  },
+  "history": [
+    {
+      "txHash": "0x36a7d0e6b000884e71392854a9356efeadb841be5b77ad93b073e422df3df594",
+      "headWitnessIndex": 1,
+      "chunkCount": 5,
+      "byteLength": 81920
+    }
+  ],
+  "contentHash": "0x29ea48ae96f3600bd477eac47aa071b8bd1f8ca8de90329250b2c8261be33e83",
+  "checkedAt": "2026-09-12T08:47:40.696Z",
+  "note": "Independent protocol verification of current uploaded prefix; full local source is not available to this verifier."
+}

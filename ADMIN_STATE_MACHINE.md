@@ -101,3 +101,9 @@ After broadcast:
 - explorer link
 - confirmation state
 - next safe step
+
+## Optional screenshot publication
+
+Persist locally optimized image bytes, hash, MIME, dimensions, and original byte count with the initial draft. The approved screenshot is immutable within that saved draft. After DEMO_VERIFIED, an attached image advances through SCREENSHOT_PUBLISHING → SCREENSHOT_PUBLISHED → SCREENSHOT_VERIFYING → SCREENSHOT_VERIFIED before manifest creation. Use the locked V3 publisher and unchanged final serialized-size guard. Persist the signed screenshot transaction before broadcasting; independent resolution must verify its exact bytes, MIME, checksum, and hash. Recovery prefers the latest screenshot receipt over the earlier demo receipt and never repeats either upload after a later failure.
+
+For an existing demo, `screenshotFor` holds the selected verified manifest item. The user reviews the optimized raster before saving the screenshot update; no new HTML is selected or executed. Recheck the unchanged registry and selected item, publish/verify only the screenshot, and continue through manifest/registry publication. Existing drafts lacking screenshot fields remain resumable. After registry broadcast, verify that signed registry receipt directly, rather than comparing it against the superseded registry.

@@ -83,3 +83,7 @@ No permissive admin-only preview mode.
 ## Wallet isolation
 
 Never expose the CCC signer or admin transaction objects to the demo iframe.
+
+## Screenshot thumbnails
+
+Accept screenshot uploads only as raster PNG/JPEG/WebP; never render uploaded SVG or HTML in the host. Decode and re-encode image pixels in the browser, preserving aspect ratio and discarding source metadata. Preview the exact optimized bytes before saving. Gallery thumbnails independently resolve the image's V3 witness chain/checksum and verify its cryptographic hash, MIME and byte count against the verified manifest, then cache it under its Type ID plus hash. Revalidate cached hashes on use. Render verified bytes through an image Blob URL and revoke URLs on replacement/unmount, including asynchronous completion after unmount. Load thumbnails near the visible selector area; an unavailable or invalid screenshot must display a diagnostic and never block demo playback.

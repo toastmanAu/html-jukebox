@@ -9,11 +9,18 @@ export const byte32Schema = z.string().regex(/^0x[0-9a-f]{64}$/, 'Expected a low
 export const pointerSchema = z.object({ typeId: byte32Schema, contentHash: byte32Schema }).strict();
 export type ManifestPointer = z.infer<typeof pointerSchema>;
 export const capabilitiesSchema = z.object({ network: z.boolean(), audio: z.boolean(), fullscreen: z.boolean(), pointerLock: z.boolean(), geolocation: z.boolean(), clipboard: z.boolean() }).strict();
+export const screenshotSchema = z.object({
+  ckbfs: z.object({ protocol: z.literal(CKBFS_PROTOCOL_V3), typeId: byte32Schema, txHash: byte32Schema }).strict(),
+  contentHash: byte32Schema, filename: z.string().min(1), contentType: z.enum(['image/webp', 'image/jpeg', 'image/png']),
+  bytes: z.number().int().positive().max(48 * 1024), width: z.number().int().positive().max(960), height: z.number().int().positive().max(960),
+}).strict();
+export type Screenshot = z.infer<typeof screenshotSchema>;
 export const itemSchema = z.object({
   id: z.string().min(1), title: z.string().min(1), description: z.string().optional(), category: z.string().optional(), tags: z.array(z.string()).optional(),
   status: z.enum(['active', 'hidden', 'archived']).optional(),
   ckbfs: z.object({ protocol: z.literal(CKBFS_PROTOCOL_V3), typeId: byte32Schema, txHash: byte32Schema.optional() }).passthrough(),
   contentHash: byte32Schema, filename: z.string().min(1), contentType: z.string().optional(), bytes: z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER),
+  screenshot: screenshotSchema.optional(),
   createdAt: z.iso.datetime().optional(), featured: z.boolean().optional(), sort: z.number().finite().optional(), capabilities: capabilitiesSchema,
 }).passthrough();
 export const manifestSchema = z.object({

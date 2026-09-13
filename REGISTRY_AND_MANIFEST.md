@@ -147,3 +147,9 @@ Rollback means:
 - increment registry revision again.
 
 Never decrement the registry revision.
+
+## Optional screenshot extension (schema v1)
+
+Each item may include `screenshot` with `ckbfs: { protocol, typeId, txHash }`, `contentHash`, `filename`, `contentType`, `bytes`, `width`, and `height`. The screenshot is a separate immutable V3 file, with PNG/JPEG/WebP raster bytes, at most 48 KiB and 960 pixels on either edge. Hash exact optimized bytes with CKB Blake2b. Older items without a screenshot remain valid and use the cabinet artwork placeholder.
+
+A screenshot-only update publishes and independently verifies a new image, then publishes manifest N+1 replacing only that item's screenshot field. Preserve the demo's HTML pointer, hash, metadata, status, and item ID; do not republish the demo HTML. Verify the selected item still matches the current verified manifest. Publish and verify the manifest, then update the existing registry with the normal owner and Type ID checks. The `previous` manifest pointer preserves the earlier screenshot reference.

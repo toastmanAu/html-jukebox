@@ -90,3 +90,9 @@ All 122 unit/integration tests, the production build, and the Pages Functions bu
 ## Import-map portability repair
 
 The scanner now resolves module names using preceding inline import maps: exact entries first, then the longest trailing-slash prefix. The reported Three.js core/addon pattern passes with HTTPS mappings while dynamic fetches remain review items. Unmapped names, relative/insecure targets, invalid prefix targets, null-blocked imports, traversal outside the prefix, and malformed maps remain blocked. Import maps do not rewrite fetch, Worker, or image URLs, and maps in templates are not activated. Scoped maps remain an explicit manual-review limitation. Twelve regression cases pass; all 134 unit/integration tests pass. Reference: https://html.spec.whatwg.org/multipage/webappapis.html#import-maps.
+
+## Optional CKBFS screenshots
+
+Added optional screenshot metadata to manifest schema v1, browser-only raster resize/compression, durable signed screenshot receipts, independent checksum/hash verification, and lazy verified/cache-backed Blob thumbnails. An existing-demo screenshot update preserves every original item field except its screenshot and publishes no HTML. Old manifests/drafts remain supported.
+
+All 139 unit/integration tests and the production build passed. New cases cover uncertain screenshot broadcasts and recovery, duplicate suppression, corruption blocking manifest construction, existing-demo metadata preservation, registry completion after a screenshot-only update, image format/size limits, and cached hash validation. Four desktop/mobile browser checks passed: real compression of a 2400×1400 detailed raster into at most 48 KiB with preserved aspect ratio, plus verified thumbnail display from an offline catalog alongside sandbox isolation and play-count behavior. First owner-signed Pudge screenshot acceptance is pending; no live image publication is claimed from mocked state-machine tests.

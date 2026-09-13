@@ -1,0 +1,30 @@
+import 'fake-indexeddb/auto';
+import { beforeEach, expect, it, vi } from 'vitest';
+import * as ccc from '@ckb-ccc/core';
+import { proofDB } from '../src/proof/journal';
+import { loadScreenshot } from '../src/screenshots/cache';
+import { validateScreenshot } from '../src/screenshots/image';
+import { resolveV3 } from '../src/ckbfs/resolver';
+import { chainFixture, typeId } from './fixtures';
+import { screenshotSchema } from '../src/registry/manifest';
+vi.mock('../src/ckbfs/resolver', () => ({ resolveV3: vi.fn() }));
+const bytes = new Uint8Array(Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=', 'base64'));
+const fixture = chainFixture([bytes]);
+const shot = screenshotSchema.parse({ ckbfs: { protocol: '20250821.4ee6689bf7ec', typeId, txHash: fixture.transactions[0].hash() }, contentHash: ccc.hashCkb(bytes), filename: 'screenshot.png', contentType: 'image/png', bytes: bytes.length, width: 1, height: 1 });
+beforeEach(async () => { vi.clearAllMocks(); await (await proofDB()).clear('demos'); });
+it('verifies chain bytes before caching and rechecks cached hashes offline', async () => {
+  vi.mocked(resolveV3).mockResolvedValue({ fileBytes: bytes, contentType: 'image/png', currentOutPoint: { txHash: shot.ckbfs.txHash } } as Awaited<ReturnType<typeof resolveV3>>);
+  expect(await loadScreenshot(shot, fixture.client)).toEqual(bytes);
+  expect(await loadScreenshot(shot, fixture.client, true)).toEqual(bytes);
+  expect(resolveV3).toHaveBeenCalledTimes(1);
+  const corrupt = bytes.slice(); corrupt[corrupt.length - 1] ^= 1;
+  await (await proofDB()).put('demos', { bytes: corrupt }, `screenshot:${typeId}:${shot.contentHash}`);
+  await expect(loadScreenshot(shot, fixture.client, true)).rejects.toThrow('SCREENSHOT_HASH_MISMATCH');
+});
+it('rejects SVG, oversized payloads, unsupported manifest formats and changed heads', async () => {
+  expect(() => validateScreenshot(new TextEncoder().encode('<svg/>'), 'image/png')).toThrow('SCREENSHOT_FORMAT');
+  expect(() => validateScreenshot(new Uint8Array(49 * 1024), 'image/png')).toThrow('SCREENSHOT_SIZE');
+  expect(() => screenshotSchema.parse({ ...shot, contentType: 'image/svg+xml' })).toThrow();
+  vi.mocked(resolveV3).mockResolvedValue({ fileBytes: bytes, contentType: 'image/png', currentOutPoint: { txHash: '0x' + 'bb'.repeat(32) } } as Awaited<ReturnType<typeof resolveV3>>);
+  await expect(loadScreenshot(shot, fixture.client)).rejects.toThrow('SCREENSHOT_CHANGED');
+});

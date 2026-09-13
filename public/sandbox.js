@@ -12,6 +12,7 @@
     loaded = true;
     frame.setAttribute('sandbox', pointerLock ? 'allow-scripts allow-pointer-lock' : 'allow-scripts');
     frame.setAttribute('allow', allow);
+    frame.addEventListener('load', () => parent.postMessage({ type: 'ckbfs-demo-loaded', session }, hostOrigin), { once: true });
     frame.srcdoc = html;
   });
   parent.postMessage({ type: 'ckbfs-sandbox-ready', session }, hostOrigin);

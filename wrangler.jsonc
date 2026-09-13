@@ -1,5 +1,12 @@
 {
   "name": "html-jukebox",
   "pages_build_output_dir": "dist",
-  "compatibility_date": "2025-10-11"
+  "compatibility_date": "2025-10-11",
+  "d1_databases": [
+    {
+      "binding": "PLAYS",
+      "database_name": "html-jukebox-plays",
+      "database_id": "8dd51bb7-d356-482c-8458-424dc3ad4e21"
+    }
+  ]
 }

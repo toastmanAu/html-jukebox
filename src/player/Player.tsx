@@ -3,11 +3,13 @@ import type { DemoCapabilities } from './policy';
 import { iframePolicy, sandboxDocument } from './policy';
 import { formatDiagnostic } from '../ckbfs/errors';
 /** The separate sandbox page never imports app code. Only verified source + approved policy cross this boundary. */
-export function Player({ bytes, title, capabilities, onClose, cached = false, preview = false }: {
-  bytes: Uint8Array; title: string; capabilities: DemoCapabilities; onClose: () => void; cached?: boolean; preview?: boolean;
+export function Player({ bytes, title, capabilities, onClose, cached = false, preview = false, onLoaded }: {
+  bytes: Uint8Array; title: string; capabilities: DemoCapabilities; onClose: () => void; cached?: boolean; preview?: boolean; onLoaded?: (loadId: string) => void;
 }) {
   const wrapper = useRef<HTMLDivElement>(null), frame = useRef<HTMLIFrameElement>(null);
   const [reload, setReload] = useState(0), [error, setError] = useState('');
+  const loaded = useRef(onLoaded); loaded.current = onLoaded;
+  const countedSession = useRef<string | undefined>(undefined);
   const close = useRef(onClose); close.current = onClose;
   useEffect(() => {
     const root = wrapper.current!;
@@ -41,12 +43,17 @@ export function Player({ bytes, title, capabilities, onClose, cached = false, pr
   const session = useMemo(() => crypto.randomUUID(), [bytes, capabilities, reload]);
   useEffect(() => {
     function onMessage(event: MessageEvent) {
-      if (event.source !== frame.current?.contentWindow || event.data?.type !== 'ckbfs-sandbox-ready' || event.data.session !== session) return;
+      if (event.source !== frame.current?.contentWindow || event.data?.session !== session) return;
+      if (event.data.type === 'ckbfs-demo-loaded') {
+        if (!preview && countedSession.current !== session) { countedSession.current = session; loaded.current?.(session); }
+        return;
+      }
+      if (event.data.type !== 'ckbfs-sandbox-ready') return;
       try { frame.current!.contentWindow!.postMessage({ type: 'ckbfs-launch', session, html: sandboxDocument(bytes, capabilities), pointerLock: capabilities.pointerLock, allow: policy.allow }, '*'); }
       catch (e) { setError(formatDiagnostic(e)); }
     }
     window.addEventListener('message', onMessage); return () => window.removeEventListener('message', onMessage);
-  }, [bytes, capabilities, policy, session]);
+  }, [bytes, capabilities, policy, session, preview]);
   return <div className="demo-player" ref={wrapper} role="dialog" aria-modal="true" aria-label={title}>
     <div className="player-toolbar"><button onClick={onClose}>Back to Jukebox</button><strong>{title}</strong><span>{preview ? 'LOCAL / PRODUCTION SANDBOX' : cached ? 'CACHED / VERIFIED' : 'ON-CHAIN / VERIFIED'}</span><button onClick={() => setReload(v => v + 1)}>Reload demo</button>
       {capabilities.fullscreen && <button onClick={() => { if (document.fullscreenElement) document.exitFullscreen().catch(e => setError(formatDiagnostic(e))); else wrapper.current?.requestFullscreen().catch(e => setError(formatDiagnostic(e))); }}>Fullscreen</button>}</div>

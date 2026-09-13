@@ -2,6 +2,11 @@ import { expect, test } from '@playwright/test';
 import * as ccc from '@ckb-ccc/core';
 import { JUKEBOX_CONFIG } from '../config/jukebox';
 test('verified cached HTML executes in isolation while host controls remain usable', async ({ page }) => {
+  const playLoads: string[] = [];
+  await page.route('**/api/plays**', async route => {
+    if (route.request().method() === 'POST') { playLoads.push(route.request().postDataJSON().loadId); await route.fulfill({ json: { plays: playLoads.length } }); }
+    else { const ids = new URL(route.request().url()).searchParams.getAll('id'); await route.fulfill({ json: { counts: Object.fromEntries(ids.map(id => [id, 0])) } }); }
+  });
   const outbound:string[]=[]; page.on('request',r=>{if(r.url().includes('sandbox-network.invalid'))outbound.push(r.url());});
   await page.route('https://testnet.ckb.dev/**',route=>route.abort());
   await page.goto('/');
@@ -13,7 +18,11 @@ test('verified cached HTML executes in isolation while host controls remain usab
   await page.reload();await page.getByRole('button',{name:/PLAY THIS DEMO/}).click();
   const demo=page.frameLocator('iframe[title="sandbox-proof"]').frameLocator('#demo');
   await expect(demo.getByText('Demo script running')).toBeVisible();await expect(demo.getByText('Host access blocked')).toBeVisible();
+  await expect.poll(() => playLoads.length).toBe(1);
   await expect(page.locator('iframe[title="sandbox-proof"]')).toHaveAttribute('sandbox','allow-scripts');expect(outbound).toEqual([]);
   await page.getByRole('button',{name:'Reload demo'}).click();await expect(page.frameLocator('iframe[title="sandbox-proof"]').frameLocator('#demo').getByText('Demo script running')).toBeVisible();
+  await expect.poll(() => playLoads.length).toBe(2);
+  expect(new Set(playLoads).size).toBe(2);
   await page.getByRole('button',{name:'Back to Jukebox'}).click();await expect(page.locator('iframe')).toHaveCount(0);
+  await expect(page.getByLabel('Shared play count')).toHaveText('2 PLAYS');
 });

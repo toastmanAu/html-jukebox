@@ -6,7 +6,7 @@ test('live catalog resolves Orbit Study and replays verified cached bytes', asyn
   const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
   await expect(page.getByRole('option', { name: /orbit-study/ })).toBeVisible({ timeout: 90_000 });
-  await expect(page.getByText('REGISTRY REV. 4 · CKBFS V3')).toBeVisible();
+  await expect(page.getByText(/REGISTRY REV\. \d+ · CKBFS V3/)).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
   await page.getByRole('button', { name: /PLAY THIS DEMO/ }).click();
   const demo = page.frameLocator('iframe[title="orbit-study"]').frameLocator('#demo');

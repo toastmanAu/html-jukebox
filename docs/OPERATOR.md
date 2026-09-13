@@ -64,7 +64,7 @@ The Pudge singleton Type ID is already saved in `config/jukebox.ts`. Do not crea
 
 For the first complete demo acceptance run:
 
-1. In the immutable demo service panel, choose **Load & authorize owner registry** with the owner JoyID connected.
+1. In the immutable demo service panel, connect the owner JoyID. Saving a new draft automatically loads and authorizes the current registry; **Load & authorize owner registry** remains available as a diagnostic check.
 2. Select `examples/orbit-study.html` (or a self-contained HTML file), review metadata and capabilities, and choose **Save inspected publish draft**.
 3. Open the production sandbox preview, test it, return, and choose **Preview works — approve these exact bytes**.
 4. **Continue next safe step** prepares the demo transaction. Review the capacity/fee and sign it.

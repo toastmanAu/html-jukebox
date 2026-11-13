@@ -3,7 +3,8 @@ import { z } from 'zod';
 import { invariant } from '../ckbfs/errors';
 
 /**
- * The music catalog is a static file shipped with the site (public/music/album.json).
+ * The music catalog is a static file shipped with the site (public/music/library.json):
+ * a list of albums, each with its own tracks.
  * A track is played from CKBFS when it has a `ckbfs` pointer, and its bytes are
  * verified against the catalog before they reach the audio element. `url` is a
  * same-site fallback for tracks that have not been published on chain yet.
@@ -39,11 +40,23 @@ export const albumSchema = z.object({
     .refine(tracks => new Set(tracks.map(t => t.n)).size === tracks.length, 'track numbers must be unique'),
 });
 
+const albumId = z.string().regex(/^[a-z\d]+(-[a-z\d]+)*$/, 'expected a lowercase slug').max(40);
+
+export const librarySchema = z.object({
+  albums: z.array(albumSchema.extend({ id: albumId })).min(1)
+    .refine(albums => new Set(albums.map(a => a.id)).size === albums.length, 'album ids must be unique'),
+});
+
 export type Track = z.infer<typeof trackSchema>;
 export type Album = z.infer<typeof albumSchema>;
+export type Library = z.infer<typeof librarySchema>;
 
 export function parseAlbum(value: unknown): Album {
   return albumSchema.parse(value);
+}
+
+export function parseLibrary(value: unknown): Library {
+  return librarySchema.parse(value);
 }
 
 export function trackOrigin(track: Track): 'ckbfs' | 'hosted' {

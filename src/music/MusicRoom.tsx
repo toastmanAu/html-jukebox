@@ -3,6 +3,7 @@ import { createPudgeClient } from '../ckbfs/client';
 import { formatDiagnostic } from '../ckbfs/errors';
 import { ModeToggle } from '../ModeToggle';
 import { findSharedTrack, formatTime, parseLibrary, stepIndex, trackHash, trackOrigin, type Library, type Track } from './catalog';
+import { sharePath } from './share';
 import { trackUrl } from './source';
 import { createScope, type Scope } from './visualiser';
 import './music.css';
@@ -161,7 +162,7 @@ export default function MusicRoom() {
   async function share(from: number, which: number) {
     if (!library) return;
     const entry = library.albums[from], shared = entry.tracks[which];
-    const url = `${location.origin}/${trackHash(entry.id, shared.n)}`;
+    const url = `${location.origin}${sharePath(entry.id, shared.n)}`;   // the preview page, which sends people on to the track
     try {
       if (typeof navigator.share === 'function') { await navigator.share({ title: `${shared.title} · ${entry.artist}`, text: `${shared.title} by ${entry.artist}, from ${entry.album}`, url }); return; }
       await navigator.clipboard.writeText(url);

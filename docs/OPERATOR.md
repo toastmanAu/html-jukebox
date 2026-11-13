@@ -150,3 +150,16 @@ For a new demo, select an optional PNG, JPEG or WebP screenshot before saving th
 For an existing demo, choose **Load published demos for screenshot update**, select the demo, select/review a screenshot, and choose **Save screenshot update**. Continue and sign the screenshot, independently verify it, then publish/verify the new manifest and sign/verify the registry update. This takes three transactions and reuses the existing HTML, including its play-count identity. Replacing a screenshot follows the same flow; old images remain in history. If a draft is selected, choose **New draft** first. Screenshots cannot be changed after saving a draft; a signed image is retained for recovery.
 
 Demos without screenshots retain the original cabinet artwork. Verified screenshots are lazy-loaded and cached in the existing IndexedDB store; checksum/hash/MIME failures remain visible. No screenshot transaction has been signed automatically by the coding agent: first live screenshot publication requires the owner JoyID through this interface.
+
+## Music mode
+
+`#music` is the music half of the jukebox; the HTML / Music switch at the top right moves between the two. It plays the album described by `public/music/album.json`.
+
+- A track with a `ckbfs` pointer (`typeId`, `contentHash`, `bytes`, `contentType`) is resolved from CKBFS V3 on Pudge, checked against the pointer's length and hash, and only then handed to the audio element as a `blob:` URL. This is why the host policy in `public/_headers` carries `media-src 'self' blob:`.
+- A track with only a `url` plays a file shipped with the site. `public/music/audio/` is git-ignored; hosted audio is deployed from a local build.
+- The catalog itself is a static file, not part of the on-chain registry. Changing the album means deploying the site.
+- Verified tracks are cached in memory for the session only.
+
+`scripts/publish-music.ts` publishes audio files with a throwaway testnet key (`new-key`, `address`, `plan <manifest>`, `run <manifest>`). The key lives in `~/.config/html-jukebox/pudge-deploy.key` (mode 600) unless `PUDGE_DEPLOY_KEY_FILE` says otherwise. A file larger than one transaction goes up as a first segment plus appends, 88 kB of content each, in rounds of one segment per file. Progress is journalled beside the manifest before every broadcast, so an interrupted run resumes. When every file verifies it writes `onchain.json` with the pointers for the catalog.
+
+First use, 2026-11-13: 13 Opus files (13.1 MB) in 157 transactions over 15 rounds, about 19 minutes, 2,327 CKB locked.

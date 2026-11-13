@@ -8,6 +8,7 @@ import { proofDB } from '../proof/journal';
 import './gallery.css';
 import { Screenshot } from '../screenshots/Screenshot';
 import { readPlayCounts, recordPlay, playLabel } from '../plays/client';
+import { ModeToggle } from '../ModeToggle';
 const Cabinet = lazy(() => import('./Cabinet'));
 class SceneBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
   state = { failed: false }; static getDerivedStateFromError() { return { failed: true }; }
@@ -63,6 +64,7 @@ export default function Gallery() {
   const webgl = useRef<boolean | null>(null);
   if (webgl.current === null) { try { webgl.current = !!document.createElement('canvas').getContext('webgl2'); } catch { webgl.current = false; } }
   return <div className={`gallery-shell ${reduced ? 'reduced-motion' : ''}`}>
+    <ModeToggle mode="html"/>
     <div className="room-light" aria-hidden="true"/><div className="room-floor" aria-hidden="true"/>
     <main className={`jukebox-machine ${busy ? 'is-launching' : ''}`} aria-label="CKBFS jukebox">
       <div className="cabinet-crown" aria-hidden="true"/><div className="light-tube tube-left" aria-hidden="true"/><div className="light-tube tube-right" aria-hidden="true"/>

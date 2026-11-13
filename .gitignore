@@ -7,3 +7,6 @@ playwright-report/
 *.tsbuildinfo
 
 .wrangler/
+
+# Hosted audio is large and is deployed from a local build, not committed.
+public/music/audio/

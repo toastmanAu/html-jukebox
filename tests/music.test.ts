@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import * as ccc from '@ckb-ccc/core';
-import { albumSchema, formatTime, parseAlbum, parseLibrary, stepIndex, trackOrigin, verifyTrackBytes, type Track } from '../src/music/catalog';
+import { albumSchema, findSharedTrack, formatTime, parseAlbum, parseLibrary, stepIndex, trackHash, trackOrigin, verifyTrackBytes, type Track } from '../src/music/catalog';
 
 const hash = (bytes: Uint8Array) => ccc.hashCkb(bytes);
 const bytes = new Uint8Array([1, 2, 3, 4]);
@@ -90,5 +90,25 @@ describe('player helpers', () => {
     expect(trackOrigin(onChain)).toBe('ckbfs');
     expect(trackOrigin(hosted)).toBe('hosted');
     expect(trackOrigin({ ...onChain, url: '/music/audio/05.mp3' })).toBe('ckbfs');
+  });
+});
+
+describe('shared track links', () => {
+  const library = parseLibrary({ albums: [{ ...album, id: 'vol-1' }, { ...album, id: 'vol-2', tracks: [{ ...onChain, n: 3 }, { ...hosted, n: 7 }] }] });
+  it('writes a link that names the album and the track number', () => {
+    expect(trackHash('vol-2', 7)).toBe('#music/vol-2/7');
+  });
+  it('finds the track a link points at by its number, not its position', () => {
+    expect(findSharedTrack('#music/vol-2/7', library)).toEqual({ album: 1, track: 1 });
+    expect(findSharedTrack(trackHash('vol-1', 1), library)).toEqual({ album: 0, track: 0 });
+  });
+  it('finds nothing for the plain music room, an unknown album or an unknown track', () => {
+    expect(findSharedTrack('#music', library)).toBeNull();
+    expect(findSharedTrack('#music/vol-9/1', library)).toBeNull();
+    expect(findSharedTrack('#music/vol-2/1', library)).toBeNull();
+  });
+  it('finds nothing for a malformed link', () => {
+    for (const hash of ['', '#music/', '#music/vol-2', '#music/vol-2/7/extra', '#music/vol-2/x', '#music/VOL-2/7', '#other/vol-2/7', '#music/vol-2/-7'])
+      expect(findSharedTrack(hash, library)).toBeNull();
   });
 });

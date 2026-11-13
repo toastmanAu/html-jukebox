@@ -37,6 +37,11 @@
 .lyrics pre{margin:0;white-space:pre-wrap;font:inherit;font-size:14px;line-height:1.65;color:rgba(238,240,255,.86);max-height:50vh;overflow:auto}
 .tracks{list-style:none;margin:0;padding:8px!important;display:flex;flex-direction:column;gap:4px}
 .tracks button{display:flex;align-items:center;gap:16px;width:100%;min-height:56px;padding:8px;border:1px solid transparent;border-radius:8px;background:transparent;text-align:left}
+.tracks li{display:flex;align-items:center;gap:4px}
+.music-shell .tracks button{flex:1 1 auto;min-width:0}
+.music-shell .tracks button.share{flex:0 0 44px;width:44px;min-height:44px;padding:0;justify-content:center;color:rgba(238,240,255,.64)}
+.tracks button.share:hover{color:#7df9ff}
+.transport .notice{margin:0;text-align:center;font-size:14px;color:#7df9ff;overflow-wrap:anywhere;user-select:all}
 .tracks button:hover{background:rgba(160,170,255,.08)}
 .tracks button[aria-current=true]{background:rgba(125,249,255,.12);border-color:rgba(125,249,255,.5)}
 .tile{flex:0 0 40px;width:40px;height:40px;display:grid;place-items:center;border-radius:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:700;font-size:14px;color:#05060d;background:hsl(calc(var(--i,0)*27 + 190) 85% 62%)}

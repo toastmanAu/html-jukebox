@@ -1,0 +1,655 @@
+{
+ "albums": [
+  {
+   "id": "vol-1",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 1",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Scale It Up (2.1)",
+     "style": "breaks",
+     "duration": 190.7,
+     "source": "RFC 1 §2.1 Scalability",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md#21-scalability",
+     "lyrics": "[Intro]\nYeah, section two point one\nHow do you scale it up and let it run\n\n[Verse]\nBitcoin came first, peer-to-peer cash\nEthereum followed with a general purpose stack\nBoth put a ceiling on what they can pack\nBlock size, gas limit, keep the nodes intact\nYou could pump the blocks up, let the fees stay low\nTwenty-six gig blocks every ten minutes though\nPetabyte a year, only data centres cope\nFull nodes drop off, and there goes your hope\nRewards run dry when the last coin's mined\nNo fees, no miners, security declined\nCan't verify yourself, gotta trust some firm\nThat ain't peer-to-peer, that's the lesson we learn\n\n[Chorus]\nScale it up, don't sell it out\nKeep the base layer strong, no doubt\nSettle on the chain, move the rest off\nLayer one holds it down, layer two takes off\nScale it up, don't sell it out\nOne global state, that's what it's about\n\n[Verse]\nSplit it into shards, many chains in a row\nLocal consensus fast, beacon chain says go\nPolkadot's parachains, relay in the middle\nBut a cross-shard call turns a deal to a riddle\nBook a train and a hotel, both gotta go through\nTwo shards out of sync, now what you gonna do\nYank the contract over, leave a hole behind\nDeFi building blocks get hard to combine\nOne plus N, the meta-chain's got a cap\nComposability is where the value's at\nShards work fine when the apps stand alone\nBut the state worth most wants a single home\n\n[Chorus]\nScale it up, don't sell it out\nKeep the base layer strong, no doubt\nSettle on the chain, move the rest off\nLayer one holds it down, layer two takes off\nScale it up, don't sell it out\nOne global state, that's what it's about\n\n[Verse]\nLayer two, the base chain settles the score\nProofs fly off-chain, instant, cost no more\nAlice gets a coffee every morning on the block\nOpens up a channel, puts a deposit in stock\nSigns a little slip every time she takes a cup\nEither side can close it and collect what's up\nState channels carry any state you choose\nSide-chains run fast but there's trust to lose\nPlasma roots its trust in the main chain's floor\nOperator goes rogue, you walk out the door\nOnly the disputes and the settlements land\nDecentralised, secure, and it scales as planned\n\n[Chorus]\nScale it up, don't sell it out\nKeep the base layer strong, no doubt\nSettle on the chain, move the rest off\nLayer one holds it down, layer two takes off\nScale it up, don't sell it out\nOne global state, that's what it's about\n\n[Outro]\nSection two point one, that's the plan\nKeep it on the base, scale it where you can",
+     "cover": "/music/covers/01.jpg",
+     "ckbfs": {
+      "typeId": "0xeacc75c34678dcc68b9695549e1d08aeccf78c797aa5b4165e35290f77f5eb04",
+      "contentHash": "0x359281f524f2b7eb68e4da428865b236c600d7dbec67a6bf02f1396c19c79628",
+      "bytes": 1169053,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Who Pays the Guards",
+     "style": "boom bap",
+     "duration": 151.4,
+     "source": "RFC 1 §2.2.3 Bitcoin's economic model",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Intro]\nPositioning paper, two point two point three\nWho pays the guards when the rewards run free\n\n[Verse]\nBlock size capped and the block time's fixed\nSo space gets scarce and the bidding begins\nNo loops in the script, so the length tells the cost\nMore inputs, more outputs, more fees get tossed\nThe value in the coin is a shared belief\nA store of value, that's the whole motif\nBut the miners get paid in the coin they guard\nSo the faith has to hold or the fall comes hard\nMake a U T X O, pay the fee one time\nThen it sits in the state till the end of the line\nPay once, stay forever, that's a sweet little deal\nWhile the miners keep spending just to keep it real\n\n[Chorus]\nWho pays the guards when the rewards run dry\nCity gets rich, gotta fortify\nSecurity budget gotta rise with the prize\nOr the walls come down right before your eyes\n\n[Verse]\nHard cap on the supply, the reward goes to zero\nThen the fees alone gotta play the hero\nPrice goes double with rewards in the mix\nHash rate doubles, that's a natural fix\nBut fees don't care what the coin is worth\nThey follow block demand, for better or worse\nYou'd need full blocks every day of the year\nAnd a fee that scales with the price, that's clear\nThose are strong assumptions, put it on the list\nAnd there's one more problem that you can't dismiss\nEmpty mempool and a block full of fees\nA miner wants to fork it and take what he sees\nFee sniping, yeah, and it's still not solved\nNot without the hard cap getting dissolved\n\n[Chorus]\nWho pays the guards when the rewards run dry\nCity gets rich, gotta fortify\nSecurity budget gotta rise with the prize\nOr the walls come down right before your eyes\n\n[Outro]\nGood for payments, but for holding it's thin\nThat's the puzzle that the paper steps in",
+     "cover": "/music/covers/02.jpg",
+     "ckbfs": {
+      "typeId": "0x14ea34bf91ddd6a315673b8acbc4d74582bcd9b9f6d784dff64fb6812db5aa0d",
+      "contentHash": "0x6b7a7a9e8b77ec94801c2328a4de42528888794649d11c1bb7fa33d65af42d1d",
+      "bytes": 974769,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Propose, Then Commit",
+     "style": "breaks",
+     "duration": 130.4,
+     "source": "RFC 1 §4.2 Consensus",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md#42-consensus",
+     "lyrics": "[Intro]\nFour point two, consensus on the floor\nNakamoto's good but we're asking for more\n\n[Verse]\nNakamoto consensus, simple and lean\nLow overhead, it's a beautiful machine\nTwo drawbacks though that you can't ignore\nThroughput's slow and there's a selfish mining door\nSo we watch the orphan rate across the net\nHow well it's connected is the reading we get\nOrphans stay low, let the difficulty drop\nBlocks come faster and the bandwidth pops\nOrphans climb high, pull the pace back down\nEvery bit of bandwidth gets used in this town\n\n[Chorus]\nPropose, then commit, two steps on the beat\nPropose, then commit, no bottleneck heat\nCount every uncle when you tune the grind\nSelfish mining gets left behind\n\n[Verse]\nThe bottleneck's the block as it moves on the wire\nSo we split confirmation and the latency's retired\nFirst you propose in the proposal zone\nThen you commit in a window that's known\nBy the time that the block comes knocking at the gate\nEvery node's seen the transactions, no wait\nNow the selfish miner orphans blocks for a gain\nBecause difficulty never counted that pain\nPut the uncles in the difficulty sum\nAny mix of strategies, the profit is none\nShort attack window from the two-step flow\nDe facto selfish mining got nowhere to go\n\n[Chorus]\nPropose, then commit, two steps on the beat\nPropose, then commit, no bottleneck heat\nCount every uncle when you tune the grind\nSelfish mining gets left behind\n\n[Outro]\nShort block interval, security intact\nThroughput up, and that's a matter of fact",
+     "cover": "/music/covers/03.jpg",
+     "ckbfs": {
+      "typeId": "0x31cdb175875ace1da250166c70bba78f70c5c2bc7d6047190906612691f51a12",
+      "contentHash": "0x76537d6432b7adf735f04555e7c68b28bacc4c8df14276631d4d4ae10089bad7",
+      "bytes": 808191,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Do the Work",
+     "style": "hardcore",
+     "duration": 119.1,
+     "source": "RFC 1 §4.2.4 Proof of Work vs Proof of Stake",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Intro]\nFour point two point four\nWork versus stake, settle the score\n\n[Verse]\nBoth of them bend to concentrated power\nBut look how they live in the day to day hour\nProof of work burns real world expense\nSlip on your costs and you're over the fence\nGotta innovate, gotta build, gotta spend\nHardware, pools, cheap power to the end\nThree things to corner, and they all keep moving\nHard to hold a monopoly when tech keeps improving\nProof of stake pays by the size of the pile\nLow cost to run it, just sit there and smile\nFirst mover edge only grows with the scale\nA few big stakers and the balance goes pale\n\n[Chorus]\nOpen door, no permission to ask\nLayer one's got one main task\nDecentralised, secure, and neutral ground\nDo the work, that's how the chain stays sound\n\n[Verse]\nValidators hold one power that's unique\nThey decide who joins, and they don't have to speak\nCensor a transaction, shuffle the line\nHard to detect and it's hard to fine\nProof of work's open, come as you are\nEarly birds get no head start in this bar\nThey say staking pulls demand for the coin\nTrue at the start while the stakers all join\nThen the rate goes flat, in and out the same\nStaking by itself is no long term game\nLong term holders got three ways to roll\nRun a node, or delegate and give up control\nOr sit there diluted while the new coins drop\nNone of that's sweet for the store of value shop\n\n[Chorus]\nOpen door, no permission to ask\nLayer one's got one main task\nDecentralised, secure, and neutral ground\nDo the work, that's how the chain stays sound\n\n[Outro]\nStake's got a role in the economy, sure\nBut the base of it all needs an open door",
+     "cover": "/music/covers/04.jpg",
+     "ckbfs": {
+      "typeId": "0x946c7d4e9a3d59b12937b52ed58c3bf0d591e8701bfb681d68d84cbb55f4c250",
+      "contentHash": "0xdd36ee0a6bb1ea393418454e945d16a5a1e9a1c11e2355216813909baee2a63a",
+      "bytes": 791603,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Eaglesong",
+     "style": "old school",
+     "duration": 124.8,
+     "source": "RFC 1 §4.2.6 Eaglesong",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Intro]\nHey, party people, gather round\nLet me tell you 'bout a brand new hashing sound\nEaglesong, y'all, Eaglesong\n\n[Verse]\nAny node can propose, here's the deal\nThe block's gotta be valid and the puzzle's gotta be real\nThe puzzle's tied to the block you bring\nSo the answer names the block, that's a one of one thing\nBitcoin hashes with a double S H A\nGood for them back in the day\nBut the world built machines for it stack on stack\nAnd a whole lot of them just sit out back\nNew coin, same hash, and those boxes wake\nRent the hash power, that's a risk to take\nCan't predict who's mining, it could swing on a dime\nSo you want a function that is new this time\n\n[Chorus]\nNovel, simple, and secure\nThree design goals, that's for sure\nEaglesong, sing it loud\nA brand new hash for a brand new crowd\n\n[Verse]\nNew means nobody tuned it before\nNo head start waiting at the hardware store\nSimple so the chips come easy to build\nIn the long run, dedicated hardware's a shield\nSecurity's third, and you need a strong case\nA hidden weak spot gives one miner the race\nSo here's how it's made, now follow along\nSponge construction, like Keccak's song\nWith a permutation out of A R X\nAddition, rotation, and xor is next\nWide trail strategy backs the proof\nSame one holding up the A E S roof\n\n[Chorus]\nNovel, simple, and secure\nThree design goals, that's for sure\nEaglesong, sing it loud\nA brand new hash for a brand new crowd\n\n[Outro]\nFirst of its kind with all three in one\nEaglesong, y'all, and the party's begun",
+     "cover": "/music/covers/05.jpg",
+     "ckbfs": {
+      "typeId": "0x0c2e06f3b64ff1d1afa47d82f0097f87e4cc1271b772bef6fa6cb26f86229d80",
+      "contentHash": "0xd199a2e6d4d281469f4b5de7b04ee01dab0faf4f3ebba0ebf6af8da98a585d5d",
+      "bytes": 812936,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Land and Houses",
+     "style": "trap",
+     "duration": 174.3,
+     "source": "RFC 1 §4.5 Economic model",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md#45-economic-model",
+     "lyrics": "[Intro]\nFour point five, the economy\nC K Bytes, come and ride with me\n\n[Verse]\nOne C K Byte is a byte of the state\nHold a thousand, get a thousand, that's the going rate\nMake one cell or split it into more\nCapacity's the space that you're paying for\nStore your data and the bytes get tied\nCan't put them in the Dao while they're occupied\nThat's the cost that you carry, and it's priced by the street\nSo you free up the state when the price gets steep\nLet it go and the bytes come back\nSame size as the data that you had in the stack\n\n[Chorus]\nLand and houses, land and houses\nBytes are the land, your assets are houses\nState rent ticking while you occupy\nLock it in the Dao and the rent slides by\n\n[Verse]\nGenesis block, thirty-three point six bill\nEight point four burned and it's burning still\nBase issuance halves every four years\nAll to the miners till the reward disappears\nSecondary issuance, steady every year\nOne point three four four billion, clear\nNervos Dao is the shelter from the rain\nDeposit and the dilution's just a name\nHold it like a hard cap, that's the long term play\nBut the bytes in a cell are the ones that pay\nProportional to space and proportional to time\nNot pay once and sit there till the end of the line\nMiners get the base and a slice of the second\nSized by the state that's in use, as reckoned\nWhen the base runs out there's still rent to earn\nTied to adoption, not the fee market's turn\n\n[Chorus]\nLand and houses, land and houses\nBytes are the land, your assets are houses\nState rent ticking while you occupy\nLock it in the Dao and the rent slides by\n\n[Outro]\nDemand for many assets into one flows through\nAnd it pays for the guards, that's the point of view",
+     "cover": "/music/covers/06.jpg",
+     "ckbfs": {
+      "typeId": "0x9feb04bd2825d6489fbaa8ebbdf3d96c565c3f8e152fc0237b1852942304e76b",
+      "contentHash": "0xf0f7f2f6030c310cb327c7ef18a5a1d4881f68309be073420e5db6959f0f8121",
+      "bytes": 1251059,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Generate Here, Verify There",
+     "style": "boom bap",
+     "duration": 147.1,
+     "source": "RFC 2 §4.1 State generation and verification",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0002-ckb/0002-ckb.md",
+     "lyrics": "[Intro]\nR F C two, four point one\nGenerate here, verify there, and done\n\n[Verse]\nSplit the work in two, that's the first design\nGenerate the state off-chain, verify on the line\nSame algorithm, two places to run\nClient side builds it, the C K B V M checks it's done\nOld state plus input makes a new state fresh\nPack it in a transaction, send it to the mesh\nNodes run it back with the same two things\nIf the output matches, then the new state sings\n\n[Chorus]\nGenerate off-chain, verify on\nYou know the result before the transaction's gone\nIt passes or it fails, no in between\nCertain every time, that's the whole machine\n\n[Verse]\nDeterministic, you can see what you made\nBefore you broadcast, no surprise gets played\nInputs and outputs, written in plain\nSo nodes see what depends on what in the chain\nThat means parallel, side by side they go\nWorkload gets spread and the system don't slow\nPick any language on the client that you please\nFast to develop and it runs with ease\nSometimes the checking is the cheaper deal\nQuicksort's N log N to build for real\nBut checking that it's sorted is a single pass\nBinary search, log N, verify in a flash\nThe more complex the rules, the wider the gap\nAnd that asymmetry is throughput on tap\nZero knowledge proofs fit right in the frame\nGenerators off-chain is what we call that game\n\n[Chorus]\nGenerate off-chain, verify on\nYou know the result before the transaction's gone\nIt passes or it fails, no in between\nCertain every time, that's the whole machine\n\n[Outro]\nDetails stay with you, privacy's a gain\nOnly the proof goes down on the chain",
+     "cover": "/music/covers/07.jpg",
+     "ckbfs": {
+      "typeId": "0x5555f1627a937948245b48d9dd597e30f341025a8d913a05665f99fb7dfe3dfb",
+      "contentHash": "0xcd685e287b6eea99c8683f98ae7595628672d47914cad5a89fcbd07aadc63a22",
+      "bytes": 972116,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Four Fields in a Cell",
+     "style": "old school",
+     "duration": 154.2,
+     "source": "RFC 2 §4.2 Cell",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0002-ckb/0002-ckb.md",
+     "lyrics": "[Intro]\nYes yes y'all, and you don't stop\nFour fields in a cell, now watch it drop\n\n[Verse]\nCapacity, that's the size limit, friend\nEverything inside has to fit in the end\nData is the state that you put in the cell\nCould be empty, but it's under the limit as well\nType is the script that checks the state\nLock is the script that guards the gate\nLock says who owns it, who can pass it along\nType says the rules so the data ain't wrong\n\n[Chorus]\nCapacity, data, type, and lock\nFour fields in a cell, now rock\nLive cells now, dead cells then\nUse it one time and you make it again\n\n[Verse]\nA cell can't change, it's set like stone\nUsed one time, and one time alone\nWant an update, here's what you do\nOld one's history, you make a new\nSame capacity, and it swaps in one go\nOld state out, new state in the flow\nAll the live cells are the knowledge today\nAll the dead cells are the history, okay\nGot ten bytes, you can split it in two\nFive and five, now there's more for you\nType runs when the cell is made\nLock runs when it's spent or it's traded\nBring your proof, and if the lock says true\nThen the type script rules what you get to do\n\n[Chorus]\nCapacity, data, type, and lock\nFour fields in a cell, now rock\nLive cells now, dead cells then\nUse it one time and you make it again\n\n[Verse]\nNo hard coded crypto in the V M\nBring your own signature, any kind of them\nMultisig, M of N, easy to write\nLend out a cell and keep ownership tight\nU T X O's clear but the scripts are thin\nAccount model's easy but the parallel's grim\nCell takes the best of both, you see\nA generic state model for you and me\n\n[Chorus]\nCapacity, data, type, and lock\nFour fields in a cell, now rock\nLive cells now, dead cells then\nUse it one time and you make it again",
+     "cover": "/music/covers/08.jpg",
+     "ckbfs": {
+      "typeId": "0xa4eaa00a498512ddc66d7abef1c9846f685a1472b05e5799351cbbc7e581f042",
+      "contentHash": "0x5e722d2543ae5aeefe607ac3cc0b013939787105a4a0f4b054a4df2e39344b5e",
+      "bytes": 947160,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Space and Time",
+     "style": "trap",
+     "duration": 140.7,
+     "source": "RFC 2 §5 Economic model",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0002-ckb/0002-ckb.md",
+     "lyrics": "[Intro]\nSection five, where the state gets priced\nSpace and time, yeah, think about it twice\n\n[Verse]\nMaking new state means the nodes gotta check\nStoring that state means disk on their neck\nOther chains charge you one time at the door\nThen you sit on every node forevermore\nHere the cell is the unit, and it's one at a time\nUse the space yourself and the interest ain't mine\nCould've lent it out, could've earned on the side\nThat's the cost that you carry for the space you occupied\nBigger and longer means the more you pay\nImplicit, no bill coming day by day\nNo upfront rent that runs out on the clock\nNo state recycled and a contract in shock\n\n[Chorus]\nSpace and time, space and time\nYou pay for the state in space and time\nNot computation, it's the state that counts\nCapacity holds it in the right amounts\n\n[Verse]\nCapacity, type, and lock are state as well\nMetadata costs you in every cell\nSo you make fewer cells and you keep it tight\nCapacity efficient, yeah, that's right\nChange the data or move who owns\nThat's a fee, and the miners set the tones\nCycles used and the state you changed\nMarket finds the price in a healthy range\nCell owners cover fees for the folks they serve\nNew users walk in with no learning curve\nPay with capacity, that's the native one\nOr a user-defined asset if the miner says done\nNo hard coded payment in the transaction, see\nBecause the model is the state, not the fee\nForcing native coin is a wall at the gate\nTake it down and adoption don't wait\n\n[Chorus]\nSpace and time, space and time\nYou pay for the state in space and time\nNot computation, it's the state that counts\nCapacity holds it in the right amounts\n\n[Outro]\nSecure common knowledge, hold it long\nThat's the main job, and the fee's just a song",
+     "cover": "/music/covers/09.jpg",
+     "ckbfs": {
+      "typeId": "0xc9261bab2d38c5a51e3f423a370934a7f8529900c2f44d39720601488cb4d0b9",
+      "contentHash": "0x411906576bac92cf0a9b6c38eefc5ec9804d871274f78e97de0604d9d47d46c7",
+      "bytes": 1103079,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "Risk Five",
+     "style": "boom bap",
+     "duration": 167.2,
+     "source": "RFC 3 CKB-VM runtime model",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0003-ckb-vm/0003-ckb-vm.md",
+     "lyrics": "[Intro]\nR F C three, the virtual machine\nRisk five underneath, keep it clean\n\n[Verse]\nThe V M's job is to validate\nInputs and outputs, is the transaction straight\nBuilt on risk five, sixty-four bit core\nMultiply and divide, then a little bit more\nCompressed instructions keep the contract small\nNo floating point in the set at all\nNeed a float, pack a soft float in\nDeterministic is the way we win\nThe contract format is a Linux elf\nEvery tool you know, right there on the shelf\n\n[Chorus]\nMain returns zero, that's a pass\nSixty-four bit risk five, built to last\nFour megs of memory, single thread\nCount every cycle, like the paper said\n\n[Verse]\nFour megabytes is the runtime space\nCode pages, stack, and the heap in place\nPlus the mapped pages from another cell\nRuns like a program on a single core shell\nStarts at main with arg c and arg v\nReturn a zero and success is the decree\nMight just hand you metadata there\nThen syscalls load the rest with care\nSingle threaded, strict, no atomics required\nBring your own coroutines if that's desired\nAny language with a risk five back end\nC or Rust, compile it and send\nCompile a whole V M, load it as a cell\nRun JavaScript or Ruby as well\nCost is the cycles, instruction by instruction\nPlus the cells that you read in the function\n\n[Chorus]\nMain returns zero, that's a pass\nSixty-four bit risk five, built to last\nFour megs of memory, single thread\nCount every cycle, like the paper said\n\n[Outro]\nLow level machine and it don't pretend\nReal hardware rules from beginning to end",
+     "cover": "/music/covers/10.jpg",
+     "ckbfs": {
+      "typeId": "0x4c306b95afaa07cee70c2363df123d369c2cffe83d9bd3b50ad0673c5cf09e45",
+      "contentHash": "0xe3783b9ae7359415394cf7223930cf7e47b76350c52f339866046ea635fd908e",
+      "bytes": 1070290,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Write or Execute",
+     "style": "hardcore",
+     "duration": 153.3,
+     "source": "RFC 3 W^X memory",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0003-ckb-vm/0003-ckb-vm.md",
+     "lyrics": "[Intro]\nWrite or execute, pick a side\nOne or the other, nowhere to hide\n\n[Verse]\nNo M M U in the C K B V M\nLike the early C P Us, way back when\nWhole block of memory, read, write, and run\nNothing stops a script changing code for fun\nJump to the stack and pretend it's code\nThat's a wide open door on a dangerous road\nBuffer overflow goes writing on the text\nNow the script's behaviour is whatever comes next\nAnd the V M itself gets harder to make\nTrace cache needs guarding on every write you take\nError prone and it's slow to boot\nSo here comes a rule to cut it at the root\n\n[Chorus]\nWrite or execute, never both\nEvery page takes a single oath\nBreak the rule and you catch a fault\nWrite or execute, that's the vault\n\n[Verse]\nFour K pages, aligned on the line\nZero, then four K, eight K, every time\nEach page carries a flag for the two\nWritable or executable, one will do\nBefore an instruction, check the page can run\nBefore a write, check the page allows one\nBreak either rule and a page fault lands\nThat's the law, and that's how it stands\nOn boot every page starts writable, then\nThe load sections marked to execute, amen\nAn elf with a section that's both gets denied\nReturns with an error, no free ride\nCode not aligned, stretch it to the edge\nRound to the page, that's the pledge\nReturn oriented tricks could still get through\nBut the easy mistakes get stopped for you\n\n[Chorus]\nWrite or execute, never both\nEvery page takes a single oath\nBreak the rule and you catch a fault\nWrite or execute, that's the vault\n\n[Outro]\nSimpler machine and a safer script\nAnd the just in time compiler's better equipped",
+     "cover": "/music/covers/11.jpg",
+     "ckbfs": {
+      "typeId": "0x9a3951aa08a5f5a3b544ae65af99037279d202ac7e9cafaf5de69d1acdd49043",
+      "contentHash": "0xe5402277526e8f92eb3637d3ad8026ac9bab4005bd7b84ed7c947490d4bfcc54",
+      "bytes": 1028435,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Headers First",
+     "style": "breaks",
+     "duration": 173.4,
+     "source": "RFC 4 Block synchronization",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0004-ckb-block-sync/0004-ckb-block-sync.md",
+     "lyrics": "[Intro]\nR F C four, how the blocks come in\nHeaders first, let the sync begin\n\n[Verse]\nThree stages, and they go in a row\nCheapest check first, that's the way to go\nConnect the header, check the format and the work\nFive percent effort for a ninety-five perk\nThen download the block and check it's whole\nThen accept it in the chain, that's the final goal\nA block starts unknown before the header's read\nFail any step and it's invalid instead\nConnected, downloaded, accepted at last\nNever ahead of the parent in the past\nIf the parent goes bad then the children go too\nSo you don't waste work on a branch that's through\n\n[Chorus]\nConnect the header, download the block\nAccept it in the chain, tick tock\nHeaders first, least cost on top\nMost work wins, and the sync don't stop\n\n[Verse]\nAlice meets Bob and she samples her chain\nLatest ten blocks, then she steps back again\nTwo, four, eight, with the gaps getting wide\nThat's the locator, sends it to his side\nBob finds the block that they both agree\nSends the headers from there to his tip, you see\nSame genesis, so there's always one\nNow the downloading stage can run\nSliding window, split it into stripes\nScheduled over peers with the right block types\nMerkle root wrong, don't call the block bad\nBlacklist the sender, that's the peer you had\nOr a liar could poison your status tree\nThen accept with the context, the heavy degree\nRoll back the tip and verify the line\nIf it fails, restore the best chain, fine\n\n[Chorus]\nConnect the header, download the block\nAccept it in the chain, tick tock\nHeaders first, least cost on top\nMost work wins, and the sync don't stop\n\n[Outro]\nTip moves on, so announce it to the crew\nCompact block if there's one, headers if a few",
+     "cover": "/music/covers/12.jpg",
+     "ckbfs": {
+      "typeId": "0x9fea7db989850f8562358197357b7fce72970b898552739d24879f155b6fa55a",
+      "contentHash": "0x5929deaa1def87e569f01f9707454e2d6ee76091d4136e0a1b365a10fb60d971",
+      "bytes": 1064296,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Machine Mode",
+     "style": "trap",
+     "duration": 152.1,
+     "source": "RFC 5 Privileged architecture",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0005-priviledged-mode/0005-priviledged-mode.md",
+     "lyrics": "[Intro]\nR F C five, the privileged mode\nOpt in only, it's off in the code\n\n[Verse]\nOne contract at a time, so you don't need rings\nBut a privileged model brings a few good things\nAn M M U for the contracts that grow\nDynamic memory, and the bad access? No\nBeginners trade cycles for a safer run\nPros who want it lean can leave it undone\nClosed by default, it's your call to make\nIgnore it completely for the cycles' sake\n\n[Chorus]\nMachine mode, user mode\nTwo levels in the privileged code\nM ret, and you step on down\nSixty-four entries when the fault comes round\n\n[Verse]\nC S R instructions, straight from the spec\nRead and write registers, keep it correct\nNot every register, just the ones for the trap\nS T vec holds the handler on the map\nTouch the others, illegal instruction's the call\nHandle it how you like, that's all\nStarts in machine mode, free to roam\nUser mode's limited, a smaller home\nNo C S R, no machine mode page\nNo executing where the flag's not engaged\nSet your metadata up, then drop with M ret\nNow the trap function's what catches the threat\n\n[Verse]\nT L B, sixty-four entries deep\nEach one a page, four K to keep\nOne way associative, here's the trick\nSame last six bits and one gets kicked\nSwitch your privilege level, the whole thing's flushed\nBuilt on the first page fault, never rushed\nStay in machine mode, you may never meet\nOnce it's up, it stays on the beat\n\n[Chorus]\nMachine mode, user mode\nTwo levels in the privileged code\nM ret, and you step on down\nSixty-four entries when the fault comes round\n\n[Outro]\nOpt in, opt out, it's yours to decide\nThe V M's got it waiting on the side",
+     "cover": "/music/covers/13.jpg",
+     "ckbfs": {
+      "typeId": "0xa78136fcf7756296176e7b44c47759dc5e3ab055d7ef4ec0380580d5ac83b935",
+      "contentHash": "0x44e8b0ff1ae958ecfe5b5a4d25192092466d35ca7c9d0b7d4a2e8e4c1e4fce78",
+      "bytes": 1070948,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
+  },
+  {
+   "id": "vol-2",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 2",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Complete Binary Tree",
+     "style": "old school",
+     "duration": 151.4,
+     "source": "RFC 6 Complete Binary Merkle Tree",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0006-merkle-tree/0006-merkle-tree.md",
+     "lyrics": "[Intro]\nHey y'all, we got a tree to build\nComplete and binary, every level filled\n\n[Verse]\nGot a static list, need a single root\nC B M T is the way we compute\nEvery level's full, 'cept maybe the last\nAnd the nodes sit left, yeah, packed in fast\nIt's a full tree too, so here's the news\nEvery node that ain't a leaf has two\nFewer hashes than the other trees around\nThat's the reason that we lay it on down\n\n[Chorus]\nTop to the bottom, left to the right\nCount from zero and you count it right\nComplete binary, keep it tight\nOne little array and the tree's in sight\n\n[Verse]\nNumber every node as you go on through\nRoot comes first, and the rest ensue\nWith N items, here's the size that's done\nThe array's two N, then you minus one\nItem number I, where's it gonna be\nAt I plus N minus one, you see\nParent of a node, take one away\nThen you half it down, that's the play\nSibling? Add one, x-or one, minus one\nChildren at two I plus one, plus two, and done\nNo items at all? Then the tree is bare\nRoot's all zeros, nothing there\n\n[Chorus]\nTop to the bottom, left to the right\nCount from zero and you count it right\nComplete binary, keep it tight\nOne little array and the tree's in sight\n\n[Outro]\nTransactions root, that's the job it's got\nOne flat array, and it saves a lot",
+     "cover": "/music/covers/v2/01.jpg",
+     "ckbfs": {
+      "typeId": "0x484599ca04876c114b1ba3bbe6e8d9beb13b4153cab280732cc5fd5a55ee48a3",
+      "contentHash": "0x2a282017020f30063dfb26f54b8782db9e3f4296cf1199b0dd1e4525cdc0cf64",
+      "bytes": 1022446,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Prove It",
+     "style": "old school",
+     "duration": 108.5,
+     "source": "RFC 6 Merkle proof",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0006-merkle-tree/0006-merkle-tree.md",
+     "lyrics": "[Intro]\nYou say it's in there? Prove it\nYou say it's in there? Prove it\n\n[Verse]\nGot a root on the chain and a claim in your hand\nOne item or more, now here's the plan\nWalk from the leaf on up to the top\nGrab every sibling at every stop\nLeave out the nodes that are already in the path\nYou can work those out, that's simple math\nJust the siblings needed, nothing more\nThe nodes you can't work out, that's the core\n\n[Chorus]\nProve it, prove it, walk it to the root\nSiblings on the path, that's all you compute\nProve it, prove it, highest index first\nHash it up together till the root is rehearsed\n\n[Verse]\nNow the order matters when you pack the proof\nDescending order, that's the truth\nMakes the building and the checking plain\nA simple little loop, again and again\nAnd the index of the item's gotta come along\n'Cause the hash don't know where it belongs\nTwo parts in the proof when you send it through\nThe indexes and the nodes come too\n\n[Verse]\nTo check it, take your leaves and the nodes you got\nPut 'em in a queue, largest index on top\nPop a node, find its sibling in the line\nIf it's next in the queue, then that works fine\nIf it ain't, take a node from the proof's stack\nHash the pair to the parent, push it back\nWhen the parent is the root, then the walk is done\nIf it matches the root, then the proof has won\n\n[Chorus]\nProve it, prove it, walk it to the root\nSiblings on the path, that's all you compute\nProve it, prove it, highest index first\nHash it up together till the root is rehearsed",
+     "cover": "/music/covers/v2/02.jpg",
+     "ckbfs": {
+      "typeId": "0x2e2e9541d77a8a554ab1518926d42f231060fc8e29b4d12ec5902c2b59c7ee4f",
+      "contentHash": "0xea597dbbdb3f619d7320b7f7a2f7f3d94fa0f117b33e697411f572fd190e8444",
+      "bytes": 687511,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Eclipse",
+     "style": "old school",
+     "duration": 116.4,
+     "source": "RFC 7 Motivation: the eclipse attack",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0007-scoring-system-and-network-security/0007-scoring-system-and-network-security.md",
+     "lyrics": "[Intro]\nLights out, lights out\nSomebody's blocking out the sun\n\n[Verse]\nOpen network, anybody joins\nNo permission, no tickets, no coins\nThat's the beauty, but it cuts two ways\nBad nodes walk in too these days\nHere's the trick that they call eclipse\nFill every slot till the true view slips\nAll your peer connections in the attacker's hands\nNow you only see what the attacker plans\n\n[Chorus]\nEclipse, eclipse, don't let 'em block the sun\nKeep the good peers close and the bad ones on the run\nStore 'em, score 'em, show the low ones out\nThat's what the peer to peer is all about\n\n[Verse]\nCheap to pull and the damage runs deep\nTake a node down while the network sleeps\nSteer its mining power where they like\nOr set it up for a double spend strike\nBitcoin saw it, Ethereum too\nThere's a paper on it, tells you what to do\nSome of those defences are already live\nSo we bring 'em on over, help the network thrive\n\n[Verse]\nThree little rules and you write 'em down\nNumber one, store every peer in town\nMuch as you can, keep the info deep\nNumber two, keep score, don't sleep\nGood behaviour, bad behaviour, all the time\nNumber three, keep the high scores on the line\nAnd the low scores, well, they gotta go\nEvict 'em out and on with the show\n\n[Chorus]\nEclipse, eclipse, don't let 'em block the sun\nKeep the good peers close and the bad ones on the run\nStore 'em, score 'em, show the low ones out\nThat's what the peer to peer is all about",
+     "cover": "/music/covers/v2/03.jpg",
+     "ckbfs": {
+      "typeId": "0x3f37d8f7b58a716e201d9f10c4a7b11206d6eb9e238d2b18b53574de4481a3ef",
+      "contentHash": "0xb93503fddf4135c9ada90cbe25b562878310154fa19505ccae9ca85d8bacbd1a",
+      "bytes": 753587,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Keep Score",
+     "style": "old school",
+     "duration": 124.3,
+     "source": "RFC 7 Scoring system",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0007-scoring-system-and-network-security/0007-scoring-system-and-network-security.md",
+     "lyrics": "[Intro]\nLadies and gentlemen, on the scoreboard tonight\nEvery peer gets a number, alright\n\n[Verse]\nEvery peer starts out at the initial score\nThen we watch what they do, and we watch some more\nA set of behaviours, each one's got a price\nThe scoring schema, cut and sliced\nConnected? That's a plus ten for you\nTimeout? Minus ten, that's due\nSync and relay tell the network layer\nWhat they saw from every player\n\n[Chorus]\nKeep score, keep score, everybody's on the board\nDo it right for a long time, get your reward\nKeep score, keep score, drop below the line\nUnder ban score, baby, you're out of time\n\n[Verse]\nThree kinds of moves that a peer can make\nFirst is correct, give a little, not a cake\n'Cause a bad one's nice till the day it strikes\nSo the credit's slow, earn it over nights\nSecond is the kind that the network might cause\nA drop, a timeout, a ping that's lost\nCan't tell if they meant it, so we stay polite\nA little minus, keep it light\n\n[Verse]\nThird is the kind that breaks the rules\nBad encoding, an invalid block, those fools\nAn invalid transaction on the wire\nThat's a big minus, now the heat gets higher\nPeer one keeps asking for the same old block\nDuplicated request, minus fifty on the clock\nFalls below the ban score, disconnect and ban\nNone of this is consensus, so tune it where you can\n\n[Chorus]\nKeep score, keep score, everybody's on the board\nDo it right for a long time, get your reward\nKeep score, keep score, drop below the line\nUnder ban score, baby, you're out of time",
+     "cover": "/music/covers/v2/04.jpg",
+     "ckbfs": {
+      "typeId": "0x2711116772bb0a6868fc4def9fdbf27e4484a32773aa8f634f7571fa1521512d",
+      "contentHash": "0x4217baded1ce8cadf4dbf014d322f1b282b4f74d972b037fd7cb55e40e0dac15",
+      "bytes": 854093,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Anchor Peers",
+     "style": "old school",
+     "duration": 130.0,
+     "source": "RFC 7 Outbound peer selection",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0007-scoring-system-and-network-security/0007-scoring-system-and-network-security.md",
+     "lyrics": "[Intro]\nDrop the anchor, drop the anchor\nBefore you sail, drop the anchor\n\n[Verse]\nHere's how they got you on the restart, friend\nStuff your address book end to end\nBad addresses, then they wait a while\nYou reboot, and they start to smile\nYou pick from the book and you dial 'em in\nIf all your outbound's theirs, they win\nSo when we start up, here's the fix\nA little bit of old and a random mix\n\n[Chorus]\nAnchor first, then random from the store\nDifferent network group than the ones before\nScore above the try score, that's the door\nAnd the boot nodes waiting if there ain't no more\n\n[Verse]\nStep one, count your outbound friends\nUnder the anchor number? That's where it begins\nLook at who you talked to recently\nTake the highest score, that's your anchor, see\nGot your anchors, or the recent list is bare\nPick at random from the peer store there\nBut it's gotta beat the try score clean\nAnd a different network group from the ones on screen\n\n[Verse]\nNothing fits? Then the boot nodes play\nKeep on going till you're full all day\nNow the sync goes quiet, nothing coming through\nFlip the switch, try a new peer or two\nExtra outbound till the messages flow\nThen evict the useless, let the extras go\nAttacker needs the anchors, highest score in the book\nAnd every random pick, that's a long, long look\n\n[Chorus]\nAnchor first, then random from the store\nDifferent network group than the ones before\nScore above the try score, that's the door\nAnd the boot nodes waiting if there ain't no more",
+     "cover": "/music/covers/v2/05.jpg",
+     "ckbfs": {
+      "typeId": "0xb81ff66ff4859f84705f6270bb10532b2ed8da590a796d61ef97736dae56127a",
+      "contentHash": "0xc7bbbf3c1388c231bb7ef6528a489b9d4481914a9f628fe9bb0617e1676f3a36",
+      "bytes": 895364,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Who Gets In",
+     "style": "old school",
+     "duration": 117.1,
+     "source": "RFC 7 Inbound peers, feelers and the peer store",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0007-scoring-system-and-network-security/0007-scoring-system-and-network-security.md",
+     "lyrics": "[Intro]\nThe club is full, the line is long\nWho gets in? Sing along\n\n[Verse]\nInbound slots are all filled tight\nNew peer knocking in the middle of the night\nDon't just slam it, don't just let 'em through\nRun the eviction test, here's what you do\nEverybody inside is a candidate now\nThen we start protecting, here's how\nTake out the ones with the highest score\nThen the lowest ping, walk 'em from the floor\n\n[Chorus]\nWho gets in, who gets out\nProtect the good ones, that's what it's about\nBiggest group, lowest score\nThat's the one we show the door\n\n[Verse]\nThen the ones who talked to us most recently\nThen half of what's left by seniority\nLongest connected, they can stay\nThings an attacker can't fake any day\nNow group what's left by the network group\nFind the biggest crowd in the loop\nLowest score in that group gets tossed\nIf the group is empty, the new peer's lost\n\n[Verse]\nWhen the outbound's full, every few minutes more\nSend a feeler out to a peer in the store\nOne we never called, just to see\nConnect, shake hands, disconnect, we're free\nAnd the peer store's got a limit too\nWhen it's full and there's somebody new\nBiggest group, not seen in a while\nLowest score there, check the file\nIf the new one's better, then they trade\nIf it ain't, the new one's not getting saved\n\n[Chorus]\nWho gets in, who gets out\nProtect the good ones, that's what it's about\nBiggest group, lowest score\nThat's the one we show the door",
+     "cover": "/music/covers/v2/06.jpg",
+     "ckbfs": {
+      "typeId": "0xcc023ef4efcb3ce7cf2ac738db14614db962b6473285476b9c1318637363e816",
+      "contentHash": "0xb07fa03383ded71ffca7a51992ff70687d0cb60dead0ef56245ccd860713a7b6",
+      "bytes": 751693,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Molecule",
+     "style": "old school",
+     "duration": 109.6,
+     "source": "RFC 8 Molecule: fixed-size types",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0008-serialization/0008-serialization.md",
+     "lyrics": "[Intro]\nByte by byte, y'all\nByte by byte\n\n[Verse]\nTwo formats on the C K B\nMolecule and J S O N, you see\nJ S O N is for the R P C\nMolecule's the one for you and me\nCanonical, one way to write\nZero copy, read it in flight\nEvery type's either fixed or it's dynamic size\nHeader numbers little-endian, no surprise\n\n[Chorus]\nByte, array, and struct\nFixed size, nothing gets tucked\nNo overhead, side by side\nMolecule, enjoy the ride\n\n[Verse]\nStart with a byte, and a byte is a byte\nZero zero, that's alright\nArray's got an inner type and a length that's set\nSize is the two multiplied, you bet\nThree bytes: one, two, three\nZero one, zero two, zero three, easy\nA thirty-two bit number, little end in front\nOh one oh two oh three oh four, here's the stunt\nIt goes four, three, two, one in the line\nLow byte first, every time\n\n[Verse]\nStruct is a bunch of fixed fields in a row\nIn the order you declared, that's how they go\nSize is the sum, there's nothing in between\nNo padding, no gaps, keep it clean\nA byte then a number, A B, then the four\nOne two three in the little-endian store\nA B, oh three, oh two, oh one, zero zero\nFive bytes flat, and the struct's the hero\n\n[Chorus]\nByte, array, and struct\nFixed size, nothing gets tucked\nNo overhead, side by side\nMolecule, enjoy the ride",
+     "cover": "/music/covers/v2/07.jpg",
+     "ckbfs": {
+      "typeId": "0x04cef82a0c92590034322b4473c5be439ef26b1854fd8c8cb471b1abadc8d9a4",
+      "contentHash": "0x93c5e2f04d0054291fa36079d1866d06cb9a56946747237ecbbcda4b114b7fcf",
+      "bytes": 675415,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Fix-Vec, Dyn-Vec",
+     "style": "old school",
+     "duration": 123.3,
+     "source": "RFC 8 Molecule: vectors and tables",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0008-serialization/0008-serialization.md",
+     "lyrics": "[Intro]\nFix-vec, dyn-vec, what's the deal\nLook inside and the type's revealed\n\n[Verse]\nTwo kinds of vectors in the molecule game\nFixed and dynamic, and here's how they're named\nLook at the item sitting inside\nFixed-size item? Fix-vec's the ride\nAnything else and it's dyn-vec time\nBoth are dynamic size, keep that in mind\nFix-vec takes two steps, that's all\nWrite the count of items, then the items fall\n\n[Chorus]\nFix-vec, count then the items in a row\nDyn-vec, size, then the offsets, then they go\nTable's a dyn-vec with a fixed length, so\nSize, offsets, fields, now you know\n\n[Verse]\nCount's a thirty-two bit little-endian number\nEmpty fix-vec, four zero bytes, no wonder\nOne byte, one two, here's what you see\nOh one and three zeros, then the one two, easy\nEight bytes in, then it's oh eight up top\nThree zeros, then the eight bytes drop\n\n[Verse]\nDyn-vec's three steps, listen up\nFull size in bytes, that's the first in the cup\nThen an offset for every item you hold\nThen the items themselves, all told\nEmpty dyn-vec, the size is four\nJust the header and nothing more\nTable's the same, but the field count's set\nSize, then offsets, then the fields, you bet\nIn the order declared, every field gets a spot\nEven the fixed ones, like it or not\n\n[Chorus]\nFix-vec, count then the items in a row\nDyn-vec, size, then the offsets, then they go\nTable's a dyn-vec with a fixed length, so\nSize, offsets, fields, now you know",
+     "cover": "/music/covers/v2/08.jpg",
+     "ckbfs": {
+      "typeId": "0xda1a2510239c2ad11ca847d10e4a6b7983d18f5fd64af258e618fccf29771b86",
+      "contentHash": "0x2c521883ebcc1c03039e2506847fd67fa2601b6912ed2bb4bc82eea9068dccd6",
+      "bytes": 762839,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Option, Union",
+     "style": "old school",
+     "duration": 135.6,
+     "source": "RFC 8 Molecule: option and union",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0008-serialization/0008-serialization.md",
+     "lyrics": "[Intro]\nMaybe something, maybe not\nOne of many, that's the plot\n\n[Verse]\nOption's dynamic, here's the game\nEmpty or full, it ain't the same\nIf it's empty, there's nothing there\nZero bytes, the cupboard's bare\nIf it's got something, just write the thing\nSame size as the item that you bring\nNo extra tag, no flag to see\nThe length alone tells you what it'll be\n\n[Chorus]\nOption, nothing or the item straight\nUnion, type id, then the freight\nMaybe something, one of some\nMolecule, and the bytes go drum\n\n[Verse]\nNone is empty, not a byte\nSome with an empty vector, that's four, alright\nOh four, zero, zero, zero on the line\nThe empty dyn-vec header, fine\n\n[Verse]\nUnion's dynamic, two steps through\nFirst the item type id, that's the clue\nThirty-two bits, little-endian, friend\nIt's the index of the item, zero on the front end\nThen you serialize what's inside\nWhatever type the id implied\nFirst type in the list is the Byte Three\nFour zero bytes, then one two, three four, five six, see\nSecond in the list, then it's oh one first\nThen the item follows, unrehearsed\nThird in the list starts oh two, then\nThe vector that's inside, and count again\n\n[Chorus]\nOption, nothing or the item straight\nUnion, type id, then the freight\nMaybe something, one of some\nMolecule, and the bytes go drum\n\n[Outro]\nFixed or dynamic, now you know the set\nByte by byte, no sweat",
+     "cover": "/music/covers/v2/09.jpg",
+     "ckbfs": {
+      "typeId": "0x7993836727a7e12d7cb1dd95026dbbfe4c0e79c543ef97d2a6383fca0fdade4f",
+      "contentHash": "0xe325a8277955aacb16ee1ee451efaafbfb2e2e73945746ec303499bf7cb47f54",
+      "bytes": 971582,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "Partial Loading",
+     "style": "old school",
+     "duration": 120.0,
+     "source": "RFC 9 Partial loading",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0009-vm-syscalls/0009-vm-syscalls.md",
+     "lyrics": "[Intro]\nCan't take it all? Take a piece\nPartial loading, if you please\n\n[Verse]\nScript's in the V M, world's outside\nNeeds a way to reach and a way to ride\nSyscalls, that's the telephone line\nTo the transaction, the chain, the header, fine\nNo custom instructions, standard risk five\nKeeps the tools all working, keeps the thing alive\nAnd every call but exit plays the same game\nThree arguments with the same three names\n\n[Chorus]\nAddress, length, and offset\nTake what fits, and the rest ain't lost yet\nFull size comes back in the length you set\nPartial loading, no regret\n\n[Verse]\nAddress is the buffer where the data lands\nLength is a pointer, sixty-four bit in your hands\nGoing in, it's how big your buffer's got\nComing out, it's the size of the whole lot\nOffset's where you wanna start the read\nNow here's the steps, and here's the speed\nRead the size that the length points to\nFull size is the data minus offset, true\n\n[Verse]\nReal size is the smaller of the two\nWrite that much to the address for you\nThen full size goes back in the length\nReturn a zero, that's success, that's strength\nMemory's tight? Then read it in bites\nChunk by chunk through the days and nights\nAnd here's a trick, give a null for the address\nAnd a zero length, and you get the size, no less\nNot a byte gets copied, just the count\nNow you know the full amount\n\n[Chorus]\nAddress, length, and offset\nTake what fits, and the rest ain't lost yet\nFull size comes back in the length you set\nPartial loading, no regret",
+     "cover": "/music/covers/v2/10.jpg",
+     "ckbfs": {
+      "typeId": "0xa1f86e06dfbac51dd8c19b9bd26679083abc1cca60b4286172920f3c2762b422",
+      "contentHash": "0x3c04e678a2f7f05e72fa5fb044e60147d46ebf61c6c7e43cb443617ba9c2e8f9",
+      "bytes": 788968,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "E-Call",
+     "style": "old school",
+     "duration": 108.1,
+     "source": "RFC 9 Syscall convention",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0009-vm-syscalls/0009-vm-syscalls.md",
+     "lyrics": "[Intro]\nOperator, operator\nGet me the chain on the line\n\n[Verse]\nSix arguments, here's where they go\nRegisters A zero through A five, you know\nEach one's a word, so it holds a number\nOr it holds a pointer, there's no blunder\nSyscall number goes in A seven\nThen you fire the e-call, straight to heaven\nDon't need all six? Then fill what you need\nThe rest stay zero, guaranteed\n\n[Chorus]\nPut it in A seven, make the e-call\nAnswer comes back in A zero, y'all\nOr it's written in the memory where you point\nSyscall party, rock the joint\n\n[Verse]\nTwo ways back when the call is through\nA return value in A zero for you\nOr the data's written where your pointer said\nAnd your normal instructions read it instead\nWrap it in a C function, make it neat\nSix arguments every time, on the beat\nExit only needs the one, that's fine\nZero out the others, hold the line\n\n[Verse]\nExit's the only way out the door\nGive it a code, and there ain't no more\nThe V M stops right there with that return\nIt don't come back, that's the thing to learn\nLoad transaction hash, load the whole transaction\nMolecule encoded, that's the action\nLoad script hash, load the script that's run\nPartial loading works for every one\n\n[Chorus]\nPut it in A seven, make the e-call\nAnswer comes back in A zero, y'all\nOr it's written in the memory where you point\nSyscall party, rock the joint",
+     "cover": "/music/covers/v2/11.jpg",
+     "ckbfs": {
+      "typeId": "0x55aa2bb1aa2ddad0c431cfb694ec9b675f018ee26419d34eac20d57c59f842ab",
+      "contentHash": "0x5228aafd5ab48c9f6664ea96b332524d619e76e307d3640d8342ecad954d100b",
+      "bytes": 661653,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Load Cell",
+     "style": "old school",
+     "duration": 124.9,
+     "source": "RFC 9 Loading cells, headers and witnesses",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0009-vm-syscalls/0009-vm-syscalls.md",
+     "lyrics": "[Intro]\nLoad it up, load it up\nIndex and source, load it up\n\n[Verse]\nLoad cell takes an index and a source\nPlus address, length, and offset, of course\nSource one is the inputs, two is the outs\nThree is the dep cells, no doubts\nThere's a special flag for the group you're in\nJust the cells with the script you're running\nWhole cell comes back in molecule, friend\nIndex out of bounds? That's a one in the end\n\n[Chorus]\nLoad cell, load cell, tell me what you see\nBy field, by data, bring it back to me\nWrong source, the V M halts, that's the key\nOut of bounds is a one, missing is a two, agree\n\n[Verse]\nLoad cell by field when you don't need it all\nZero is capacity, that's the call\nOne is the data hash, two is the lock\nThree is the lock hash, tick tock\nFour is the type and five is its hash\nSix is occupied capacity, in a flash\nAsk for a type that the cell ain't got\nGet a two back, that's the spot\n\n[Verse]\nLoad cell data gives you just the data part\nLoad as code, now that's a work of art\nMaps it in memory and marks it to run\nFour K aligned or the V M's done\nLoad header from an input, a dep, or header deps\nHash in the header deps, mind your steps\nLoad witness by the index, source is a hint\nAnd debug takes a string and gives the log a print\n\n[Chorus]\nLoad cell, load cell, tell me what you see\nBy field, by data, bring it back to me\nWrong source, the V M halts, that's the key\nOut of bounds is a one, missing is a two, agree",
+     "cover": "/music/covers/v2/12.jpg",
+     "ckbfs": {
+      "typeId": "0x4ec99420c30269841365d00bba2abf12d9adc4d14f919d871e674b69da6e56f0",
+      "contentHash": "0x27b0000833ced5bd3fc95c065b667a9d990db1de94c47d27b1b435a980ad6bac",
+      "bytes": 809076,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Forty-Three Rounds",
+     "style": "old school",
+     "duration": 130.0,
+     "source": "RFC 10 Eaglesong",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0010-eaglesong/0010-eaglesong.md",
+     "lyrics": "[Intro]\nForty-three rounds, y'all\nForty-three rounds, count 'em\n\n[Verse]\nEaglesong's a sponge, so here's the thing\nA permutation and three numbers that it brings\nRate and capacity, and a delimiter byte\nTwo five six, two five six, oh six, that's right\nStick the delimiter on the end of what you got\nChop it into chunks of the rate, that's the lot\nState starts at zero, five twelve bits wide\nAbsorb every chunk with an x-or on the top side\n\n[Chorus]\nForty-three rounds, and the eagle sings\nAddition, rotation, x-or, three things\nAbsorb it, then squeeze it, that's the sponge\nTwo fifty-six bits when the work is done\n\n[Verse]\nAfter every chunk, run the permutation through\nThen you squeeze out the output, that's what you do\nA R X, and that's all we use\nAdd, rotate, x-or, nothing to confuse\nThirty-two bit words and there's sixteen in the state\nOne round function, forty-three times straight\nFour little steps in every round\nListen up close and I'll break it down\n\n[Verse]\nStep one, the bit matrix, ones and zeros\nTells you which words to x-or, those are the heroes\nStep two, circulant, every word in the set\nX-or with itself rotated twice, you bet\nStep three, inject the constants in\nDifferent every word and every round we spin\nStep four, add, rotate, add, in eight little pairs\nRight to the left, then they spin eight opposite squares\nThen the left to the right, and that's the only place\nWhere the modular addition shows its face\n\n[Chorus]\nForty-three rounds, and the eagle sings\nAddition, rotation, x-or, three things\nAbsorb it, then squeeze it, that's the sponge\nTwo fifty-six bits when the work is done\n\n[Outro]\nProof of work on the C K B\nEaglesong, y'all, one two three",
+     "cover": "/music/covers/v2/13.jpg",
+     "ckbfs": {
+      "typeId": "0x70b42186a74ce00116390a1b3ca79cc5ab6154caf43b467cdcdbbf812975bcce",
+      "contentHash": "0xc586e4c7a9092ba3c718f9a12ae5a108a7e19cedf3f8c891e4aa1310f6c7d82d",
+      "bytes": 864432,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
+  },
+  {
+   "id": "vol-3",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 3",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Low Capacity",
+     "style": "trap",
+     "duration": 137.2,
+     "source": "RFC 11 Motivation and SetFilter",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0011-transaction-filter-protocol/0011-transaction-filter-protocol.md",
+     "lyrics": "[Intro]\nSmall device, big chain\nOnly send me what's mine\n\n[Verse]\nSmartphone, browser extension in my hand\nEmbedded device, low capacity, understand\nCan't verify the whole chain, that's a fact\nJust check that the headers connect, stay intact\nTrust the block of the highest difficulty\nThe transactions inside it are valid to me\nWithout this I'm downloading every block\nEvery broadcast transaction, round the clock\nThen throwing most of it away\nSlow sync, wasted bandwidth, memory to pay\n\n[Chorus]\nSet the filter, set the filter\nOnly what I want comes through\nBloom on the line, peer by peer\nSet the filter, cut the queue\n\n[Verse]\nSet filter message, three fields in the frame\nFilter, num hashes, hash seed, that's the name\nFilter's a bit field, byte-aligned in size\nThirty-six thousand bytes is the max, no lies\nNum hashes, twenty at the top\nHolds ten thousand items before the false ones pop\nOne in a million, false positive rate\nHash seed's a random offset, set it straight\nH one is the low half, H two is the high\nSeed plus H one plus N times H two, try\nMod the filter size and you land on a bit\nSoon as the peer gets the message, that's it\nRestricts what it broadcasts to the ones that match\nEvery connection, its own filter to attach\n\n[Chorus]\nSet the filter, set the filter\nOnly what I want comes through\nBloom on the line, peer by peer\nSet the filter, cut the queue\n\n[Outro]\nR F C eleven, marked withdrawn\nSmall device, big chain, the idea lives on",
+     "cover": "/music/covers/v3/01.jpg",
+     "ckbfs": {
+      "typeId": "0x2532904fc11dd189305e3d2e5cb79fce94532dae79c22494a424f2d5f47da0cd",
+      "contentHash": "0xfbc14d80f03639a0d54c7e06e4f3b08981004e7e1db9d702b8986fecd8363439",
+      "bytes": 1046332,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Match Found",
+     "style": "trap",
+     "duration": 128.3,
+     "source": "RFC 11 Filter matching, AddFilter, ClearFilter, FilteredBlock",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0011-transaction-filter-protocol/0011-transaction-filter-protocol.md",
+     "lyrics": "[Intro]\nTest it, test it\nOnce it hits, we stop\n\n[Verse]\nEvery broadcast transaction gets a test\nAgainst the filter, here's the order, no rest\nFirst the hash of the transaction itself\nThen each cell input, pull it off the shelf\nHash of the previous output, check\nThen every cell output, next on deck\nLock hash and type hash of the script\nFind one match and the rest gets skipped\nNothing hits? Then there's no match\nAlgorithm aborts on the very first catch\n\n[Chorus]\nMatch found, match found\nSend it down the line\nNo match, no sound\nThat one isn't mine\n\n[Verse]\nAdd filter when you got more to track\nBitwise OR on the filter, stack on stack\nGot to set one first before you add\nCan't be bigger than the one you had\nKeeps the connection open, saves the pain\nOf sending a whole new filter again\nClear filter, no arguments at all\nTells the peer to drop it, end of call\nAfter you set it, there's more they do\nFiltered block message coming to you\nIn place of block and compact block too\nHeader's standard, same as you knew\nTransactions, each with an index tied\nAnd hashes, a Merkle branch on the side\n\n[Chorus]\nMatch found, match found\nSend it down the line\nNo match, no sound\nThat one isn't mine\n\n[Outro]\nMolecule on the wire, byte by byte\nOnly what matches comes in tonight",
+     "cover": "/music/covers/v3/02.jpg",
+     "ckbfs": {
+      "typeId": "0x388535488f01b77c62a99e52a954d760d63f81f40500ae2f4980a64e32b739e3",
+      "contentHash": "0xef99caf7fd528868980eae28bc6da0a7269b656d535f5820e7517b73b6ac7bd0",
+      "bytes": 956146,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Seed Nodes",
+     "style": "trap",
+     "duration": 134.1,
+     "source": "RFC 12 Discovery methods",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0012-node-discovery/0012-node-discovery.md",
+     "lyrics": "[Intro]\nFirst time up, nobody knows me\nWho do I call?\n\n[Verse]\nClient starts and the address list is bare\nPeer store empty, nobody there\nFirst move, send the D N S requests\nSeed hostnames in the client, that's the nest\nLearn the addresses of the other peers\nThat's the bootstrap stage, switch the gears\nIf the D N S fails, every single try\nFall back on the list that's hard-coded inside\nSeed addresses, built right in\nOnly used when the D N S can't win\n\n[Chorus]\nSeed nodes, seed nodes\nHigh uptime, many roads\nGet what I need and I let them go\nDon't overload the seed nodes\n\n[Verse]\nSeed nodes been up for a long, long time\nMany connections down many a line\nOnce I got enough addresses stored\nClose those connections, don't hog the board\nModelled on the Satoshi client way\nWith a few differences, here's what they say\nVersion number rides in the get nodes call\nNodes message broadcasts the connected, all\nPeriodically, to everyone you know\nMulti-address is the format, though\nAnd it must not have the P two P segment in\nThat's misbehaviour, low score for the sin\n\n[Chorus]\nSeed nodes, seed nodes\nHigh uptime, many roads\nGet what I need and I let them go\nDon't overload the seed nodes\n\n[Outro]\nEmpty list to a full address book\nD N S first, then the seeds, that's the hook",
+     "cover": "/music/covers/v3/03.jpg",
+     "ckbfs": {
+      "typeId": "0xca39a5474da5ae05620671ecc95ecb70e97783a35a07a8e0631681c51efcbd93",
+      "contentHash": "0x002f523503629681d6f7d2edf13f58083df04c914c2b914a052f468eebc9e4ea",
+      "bytes": 975443,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Announce",
+     "style": "trap",
+     "duration": 96.0,
+     "source": "RFC 12 GetNodes and Nodes messages",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0012-node-discovery/0012-node-discovery.md",
+     "lyrics": "[Intro]\nOutbound only\nAsk once, hear once\n\n[Verse]\nThree conditions before I send get nodes\nAll got to hold, that's how it goes\nOne, it's an outbound connection, mine\nThat's for the fingerprinting, hold the line\nTwo, their version's bigger than the preset\nThree, my stored addresses ain't there yet\nUnder the threshold, a thousand by default\nVersion, count, and a listen port, that's all\n\n[Chorus]\nAnnounce true, announce false\nOne's a reply and one's a pulse\nBreak the rules and the score gets hit\nAnnounce, announce, that's the bit\n\n[Verse]\nYou get my get nodes, you send nodes back\nFirst time and inbound, that's the track\nAnnounce set false, because it's a reply\nOnly one of those per ask, don't try\nAt regular intervals, here's the other one\nBroadcast your connected nodes to everyone\nAnnounce set true, that's the broadcast kind\nReceive it and relay the routable ones you find\nOnly the first broadcast can go past ten\nAnnounce threshold, don't flood it again\nEach node in the message, three addresses max\nMax node addresses, those are the facts\nThe announce field tells the two apart\nSo the punishment rules can be smart\n\n[Chorus]\nAnnounce true, announce false\nOne's a reply and one's a pulse\nBreak the rules and the score gets hit\nAnnounce, announce, that's the bit\n\n[Outro]\nDiscovery message, the payload's a union\nGet nodes or nodes, pick one, keep moving",
+     "cover": "/music/covers/v3/04.jpg",
+     "ckbfs": {
+      "typeId": "0x9830e94b7c457fcd8146fb779ac0a890b87d524fdc223385a9d63cac928bfa77",
+      "contentHash": "0x29a8691510293c2f1030b8dda5e4ce79829db1f978fb6b549b9052c6ada0b5fd",
+      "bytes": 718760,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Block Template",
+     "style": "trap",
+     "duration": 144.1,
+     "source": "RFC 13 get_block_template",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0013-get-block-template/0013-get-block-template.md",
+     "lyrics": "[Intro]\nDon't keep me in the dark\nShow me the whole block\n\n[Verse]\nOld get work just handed out a header\nMiner solving blind, nothing better\nKept in the dark, no say in the block\nNo influence on what's in stock\nGet block template flips the script\nWhole block structure, fully equipped\nSent to the miner to customise\nAssemble it, audit it with your own eyes\nModify it, maybe, before you hash\nDecentralised blocks, security that lasts\n\n[Chorus]\nGive me the template, I'll build the block\nGive me the template, I run the clock\nVersion, difficulty, number, parent hash\nGive me the template, then I send it back\n\n[Verse]\nJ S O N R P C, three arguments in\nCycles limit, bytes limit, max version\nLeave them out, consensus default's the call\nServer should respect them, not required at all\nSo the client checks what the template brings\nBack comes an object with a list of things\nVersion, difficulty in hex, current time\nNumber of the block and the parent hash line\nCellbase, required, it's always there\nCommit transactions with their data laid bare\nHash and data, and maybe cycles too\nRequired flag true means it's got to go through\nDepends tells you which ones come before\nProposal transactions, short I Ds, more\nWork I D, if they hand you one\nSend it back with the block when you're done\n\n[Chorus]\nGive me the template, I'll build the block\nGive me the template, I run the clock\nVersion, difficulty, number, parent hash\nGive me the template, then I send it back\n\n[Outro]\nSubmit block, molecule bytes in hex\nWork I D with it, on to the next",
+     "cover": "/music/covers/v3/05.jpg",
+     "ckbfs": {
+      "typeId": "0xdce868f2df1d1265c769ed248392d21f57a2dba91149861301bef51da0a9d0ad",
+      "contentHash": "0x4673eb227b232c20fd92dea2c6d98dd53beff7164cea50c55d3e08bfed96a629",
+      "bytes": 1002987,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Max Block Cycles",
+     "style": "trap",
+     "duration": 151.7,
+     "source": "RFC 14 Consensus change and loading cycles",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0014-vm-cycle-limits/0014-vm-cycle-limits.md",
+     "lyrics": "[Intro]\nEverything halts\nEverything halts, or it errors\n\n[Verse]\nThe V M's flexible, free to run\nLoops and branches, any control flow, done\nSo we need some rules to keep it clean\nMalicious script with an infinite loop, that's mean\nIntroduce cycles, here's the cost\nEvery instruction, every syscall, tossed\nOnto the meter, each one consumes\nAdd it all up for the block, no room\nPast the limit and the block's rejected\nThat's how the network stays protected\n\n[Chorus]\nMax block cycles, that's the ceiling\nSum of the scripts, no more dealing\nGo over and the block gets dropped\nMax block cycles, that's where it stops\n\n[Verse]\nIt's a scalar field in the chain spec now\nConsensus rule, hard limit, here's how\nSum of the cycles of all scripts in the block\nCan't exceed it, that's the lock\nBut there's no limit on a single transaction\nNo cap on one script, free in its action\nLong as the whole block stays below\nUse what you want, go fast, go slow\nGuaranteed that every script will halt\nOr end in an error state, by default\nRisk five costs come from real hardware\nSyscalls from benchmarks, measured with care\nLoading the binary, there's a charge on that too\nQuarter of a cycle per byte, coming through\nFractions round up, so here's the sum\nThirty and a quarter becomes thirty-one\nShip it small, that's what it's for\nBig binary attacks get shown the door\n\n[Chorus]\nMax block cycles, that's the ceiling\nSum of the scripts, no more dealing\nGo over and the block gets dropped\nMax block cycles, that's where it stops\n\n[Outro]\nEverything halts\nEverything halts, or it errors",
+     "cover": "/music/covers/v3/06.jpg",
+     "ckbfs": {
+      "typeId": "0x6f60c7f589abe094ba530d9c92d985e14f0eff47885f1405d632465e2a095ca4",
+      "contentHash": "0x8caf0642b2af26f8fa8bdb043b608655b795e9fddae4dc03109a3c8f9e62569d",
+      "bytes": 1103112,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "One Cycle",
+     "style": "trap",
+     "duration": 94.2,
+     "source": "RFC 14 Instruction and syscall cycles",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0014-vm-cycle-limits/0014-vm-cycle-limits.md",
+     "lyrics": "[Intro]\nWhat's it cost? What's it cost?\nRead me the price list\n\n[Verse]\nMost instructions cost one cycle flat\nBut some of them don't, so look at that\nJump and branch, that's three a go\nBranches cost more than the normal flow\nLoad a double word, store one, two\nSixty-four bit system, that's the cheap one for you\nLoad a word, a half, or a byte, that's three\nSmaller values cost more, you see\nMemory access ain't the normal rate\nMore than a plain instruction, straight\n\n[Chorus]\nOne for the normal, three for the branch\nFive to multiply, thirty-two to divide\nFive hundred for the e-call, that's the fee\nCount them cycles, count with me\n\n[Verse]\nMultiply's five, all five kinds\nDivide's thirty-two, keep that in mind\nRemainder too, same thirty-two\nMuch more expensive, that's the view\nE-call, five hundred, e-break the same\nSyscall's got two parts in the game\nBookkeeping first, the complex bit\nThat's the five hundred, pay for it\nThen a plain memory copy, cheap to run\nQuarter cycle a byte and it's done\nRound the fraction up at the end\nJust like the loading, same rule, friend\nLooks a lot like the numbers you find\nIn modern computer architecture, same kind\n\n[Chorus]\nOne for the normal, three for the branch\nFive to multiply, thirty-two to divide\nFive hundred for the e-call, that's the fee\nCount them cycles, count with me\n\n[Outro]\nHard rules now, written in the R F C\nMight move into consensus, we'll see",
+     "cover": "/music/covers/v3/07.jpg",
+     "ckbfs": {
+      "typeId": "0xdc00ebf6a774b85decdcf24649765d6349e5e44a86072da83aedd2d85c39efd7",
+      "contentHash": "0x29133a47dca59f34a801c08ece0fad4c899f13b909e02dd09feb193e120fa6de",
+      "bytes": 699153,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Medium or Store",
+     "style": "trap",
+     "duration": 177.5,
+     "source": "RFC 15 §2 The crypto-economics design of Bitcoin",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Intro]\nTwo kinds of users on the same chain\nWhich one pays?\n\n[Verse]\nMedium of exchange, that's the first kind\nDon't hold the coin, just the transfer in mind\nBuy it just in time and sell it just the same\nDon't care about the price, only the fee in the game\nStore of value, that's the other side\nHold it for years, let the fee cost slide\nSpread it over time, it's nothing much\nCare about security, decentralised and such\nIf it's easy to attack, the value's gone\nIf it's centralised, counter-party risk is on\n\n[Chorus]\nMedium or store, medium or store\nOne moves through, one holds for more\nWho compensates the miners in the long run?\nMedium or store, when the coins are done\n\n[Verse]\nHard cap means when the last coin's mined\nFees alone pay the miners, that's the design\nOpen question if that can last\nStore of value networks don't transact fast\nThe movers got little exposure to the risk\nWon't pay for security, in and out, brisk\nThe holders are exposed for a long, long while\nWilling to pay, but no transactions to file\nAnd the hash power guards more than this block\nEvery block before it's under that lock\nOne-time payments for an ongoing guard\nNot sustainable, that's the hard part\nSo inflation fits the store of value way\nIndirect payment, the ones who benefit pay\nIn proportion to the time they stay\n\n[Chorus]\nMedium or store, medium or store\nOne moves through, one holds for more\nWho compensates the miners in the long run?\nMedium or store, when the coins are done",
+     "cover": "/music/covers/v3/08.jpg",
+     "ckbfs": {
+      "typeId": "0x06d062fb2940701f199b9ddf0f9d72c68f59d0d484b104bd76651e74d4990e12",
+      "contentHash": "0xda7200c0e59cec76c344fba984376a715a944282b426ec06563af4d6c6fbe089",
+      "bytes": 1274591,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Store of Assets",
+     "style": "trap",
+     "duration": 172.3,
+     "source": "RFC 15 §4 Store of Assets",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Intro]\nNot just one coin\nMany assets, one platform\n\n[Verse]\nSmart contract platform issues tokens out\nOwnership of assets, that's what they're about\nOwn communities, own markets too\nValue independent of the platform, true\nBut they lean on the platform all the same\nTo process transactions and secure the game\nBitcoin's a single asset platform, see\nSmart contracts, multi-asset, plenty\nStore of value was the Bitcoin phrase\nStore of assets is the one we raise\n\n[Chorus]\nStore of assets, store of assets\nSecurity's got to grow with what it protects\nOr the platform is the ceiling on the value next\nStore of assets, store of assets\n\n[Verse]\nIf the assets grow and the guard stays small\nDouble spend pays, attack the consensus, all\nNone of the platforms today built this way\nTokens for transactions, or for stake, they say\nEither way the asset value climbs\nAnd the miner's income stays behind\nEvery platform's an ecosystem inside\nIndependent projects, side by side\nSecurity is public goods for them all\nNeeds a clear mechanism, or it'll stall\nCapture the success of the whole ecosystem\nTurn asset demand into miner revenue, listen\nRaise the value of the native token paid\nOtherwise there's a ceiling, and the liquidity fades\nWhen transactions can't be protected enough\nDemand for the asset dries right up\n\n[Chorus]\nStore of assets, store of assets\nSecurity's got to grow with what it protects\nOr the platform is the ceiling on the value next\nStore of assets, store of assets\n\n[Outro]\nDecentralised, multi-asset, smart contract too\nGot to be a store of assets to make it through",
+     "cover": "/music/covers/v3/09.jpg",
+     "ckbfs": {
+      "typeId": "0xc4cafd52bc472acd910ab42fc249438040400da0d2515c414488aee40b75a771",
+      "contentHash": "0x41fef133af8c54a72004b06f2ff4d12a579167676f3773ed30d15acc82b92db6",
+      "bytes": 1188150,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "Pay Once, Occupy Forever",
+     "style": "trap",
+     "duration": 149.4,
+     "source": "RFC 15 §5 Decentralization and the need for bounded state",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Intro]\nPay once\nOccupy forever? Nah\n\n[Verse]\nGold held value for thousands of years\nNeutral, no censor, no confiscation fears\nFor a chain that means a low barrier in\nRun a full node, anybody can spin\nSmart contract full node costs more to run\nProtect that cost or decentralised is done\nBitcoin throttles bandwidth, Ethereum compute\nBut the global state keeps growing, that's the dispute\nBitcoin's state is the U T X O set\nOnce one's made it sits there free, no debt\n\n[Chorus]\nPay once, occupy forever\nThat's the model that we got to sever\nBound the state and let the market price it\nPay once, occupy forever? Not likely\n\n[Verse]\nEthereum charges fixed gas to store\nRefund when you clear it, but there's more\nSize ain't bounded, nor the growth rate\nNo certainty on the full node weight\nOne-time revenue, but the storage cost\nSits on the miners and the nodes, time lost\nGas was made for pricing computation\nWhy price storage with it? No explanation\nState rent's the leading plan on their side\nPay by the size or the contract hibernates, denied\nBut a token contract's many users deep\nHard to coordinate who pays the keep\nThree goals, then, for the state we hold\nBounded growth, so the cost's controlled\nMarket sets the price to expand or free\nAnd revenue keeps flowing to the miners, steadily\n\n[Chorus]\nPay once, occupy forever\nThat's the model that we got to sever\nBound the state and let the market price it\nPay once, occupy forever? Not likely\n\n[Outro]\nBandwidth, computation, now the state\nConstrain it and price it, before it's too late",
+     "cover": "/music/covers/v3/10.jpg",
+     "ckbfs": {
+      "typeId": "0x80a1bf8875a7b44ebacd7debc5724c20ee4852ecd00e1b25719f809b8d3142b6",
+      "contentHash": "0x1aa2955fde55eb6aa1bd179c9e19b318384de96a186cbd042bf20f2fbfeb6571",
+      "bytes": 1056930,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Sixty, Thirty-Five, Five",
+     "style": "trap",
+     "duration": 110.0,
+     "source": "RFC 15 §6 Native tokens, issuance and the NervosDAO",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Intro]\nSixty, thirty-five, five\nWatch the issuance divide\n\n[Verse]\nC K Byte, common knowledge byte\nCell capacity, a piece of the state, right\nAlice got a thousand, makes a thousand byte cell\nOr a few that add up, just as well\nFour bytes for capacity, sixty-four for the lock\nOne twenty-eight for state on the block\nOne ninety-six occupied, room to grow\nUp to a thousand, now you know\nSmallest unit is the C K Shannon\nA hundred million to a byte, that's canon\n\n[Chorus]\nSixty to the miners, thirty-five to the Dao\nFive gets burned till the community says how\nThat's the example, that's the split\nFollows where the bytes all sit\n\n[Verse]\nTwo issuances, the base is first\nFinite supply, halves about every four years\nAll of it to miners till it's mined out\nSecondary's constant, there's no doubt\nBuilt to collect the state rent due\nTargeted inflation, two steps through\nStep one, inflation tax on everyone holding\nStoring state? That's your rent unfolding\nStep two, the ones not storing state\nDeposit in the Dao and it compensates\nDao takes a share of the secondary flow\nMakes up for the dilution, so\nSay sixty percent of the bytes store state\nThirty-five in the Dao, five liquid, wait\nSixty to the miners, thirty-five to the locked\nFive for the community, burned till they've talked\nLong term holders in the Dao don't feel it\nLike a hard cap token, that's how they see it\n\n[Chorus]\nSixty to the miners, thirty-five to the Dao\nFive gets burned till the community says how\nThat's the example, that's the split\nFollows where the bytes all sit",
+     "cover": "/music/covers/v3/11.jpg",
+     "ckbfs": {
+      "typeId": "0x141366a376cb6d99705e1940403e71e4a38a826d0799f7249ae3ded49fcf2233",
+      "contentHash": "0xf7a49e10cdbceb31f2cb33082d1e101e8c08c0b54e2b5647c427560f36baa20e",
+      "bytes": 828999,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Same Side",
+     "style": "trap",
+     "duration": 141.1,
+     "source": "RFC 15 §7 Aligning interests and first class assets",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Intro]\nEverybody wants something\nWhat if it's the same thing?\n\n[Verse]\nTypical platform, everybody pulls apart\nUsers want cheap transactions from the start\nDevelopers want adoption for their apps\nMiners want income, holders want the price up, facts\nMore adoption don't make transactions cheap\nMore demand on the chain and the fees get steep\nCheaper transactions, miners don't earn more\nNot aligned, often in conflict, that's the score\n\n[Chorus]\nSame side, same side\nHigher price and everybody rides\nNetwork more secure, miners get paid\nHolders get the return, same side, made\n\n[Verse]\nOn C K B the users want their assets secure\nDevelopers want more assets preserved, for sure\nMiners want income, holders appreciation\nHigher token price supports the whole equation\nMore assets secured, more bytes occupied\nCirculating supply goes down, price has support on its side\nMiners expand, the network's more secure\nDraws higher value usage, more and more\nPro-cyclical loop, that's the growth engine\nAdoption and value, each one extending\nFirst class assets, cells at the top\nOwned by the user, lock script, full stop\nNot held in custody by a contract's hand\nSo the storage cost's on the users, understand\nFour hundred bytes of code for a token's rules\nSixty-four bytes per owner, those are the tools\nTen thousand owners, the developer still\nNeeds four hundred C K Bytes, that's the bill\n\n[Chorus]\nSame side, same side\nHigher price and everybody rides\nNetwork more secure, miners get paid\nHolders get the return, same side, made",
+     "cover": "/music/covers/v3/12.jpg",
+     "ckbfs": {
+      "typeId": "0x99fe5c0b2d5fc1487ae9abb76996f571ed78150983e8f191d24524d55f419d98",
+      "contentHash": "0x2823ad13b2e7b344bea5f6e6c4d7269d766e89ecf06d34cf8840de9f913d6691",
+      "bytes": 1029235,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Borrowed Bytes",
+     "style": "trap",
+     "duration": 150.0,
+     "source": "RFC 15 §7-8 Lending, subscriptions and liquidity income",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Intro]\nLend it out, lock it in\nBytes come back again\n\n[Verse]\nUtility's in holding, not in the send\nSo here's a thing that you can do, lend\nC K Bytes locked for a known time span\nRisk-free, no collateral, that's the plan\nEntrepreneur borrows for six months, say\nBuilds a prototype, proves it'll pay\nLower capital cost to start\nLong term users lend and earn their part\nRate's set by supply and demand\nAnd how much of the state's in hand\n\n[Chorus]\nBorrowed bytes, borrowed bytes\nHigh use, high rate, release the state tonight\nLow use, low rate, come build it right\nBorrowed bytes, borrowed bytes\n\n[Verse]\nHigh utilisation, fewer bytes to lend\nInterest goes up, and that's the trend\nMakes it worth it to release your state\nLock in the Dao and collect the rate\nLow utilisation, more bytes around\nInterest drops, and adoption's found\nSubscriptions, that's another block to build\nLock in the Dao and the service gets billed\nProvider's the beneficiary of the interest paid\nWithdraw from the Dao and the service fades\nStore of assets users, same idea\nSubscription metered by state size, clear\nMiners the beneficiary, security's the service\nLayer two operators, here's another purpose\nFixed deposits lent to the market for income\nOn top of the layer two fees, and then some\n\n[Chorus]\nBorrowed bytes, borrowed bytes\nHigh use, high rate, release the state tonight\nLow use, low rate, come build it right\nBorrowed bytes, borrowed bytes\n\n[Outro]\nBase layer, most secure and the highest cost\nBuilt for high value and the long term, boss",
+     "cover": "/music/covers/v3/13.jpg",
+     "ckbfs": {
+      "typeId": "0xf805e933cd2abd2dfb230497176a2ca3c51fe6f9cf3b2db100044fa0205a292a",
+      "contentHash": "0x868d3480103b738305152c2fd0f15d8bffdf4c2baccf6a077477586366c9e917",
+      "bytes": 1022708,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
+  }
+ ]
+}

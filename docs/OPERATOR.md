@@ -153,7 +153,7 @@ Demos without screenshots retain the original cabinet artwork. Verified screensh
 
 ## Music mode
 
-`#music` is the music half of the jukebox; the HTML / Music switch at the top right moves between the two. It plays the album described by `public/music/album.json`.
+`#music` is the music half of the jukebox; the HTML / Music switch at the top right moves between the two. It plays the albums listed in `public/music/library.json` (`{ "albums": [...] }`, each with an `id` and its own tracks); a row of buttons under the title switches album without stopping the music.
 
 - A track with a `ckbfs` pointer (`typeId`, `contentHash`, `bytes`, `contentType`) is resolved from CKBFS V3 on Pudge, checked against the pointer's length and hash, and only then handed to the audio element as a `blob:` URL. This is why the host policy in `public/_headers` carries `media-src 'self' blob:`.
 - A track with only a `url` plays a file shipped with the site. `public/music/audio/` is git-ignored; hosted audio is deployed from a local build.

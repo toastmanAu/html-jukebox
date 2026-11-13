@@ -2,16 +2,23 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPudgeClient } from '../ckbfs/client';
 import { formatDiagnostic } from '../ckbfs/errors';
 import { ModeToggle } from '../ModeToggle';
-import { formatTime, parseAlbum, stepIndex, trackOrigin, type Album, type Track } from './catalog';
+import { formatTime, parseLibrary, stepIndex, trackOrigin, type Library, type Track } from './catalog';
 import { trackUrl } from './source';
 import { createScope, type Scope } from './visualiser';
 import './music.css';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
-/** The music half of the jukebox: an album player with a light show behind it. */
+/**
+ * The music half of the jukebox: an album player with a light show behind it.
+ *
+ * Two albums matter at once: the one on show in the track list (`shown`) and the one
+ * the current track belongs to (`playingIn`). Browsing another album does not stop the music.
+ */
 export default function MusicRoom() {
-  const [album, setAlbum] = useState<Album>();
+  const [library, setLibrary] = useState<Library>();
+  const [shown, setShown] = useState(0);
+  const [playingIn, setPlayingIn] = useState(0);
   const [index, setIndex] = useState(-1);
   const [playing, setPlaying] = useState(false);
   const [time, setTime] = useState(0);
@@ -30,14 +37,16 @@ export default function MusicRoom() {
   const playingRef = useRef(false);
   playingRef.current = playing;
 
-  const track: Track | undefined = album && index >= 0 ? album.tracks[index] : undefined;
+  const album = library?.albums[shown];
+  const source = library?.albums[playingIn];
+  const track: Track | undefined = source && index >= 0 ? source.tracks[index] : undefined;
 
   useEffect(() => {
     let cancelled = false;
-    fetch('/music/album.json')
+    fetch('/music/library.json')
       .then(response => { if (!response.ok) throw new Error(`ALBUM_UNAVAILABLE: HTTP ${response.status}`); return response.json(); })
-      .then(json => { if (!cancelled) { setAlbum(parseAlbum(json)); setStatus('Pick a track.'); } })
-      .catch(e => { if (!cancelled) { setError(formatDiagnostic(e)); setStatus('The album could not be loaded.'); } });
+      .then(json => { if (!cancelled) { setLibrary(parseLibrary(json)); setStatus('Pick a track.'); } })
+      .catch(e => { if (!cancelled) { setError(formatDiagnostic(e)); setStatus('The music could not be loaded.'); } });
     return () => { cancelled = true; };
   }, []);
 
@@ -76,11 +85,11 @@ export default function MusicRoom() {
     }
   }
 
-  const select = useCallback(async (next: number) => {
-    if (!album || !audio.current) return;
-    const chosen = album.tracks[next];
+  const select = useCallback(async (from: number, next: number) => {
+    if (!library || !audio.current) return;
+    const chosen = library.albums[from].tracks[next];
     const id = ++request.current;
-    setIndex(next); setError(''); setTime(0); setLength(chosen.duration);
+    setPlayingIn(from); setIndex(next); setError(''); setTime(0); setLength(chosen.duration);
     audio.current.pause();
     connectAnalyser();
     context.current?.resume().catch(() => undefined);
@@ -97,31 +106,31 @@ export default function MusicRoom() {
       if (e instanceof DOMException && e.name === 'NotAllowedError') { setStatus('Press play to start.'); return; }
       setError(formatDiagnostic(e)); setStatus('This track could not be played.');
     }
-  }, [album]);
+  }, [library]);
 
   function toggle() {
-    if (!audio.current || !album) return;
-    if (index < 0) { void select(0); return; }
+    if (!audio.current || !library) return;
+    if (index < 0) { void select(shown, 0); return; }
     if (audio.current.paused) { context.current?.resume().catch(() => undefined); audio.current.play().catch(e => setError(formatDiagnostic(e))); }
     else audio.current.pause();
   }
   function step(delta: 1 | -1) {
-    if (!album) return;
-    const next = stepIndex(index, delta, album.tracks.length);
-    if (next !== null) void select(next);
+    if (!source) return;
+    const next = stepIndex(index, delta, source.tracks.length);
+    if (next !== null) void select(playingIn, next);
   }
 
   useEffect(() => {
-    if (!track || !album || !('mediaSession' in navigator)) return;
+    if (!track || !source || !('mediaSession' in navigator)) return;
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: track.title, artist: album.artist, album: album.album,
+      title: track.title, artist: source.artist, album: source.album,
       artwork: track.cover ? [{ src: track.cover, sizes: '640x640', type: 'image/jpeg' }] : [],
     });
     navigator.mediaSession.setActionHandler('nexttrack', () => step(1));
     navigator.mediaSession.setActionHandler('previoustrack', () => step(-1));
   });
 
-  const atStart = index <= 0, atEnd = !album || index >= album.tracks.length - 1;
+  const atStart = index <= 0, atEnd = !source || index >= source.tracks.length - 1;
   return <div className={`music-shell ${lightShow ? 'light-show' : ''}`}>
     <canvas ref={canvas} className="scope" aria-hidden="true"/>
     <ModeToggle mode="music"/>
@@ -136,6 +145,11 @@ export default function MusicRoom() {
       <header className="deck-head">
         <p className="eyebrow">{album?.artist ?? 'CKBFS JUKEBOX'}</p>
         <h1>{album?.album ?? 'Music'}</h1>
+        {library && library.albums.length > 1 && <div className="albums" role="group" aria-label="Albums">
+          {library.albums.map((entry, i) => <button key={entry.id} type="button" aria-pressed={i === shown} onClick={() => setShown(i)}>
+            {entry.album.replace(/^.*\b(vol\. \d+)$/i, '$1')}{i === playingIn && index >= 0 && <span className="sr-only"> (playing)</span>}
+          </button>)}
+        </div>}
       </header>
 
       <section className="now" aria-label="Now playing">
@@ -145,6 +159,7 @@ export default function MusicRoom() {
           <span className="clock" aria-label="Elapsed time">{formatTime(time)}</span>
         </div>
         <h2>{track?.title ?? 'Nothing playing'}</h2>
+        {track && source && source !== album && <p className="from">{source.album}</p>}
         {track && <p className="credit"><span className="style">{track.style}</span> · <a href={track.link} target="_blank" rel="noreferrer">{track.source}</a></p>}
         <p className="status" role="status">{status}</p>
         {error && <p className="music-error" role="alert">{error}</p>}
@@ -158,7 +173,7 @@ export default function MusicRoom() {
           <span className="seek-time" aria-hidden="true">{formatTime(time)} / {formatTime(length)}</span>
         </label>
         <div className="buttons">
-          <button type="button" onClick={() => step(-1)} disabled={!album || atStart} aria-label="Previous track">⏮</button>
+          <button type="button" onClick={() => step(-1)} disabled={!source || atStart} aria-label="Previous track">⏮</button>
           <button type="button" className="play" onClick={toggle} disabled={!album} aria-label={playing ? 'Pause' : 'Play'}>{playing ? '⏸' : '▶'}</button>
           <button type="button" onClick={() => step(1)} disabled={atEnd} aria-label="Next track">⏭</button>
         </div>
@@ -171,8 +186,9 @@ export default function MusicRoom() {
       {lyrics && track && <section className="lyrics" aria-label={`Lyrics for ${track.title}`}><pre>{track.lyrics}</pre></section>}
 
       <ol className="tracks" aria-label="Tracks">
-        {album?.tracks.map((entry, i) => <li key={entry.n}>
-          <button type="button" aria-current={i === index ? 'true' : undefined} onClick={() => i === index ? toggle() : void select(i)}>
+        {album?.tracks.map((entry, i) => <li key={`${album.id}-${entry.n}`}>
+          <button type="button" aria-current={shown === playingIn && i === index ? 'true' : undefined}
+            onClick={() => shown === playingIn && i === index ? toggle() : void select(shown, i)}>
             <span className="tile" aria-hidden="true">{pad(entry.n)}</span>
             <span className="name">{entry.title}<small>{entry.style} · {trackOrigin(entry) === 'ckbfs' ? 'on chain' : 'hosted'}</small></span>
             <span className="len">{formatTime(entry.duration)}</span>

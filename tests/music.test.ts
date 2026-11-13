@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import * as ccc from '@ckb-ccc/core';
-import { albumSchema, formatTime, parseAlbum, stepIndex, trackOrigin, verifyTrackBytes, type Track } from '../src/music/catalog';
+import { albumSchema, formatTime, parseAlbum, parseLibrary, stepIndex, trackOrigin, verifyTrackBytes, type Track } from '../src/music/catalog';
 
 const hash = (bytes: Uint8Array) => ccc.hashCkb(bytes);
 const bytes = new Uint8Array([1, 2, 3, 4]);
@@ -33,6 +33,26 @@ describe('music catalog', () => {
   });
   it('rejects duplicate track numbers', () => {
     expect(() => parseAlbum({ ...album, tracks: [hosted, { ...hosted }] })).toThrow('unique');
+  });
+});
+
+describe('music library', () => {
+  const vol = (id: string) => ({ ...album, id });
+  it('accepts several albums, each with its own track numbering', () => {
+    expect(parseLibrary({ albums: [vol('vol-1'), vol('vol-2')] }).albums.map(a => a.id)).toEqual(['vol-1', 'vol-2']);
+  });
+  it('rejects an empty library', () => {
+    expect(() => parseLibrary({ albums: [] })).toThrow();
+  });
+  it('rejects two albums with the same id', () => {
+    expect(() => parseLibrary({ albums: [vol('vol-1'), vol('vol-1')] })).toThrow('unique');
+  });
+  it('rejects an album without an id, or with one that is not a plain slug', () => {
+    expect(() => parseLibrary({ albums: [album] })).toThrow();
+    expect(() => parseLibrary({ albums: [vol('Vol 1/..')] })).toThrow();
+  });
+  it('rejects a bad track inside any album', () => {
+    expect(() => parseLibrary({ albums: [vol('vol-1'), { ...vol('vol-2'), tracks: [base] }] })).toThrow();
   });
 });
 

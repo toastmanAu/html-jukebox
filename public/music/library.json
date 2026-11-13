@@ -650,6 +650,223 @@
      }
     }
    ]
+  },
+  {
+   "id": "vol-4",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 4",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Not Before",
+     "style": "boom bap",
+     "duration": 126.0,
+     "source": "RFC 17 Summary",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0017-tx-valid-since/0017-tx-valid-since.md",
+     "lyrics": "[Intro]\nNot yet, not yet\nCome back when it's time\n\n[Verse]\nThere's a rule in the consensus, simple and plain\nStops an input being committed too soon on the chain\nOptional value, they call it since\nAdd it to an input, and here's the sense\nNames a time in the future when it's good to go\nCurrent time's got to reach it, or the node says no\nEqual or greater, then the precondition's met\nAnything before that, you ain't there yet\n\n[Chorus]\nNot before, not before\nSince on the input, that's the door\nMiss it on one and the whole thing's out\nNot before, that's what it's about\n\n[Verse]\nA transaction's many inputs, many hands\nDifferent parties batched with different plans\nSo the since field sits on each input alone\nEvery party sets a value of their own\nOne of them not met, and here's the news\nThe node rejects the whole thing, straight refused\nThree metrics you can use to tell the time\nBlock number, that's the first in line\nEpoch number with a fraction, two\nTimestamp, three, and here's the clue\nIt's the median of thirty-seven blocks before\nPick exactly one of them, no more\nEvery one of them only ever climbs\nNever goes down with the passing of time\nThen a flag, absolute or relative, choose\nAbsolute, the value is the one you use\nRelative, start from the commitment block\nAdd the since value on top, that's the clock\n\n[Chorus]\nNot before, not before\nSince on the input, that's the door\nMiss it on one and the whole thing's out\nNot before, that's what it's about\n\n[Outro]\nTarget equal or greater than the threshold set\nThat's the only way the since gets met",
+     "cover": "/music/covers/v4/01.jpg",
+     "ckbfs": {
+      "typeId": "0x49efd763cbad4030befa52f040508f0ea494f2e2adb79bce6d00bfea33d64616",
+      "contentHash": "0x9d5e73adf5f657af560b98262931e0663ad53a964ef81aa76d9973db0bfbc6ef",
+      "bytes": 841640,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Sixty-Four Bits",
+     "style": "breaks",
+     "duration": 160.0,
+     "source": "RFC 17 How to specify the since precondition",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0017-tx-valid-since/0017-tx-valid-since.md",
+     "lyrics": "[Intro]\nSixty-four bits, y'all\nEight on top, fifty-six below\n\n[Verse]\nEvery input's got a since field packed\nUnsigned sixty-four bit integer, that's a fact\nZero means it's off, ignore the thing\nAnything else, here's the encoding\nHighest eight bits are the flags up top\nFifty-six remaining are the value, stop\nHighest bit of all, here's what it does\nZero's absolute, one is relative\n\n[Chorus]\nSixty-four bits, break it down\nEight for the flags, the rest goes round\nOne bit relative, two for the metric\nFive reserved, keep it zero, electric\n\n[Verse]\nNext two bits pick the metric to play\nZero zero, block number's the way\nZero one, epoch with a fraction\nOne zero, median timestamp action\nOne one's invalid, never set it so\nNext five bits are reserved, all zero\nBlock number or timestamp, the value's plain\nFifty-six bit integer, little-endian\nEpoch with a fraction packs in three\nE and I and L, now follow me\nE is the epoch, three bytes low\nBit zero to twenty-three, there you go\nI is the index, two bytes more\nTwenty-four to thirty-nine on the floor\nL is the length, two bytes at the top\nForty to fifty-five, and that's the lot\nCount them from the right, least significant first\nAll little-endian, every one, rehearsed\n\n[Chorus]\nSixty-four bits, break it down\nEight for the flags, the rest goes round\nOne bit relative, two for the metric\nFive reserved, keep it zero, electric\n\n[Outro]\nShift right sixty-three, that's the relative flag\nShift sixty-one and mask with three, in the bag",
+     "cover": "/music/covers/v4/02.jpg",
+     "ckbfs": {
+      "typeId": "0xa79ab17732f3edb3ae86d1faba1d3bd257ea9efc1ee3a0d39cd8770aaf77e15b",
+      "contentHash": "0x011cd42021b56cef2dc8af8b6da4c1698036bc434043417f849bf29653c91215",
+      "bytes": 1010842,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Threshold",
+     "style": "boom bap",
+     "duration": 156.2,
+     "source": "RFC 17 How to verify the since precondition",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0017-tx-valid-since/0017-tx-valid-since.md",
+     "lyrics": "[Intro]\nThree steps to the door\nDecode, compute, compare\n\n[Verse]\nStep one, decode what's in the field\nIf it's zero, skip it, nothing to yield\nNot zero, check the format's right\nMetric flag's not one one, keep it tight\nReserved flags, every one a zero\nAnd for the epoch metric, here we go\nIndex got to be less than the length\nOr both of them zero, that's the strength\nIn that case set them zero and one\nFormat's valid, step one's done\n\n[Chorus]\nReach the threshold, reach the threshold\nTarget's got to meet it or the door stays closed\nBase plus value if it's relative\nReach the threshold, that's how you live\n\n[Verse]\nStep two, compute the threshold line\nAbsolute, the value's it, just fine\nCopy it straight, no conversion at all\nRelative needs a base before the call\nFind the commitment block of the input, see\nThe block that committed the output it used to be\nBlock number metric, base is that block's number\nEpoch metric, the epoch field, no blunder\nTimestamp metric, the timestamp in the header\nBase plus value, now you got it together\nStep three, the target block's the one\nThat commits the transaction when it's done\nStill in the pool? Then it's the next to be mined\nBlock number target, last mined plus one, aligned\nEpoch target is the next index along\nFive hundred, ten of twenty, then eleven, strong\nTimestamp target is the median found\nIn the thirty-seven blocks before, all round\nTarget equal or greater, you're through\nAnything less, there's waiting to do\n\n[Chorus]\nReach the threshold, reach the threshold\nTarget's got to meet it or the door stays closed\nBase plus value if it's relative\nReach the threshold, that's how you live",
+     "cover": "/music/covers/v4/03.jpg",
+     "ckbfs": {
+      "typeId": "0x0a5dc08633ffb8c018d1401ad8d80ef437acd0e38f5c60e49fb72efbcd76c574",
+      "contentHash": "0x3ebb9ff1a28815bf57bd880614bdaeb99fcd2b7e5214bef1a1262ee202078181",
+      "bytes": 1052226,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Code Hash",
+     "style": "boom bap",
+     "duration": 160.2,
+     "source": "RFC 19 Cell and Script",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0019-data-structures/0019-data-structures.md",
+     "lyrics": "[Intro]\nWhere's the code at?\nFollow the hash\n\n[Verse]\nCell's got three, let me lay it flat\nCapacity, type, and lock, that's that\nCapacity's the size, counted in shannons\nAnd it's the balance too, that's the canon\nGot to cover its own length, and the data\nThe type and the lock, sooner or later\nType's a script and it's optional, friend\nLimits how the data changes, end to end\nLock's a script, and it says who owns\nUnlock it and you spend it, that's the throne\n\n[Chorus]\nCode hash, args, hash type\nThree in the script, that's the stripe\nCode sits in a dep cell on the side\nCode hash, that's the guide\n\n[Verse]\nA script's got three fields, here they are\nCode hash first, that's the star\nHash of a binary, risk five, E L F\nThe code's not in the script itself\nSaves the space, it's in a dep cell instead\nAttached to the transaction, like I said\nHash type tells you how to match it right\nData or type, pick one, hold tight\nData, match the hash of the dep cell's data\nType, match its type script hash, see you later\nThen the args, the script's input\nLoaded in the V M when it's put\nNo arg C, arg V the Unix way\nSpecial syscalls load them, that's the play\nBinary gets loaded in a V M instance\nWhen the transaction's verified, no resistance\n\n[Chorus]\nCode hash, args, hash type\nThree in the script, that's the stripe\nCode sits in a dep cell on the side\nCode hash, that's the guide\n\n[Outro]\nR F C nineteen, withdrawn they say\nData structures, we rapped them anyway",
+     "cover": "/music/covers/v4/04.jpg",
+     "ckbfs": {
+      "typeId": "0xdae01b35a03465cb4f7f24e1c62dce5baaa4c5d471326b10d42ddb2ff2fe43e4",
+      "contentHash": "0x5131cbfd7b17b9ffbca12bf89643007597136b2699bda1f2d03d80421f3cd108",
+      "bytes": 1024437,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Read the Header",
+     "style": "breaks",
+     "duration": 124.0,
+     "source": "RFC 19 Block and Header",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0019-data-structures/0019-data-structures.md",
+     "lyrics": "[Intro]\nTop of the block\nRead the header, read the header\n\n[Verse]\nA block's got four things, check the list\nHeader, transactions, don't get it twisted\nProposals, short I Ds of the proposed\nAnd the uncles, that's how it's composed\nTransactions are the ones committed inside\nProposals hex-encoded, side by side\nUncle block's a header of its own\nAnd its own proposals, never alone\n\n[Chorus]\nRead the header, read the header\nNumber, parent, nonce, all together\nTimestamp ticking in milliseconds\nRead the header, that's the reckoning\n\n[Verse]\nCompact target, that's the difficulty\nOf the proof of work, packed in thirty-two, see\nNumber is the height of the block\nParent hash, the one before, that's the lock\nNonce is the solution to the puzzle, found\nOne twenty-eight bits, wide and round\nTimestamp, Unix time, in milliseconds\nVersion for the forks, compatibility reckoned\nTransactions root, two roots in one\nTransaction hashes and the witness ones\nProposals hash of the I Ds in a row\nAll zeros when there's none to show\nUncles hash of the uncle headers too\nAll zeros when there's none in view\nEpoch packs the number, index, length\nSixty-four bits, three parts, that's the strength\nAnd the Dao field, bytes of its own\nRead the Dao R F C, that one's shown\n\n[Chorus]\nRead the header, read the header\nNumber, parent, nonce, all together\nTimestamp ticking in milliseconds\nRead the header, that's the reckoning",
+     "cover": "/music/covers/v4/05.jpg",
+     "ckbfs": {
+      "typeId": "0xa29cb3fe9a19936d29f4dce1a4b4da1b9a09524c2c5f20650b77079d0d26b0a9",
+      "contentHash": "0xc65cef46a5c2f38dd3c4ec4c73bf00ddf23e3f636ff226d9da09535f8bdddf77",
+      "bytes": 791003,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Fresh Transactions",
+     "style": "boom bap",
+     "duration": 161.2,
+     "source": "RFC 20 Motivation and eliminating the bottleneck",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Intro]\nWhat's the hold up?\nFresh transactions on the wire\n\n[Verse]\nNakamoto consensus, simple, low overhead\nSecurity well understood, like the papers said\nBut a barrier holds it to a few a second\nTwo parameters cap it, as it's reckoned\nMax block size and the block interval\nOne megabyte, ten minutes, that's the original\nRoughly ten transactions a second, slow\nBigger blocks or faster, here's what you should know\nMore blocks made while others propagate\nCompeting blocks, and only one's the fate\nBandwidth spent on orphans goes to waste\nThat's the limit on the pace\n\n[Chorus]\nFresh transactions, that's the bottleneck\nNodes got to ask before they forward, check\nPropose it first, commit it later on\nFresh transactions, and the hold up's gone\n\n[Verse]\nWhen the interval drops, here's what's slow\nFresh transactions, not finished on the go\nNot yet propagated when they're put in the block\nNodes request them first, and that's the clock\nAttackers use it too, embed them on purpose\nLonger latency, hoping it'll serve them\nSo split the confirmation into two\nPropose and commit, that's what we do\nProposed when its truncated hash is in\nThe proposal zone, of the block or its uncle kin\nProposal don't affect if the block is valid\nForward the block first, that's the ballad\nCommitted in the commitment zone, a window on\nStarting several blocks after the proposal's gone\nBy then every node's received it and verified\nBottleneck eliminated, that's the ride\n\n[Chorus]\nFresh transactions, that's the bottleneck\nNodes got to ask before they forward, check\nPropose it first, commit it later on\nFresh transactions, and the hold up's gone",
+     "cover": "/music/covers/v4/06.jpg",
+     "ckbfs": {
+      "typeId": "0x83a38b2449fd0bc05a469652fc6c8890b8b3cf463fc5a02c0a545f87401f8864",
+      "contentHash": "0x5eb26bf9126bc0fccd2a18f3909a59e4aa1e4d4a7a45ee1ae7e72487172385c5",
+      "bytes": 987115,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Now or Never",
+     "style": "breaks",
+     "duration": 151.6,
+     "source": "RFC 20 Block propagation protocol",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Intro]\nThree rules for the relay\nNow or never, now or never\n\n[Verse]\nBroadcast every block with a valid proof of work\nOrphans too, don't let them lurk\nThey might be uncles in the main chain soon\nAnd a proof takes time, can't flood the room\nThree rules cut the extra round trip out\nWhen it has to happen, one hop, no doubt\n\n[Chorus]\nNow or never, send it on\nThree and a half seconds and the chance is gone\nQuery on the side, push what's new\nNow or never, coming through\n\n[Verse]\nRule one, the query doesn't block\nRebuild the commitment zone, then don't stop\nForward the compact block down the line\nAsk upstream for the proposed, same time\nFine as long as the answer lands\nBefore W close blocks, that's the plan\nProposal I Ds held in memory, tight\nTill they leave the proposal window, right\nSize limits hard-coded, no D O S\nToo many big ones? Clear the mess\nBlacklist the peer that sent the most\nRule one's done, now here's the post\nRule two, missing committed, now or never\nQuery the sender with a short timeout tether\nFail and they lose high bandwidth mode\nNext fastest peer takes on the load\nIncomplete block don't travel on\nTill another peer sends what was gone\nThree and a half seconds, that's the wait\nNinety-five percent make it through the gate\nRule three, transaction push, that's last\nSender didn't know them? Prefill them fast\nPut them in the compact block going out\nOne hop only, that's what it's about\n\n[Chorus]\nNow or never, send it on\nThree and a half seconds and the chance is gone\nQuery on the side, push what's new\nNow or never, coming through",
+     "cover": "/music/covers/v4/07.jpg",
+     "ckbfs": {
+      "typeId": "0x9c63182e5b5c13ee92b32bb14cdfa5b5995d2c6adb43ae9ec8dec08668887258",
+      "contentHash": "0xee2ba19ea01e96bc8dcb905f8d2eecc79251220da9827656d334b532f5b9bf73",
+      "bytes": 932524,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Fixed Orphan Rate",
+     "style": "boom bap",
+     "duration": 122.8,
+     "source": "RFC 20 Dynamic difficulty adjustment mechanism",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Intro]\nNot a fixed interval\nA fixed orphan rate\n\n[Verse]\nTwo steps let us drop the interval down\nNext thing is to find the sweet spot in town\nBest use of the bandwidth, safe all the same\nDynamic difficulty, that's the name\nTwo goals, G one and G two\nSelfish mining unprofitable, that's the first to do\nThen adjust the throughput on the fly\nTo the bandwidth and the latency, that's why\n\n[Chorus]\nFixed orphan rate, that's the aim\nNot a fixed interval, different game\nCount every block when you measure the power\nFixed orphan rate, hour by hour\n\n[Verse]\nFour constraints to hold, in line with the old\nC one, same target duration, every epoch, told\nC two, max reward in an epoch depends\nOnly on its number, that's how it's penned\nSo the rewards come out at a set rate\nC three, the hash estimate can't shift too great\nStops an attacker forging a chain\nC four, the interval's got bounds to maintain\nUpper bound keeps the service alive\nLower keeps the traffic where most nodes survive\nFor G one, count all blocks, not just the main\nHash rate estimate, then dampen the gain\nFor G two, target the orphan rate\nSolve the interval from the last epoch's state\nIts duration, its orphans, its main chain count\nThen the next epoch's numbers, every amount\nMain chain blocks, reward, and target too\nWith dampening and bounds, that's how it's through\nRuns at the end of every epoch, friend\nPipeline the sync and confirm, that's the end\n\n[Chorus]\nFixed orphan rate, that's the aim\nNot a fixed interval, different game\nCount every block when you measure the power\nFixed orphan rate, hour by hour",
+     "cover": "/music/covers/v4/08.jpg",
+     "ckbfs": {
+      "typeId": "0x1046d23f7b74b7acbefe5b174e369038b04b977714e4b192d726873d71ba4b9e",
+      "contentHash": "0x85f0665baf8773beea5fd61723ffc1099203681fd8b37f0d67c861af13d2cb31",
+      "bytes": 820283,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Count the Uncles",
+     "style": "boom bap",
+     "duration": 125.8,
+     "source": "RFC 20 Mitigating selfish mining and the uncle definition",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Intro]\nEvery block counts\nEven the ones that lost\n\n[Verse]\nSelfish mining, here's the trick they play\nOrphan other miners' blocks on purpose, that's the way\nUnfair reward, and where's it rooted?\nDifficulty adjustment, that's what they looted\nIt ignores the orphans when it sizes the power\nMore orphans, lower difficulty, their hour\nHigher reward over time for the cheat\nThat's the hole, now here's the beat\n\n[Chorus]\nCount the uncles, count them all\nDifficulty don't care who took the fall\nOrphan rate can't move the dial\nCount the uncles, every mile\n\n[Verse]\nEvery block refers to orphans as its uncles\nAll of them counted, no more fumbles\nNew difficulty independent of the orphan rate\nSelfish mining don't pay, that's the state\nFor a large range of parameters, proved\nHowever the attacker's power's moved\nHonest, selfish, idle, split it any way\nHowever many epochs, still don't pay\nNow what's an uncle? Three conditions, friend\nSame epoch, same difficulty, that's the blend\nSecond, the nephew's height is greater, clear\nThird, it's the first in its chain to refer\nNot like Ethereum, we don't mind how far\nThe common ancestor is, wherever they are\nLong as both of them share the epoch, fine\nThat's an uncle, by the design\nProposal I D's the first bits of the hash\nDon't need to be unique, just a neighbourhood stash\nSame I D on two? Both proposed, that's cool\nMake it long enough, collisions hard, that's the rule\n\n[Chorus]\nCount the uncles, count them all\nDifficulty don't care who took the fall\nOrphan rate can't move the dial\nCount the uncles, every mile",
+     "cover": "/music/covers/v4/09.jpg",
+     "ckbfs": {
+      "typeId": "0x74b57bc3bfb62c0b04666737582fc68a38cd19e1e51438ad2d7ecc98651ef22d",
+      "contentHash": "0x4b65342403d1309052024120fef3e7b5034e6394a3f05be19830079d534bc1d4",
+      "bytes": 837188,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "One Line",
+     "style": "breaks",
+     "duration": 142.3,
+     "source": "RFC 21 Payload format and wrap to address",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0021-ckb-address-format/0021-ckb-address-format.md",
+     "lyrics": "[Intro]\nOne line, human readable\nC K B, then a one\n\n[Verse]\nAn address is a lock script, on display\nApplication level, recommended way\nThree parameters, code hash, hash type, args\nPacked in one line, verifiable, it's ours\nFirst encode the lock to a bytes array\nPayload's the name, then wrap it, okay\nOne byte up front says the format type\nZero zero is the full one, that's the stripe\n\n[Chorus]\nOne line, one line\nLock script wrapped and it reads just fine\nC K B for the main, C K T for the test\nOne line, and the checksum does the rest\n\n[Verse]\nFull format carries every field of the lock\nEncoded Bech thirty-two M, that's the stock\nZero one's the short one, deprecated now\nZero two and zero four, same, take a bow\nWhy'd the old full format get retired?\nA flaw in Bech thirty-two, that's what transpired\nDelete or insert characters, still looks valid\nUnexpected address, that's a bad ballad\nAnd the hard fork needed a field brand new\nFor the V M version, per script group, too\nWrap it up, three parts in the string\nHuman readable part's the first thing\nSeparator's always the number one\nThen the data part, base thirty-two, done\nLast six characters are the checksum, B C H\nOriginal limit ninety long, but wait\nWe removed the length limit, let it run\nError correction's off past ninety, none\nDon't want to use it anyway, you see\nRisk of a wrong correction, not for me\n\n[Chorus]\nOne line, one line\nLock script wrapped and it reads just fine\nC K B for the main, C K T for the test\nOne line, and the checksum does the rest",
+     "cover": "/music/covers/v4/10.jpg",
+     "ckbfs": {
+      "typeId": "0x884358f4fb2ca250886254475a70357f982e2eeb0bb5628b975be32989f1bb28",
+      "contentHash": "0x778b26931fa3594663afe4e8099b6b5a66cee0359a695c30822875e1dec2f7de",
+      "bytes": 893321,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Two of Three",
+     "style": "boom bap",
+     "duration": 160.5,
+     "source": "RFC 21 Multisig script",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0021-ckb-address-format/0021-ckb-address-format.md",
+     "lyrics": "[Intro]\nAlice, Bob and Cipher\nTwo of three, but one's a must\n\n[Verse]\nShort format had a table, three in a row\nDeprecated now, but here's the show\nIndex zero, sec P two five six K one\nWith blake one sixty, that's the common one\nIndex one, the multisig, hold tight\nIndex two is anyone can pay, alright\nBlake one sixty's the leading twenty bytes\nOf a Blake two B hash, cut to size\n\n[Chorus]\nTwo of three, two of three\nAny two of us, but it's got to have me\nS and R and M and N\nTwo of three, say it again\n\n[Verse]\nMultisig script hash, twenty bytes long\nHash of the multisig script, here's the song\nS, R, M, N, four single bytes\nZero to two fifty-five, those are the heights\nS is the format version, fixed at zero\nM of N signatures, that's the hero\nN's how many keys are on the list\nM's how many got to sign, don't miss\nR means the signatures have got to match\nThe first R keys on the list, that's the catch\nThen the blake one sixty of each public key\nCompressed, in order, one, two, three\nAlice, Bob and Cipher share a cell\nAny two can unlock it, but as well\nCipher must approve, that's the deal\nSo Cipher's key goes first, that's the seal\nR is one, M is two, N is three\nThat's the script for the family\nArgs are always twenty bytes in the short kind\nNeed more? Use the full format, keep that in mind\n\n[Chorus]\nTwo of three, two of three\nAny two of us, but it's got to have me\nS and R and M and N\nTwo of three, say it again",
+     "cover": "/music/covers/v4/11.jpg",
+     "ckbfs": {
+      "typeId": "0x125fa2837690a8bae96354b7446d0a5a503f1f73eb91ad578069a1100a515a73",
+      "contentHash": "0xe3ea2f5c49d96136e2eb94cc36265b6ca27cfeda74728a52c093fb1391ca3512",
+      "bytes": 1070662,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Live Cell",
+     "style": "boom bap",
+     "duration": 126.5,
+     "source": "RFC 22 Value storage, cell data and lock script",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0022-transaction-structure/0022-transaction-structure.md",
+     "lyrics": "[Intro]\nIs it live or is it dead?\nCheck the out point\n\n[Verse]\nC K B runs on the U T X O\nDestroy some outputs, make some new, you know\nTransaction output, we call it a cell\nSame thing, either name will do as well\nInputs get destroyed, the outputs made\nBlocks got numbers, and the order's laid\nLive cell's an output nobody's spent\nDead cell's been an input, came and went\nOnly live cells can be inputs, see\nThat's the rule, as simple as can be\n\n[Chorus]\nLive cell, live cell\nTransaction hash and index tell\nCan't mint capacity out of the air\nLive cell, spend it with care\n\n[Verse]\nHash the transaction, every field but one\nLeave the witnesses out and it's done\nHash is unique, and the cell's got a place\nIn the outputs array, so here's the trace\nTransaction hash and index, that's the out point\nReference, not a copy, that's the joint\nSum of inputs' capacity, got to be\nAt least the sum of the outputs, see\nMiners take the difference as the fee\nCapacity's the token and the limit, both\nOn the data stored, that's the oath\nCovers data, lock, type, and itself\nOutputs data sits on a parallel shelf\nEvery cell's got a lock, and it runs\nWhen the cell's an input, that's the one\nGroup the inputs by the lock, run it once\nGroup it, locate it, execute, no stunts\nPublic key info in the args, by convention\nSignature in the witnesses, worth a mention\n\n[Chorus]\nLive cell, live cell\nTransaction hash and index tell\nCan't mint capacity out of the air\nLive cell, spend it with care",
+     "cover": "/music/covers/v4/12.jpg",
+     "ckbfs": {
+      "typeId": "0x8c4e6acf0c13e9c88edc287cdc9b20843b333f4b9432d2ed8f40649589532a3d",
+      "contentHash": "0x81dd78aff941719b45a94246847e478b90b12ca51a4bc2cc4591c0b1d93ab038",
+      "bytes": 838347,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Only One",
+     "style": "breaks",
+     "duration": 112.9,
+     "source": "RFC 22 Type script, upgradable script and Type ID",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0022-transaction-structure/0022-transaction-structure.md",
+     "lyrics": "[Intro]\nOnly one, only one\nOne live cell of its kind\n\n[Verse]\nType script's like the lock, with two things changed\nIt's optional, and it runs on both, arranged\nInputs and outputs, every time\nLock's for ownership, type's for the logic line\nState transition contract for cells of a type\nSee one in an output, it passed the hype\nToken issuance, that's the typical case\nNew tokens made by the rules in place\n\n[Chorus]\nOnly one, only one\nType I D and the copy's done\nOne in, one out, at the most\nOnly one, coast to coast\n\n[Verse]\nLocate code by data hash, and it's fixed\nCan't find new code with the same hash, nixed\nBut sometimes you want to change the code\nWithout touching the script, so here's the road\nHash type type, match the type script hash\nReplace the code cell, same type, in a flash\nNew cell's got the updated code inside\nUpgrade rules in its lock, that's the guide\nCareful though, the code can change on you\nGot to trust the author, check the policy too\nSomeone could make a flawed one, same type script\nThat's where type I D comes in, equipped\nSingleton type, one live cell alone\nNobody makes another, that's the throne\nIn any type I D group, at the most\nOne input, one output, that's the post\nOne output only, that's a creation\nOne input only, that's deletion\nOne of each, a transfer, that's the three\nCreation args hash the first input, see\nPlus the output index of the cell\nUnique for good, and that's the spell\n\n[Chorus]\nOnly one, only one\nType I D and the copy's done\nOne in, one out, at the most\nOnly one, coast to coast",
+     "cover": "/music/covers/v4/13.jpg",
+     "ckbfs": {
+      "typeId": "0x88655813cc1363cccdc69c648535b3ccce1cfdc7652acd486be845cd8b9079c3",
+      "contentHash": "0x45b494751894dd278627d92f3c97cb42db6c03fc14cf6dc50cdd3f25630ef350",
+      "bytes": 684509,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
   }
  ]
 }

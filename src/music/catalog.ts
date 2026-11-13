@@ -84,3 +84,18 @@ export function stepIndex(current: number, delta: 1 | -1, count: number): number
   const next = current + delta;
   return next >= 0 && next < count ? next : null;
 }
+
+/** The address of one track: `#music/<album id>/<track number>`. */
+export function trackHash(albumId: string, n: number): string {
+  return `#music/${albumId}/${n}`;
+}
+
+/** Positions of the album and track a shared link points at, or null if it names nothing in the library. */
+export function findSharedTrack(hash: string, library: Library): { album: number; track: number } | null {
+  const match = /^#music\/([a-z\d-]{1,40})\/(\d{1,4})$/.exec(hash);
+  if (!match) return null;
+  const album = library.albums.findIndex(entry => entry.id === match[1]);
+  if (album < 0) return null;
+  const track = library.albums[album].tracks.findIndex(entry => entry.n === Number(match[2]));
+  return track < 0 ? null : { album, track };
+}

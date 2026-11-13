@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPudgeClient } from '../ckbfs/client';
 import { formatDiagnostic } from '../ckbfs/errors';
 import { ModeToggle } from '../ModeToggle';
-import { formatTime, parseLibrary, stepIndex, trackOrigin, type Library, type Track } from './catalog';
+import { findSharedTrack, formatTime, parseLibrary, stepIndex, trackHash, trackOrigin, type Library, type Track } from './catalog';
 import { trackUrl } from './source';
 import { createScope, type Scope } from './visualiser';
 import './music.css';
@@ -14,6 +14,9 @@ const pad = (n: number) => String(n).padStart(2, '0');
  *
  * Two albums matter at once: the one on show in the track list (`shown`) and the one
  * the current track belongs to (`playingIn`). Browsing another album does not stop the music.
+ *
+ * Every track has an address, `#music/<album id>/<track number>`. Opening one cues that track;
+ * a browser will not start audio without a tap, so the listener presses play.
  */
 export default function MusicRoom() {
   const [library, setLibrary] = useState<Library>();
@@ -25,6 +28,7 @@ export default function MusicRoom() {
   const [length, setLength] = useState(0);
   const [status, setStatus] = useState('Loading the album…');
   const [error, setError] = useState('');
+  const [notice, setNotice] = useState('');
   const [lyrics, setLyrics] = useState(false);
   const [lightShow, setLightShow] = useState(false);
   const [reduced] = useState(() => matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -36,6 +40,8 @@ export default function MusicRoom() {
   const request = useRef(0);      // guards against a slow resolve landing after a newer selection
   const playingRef = useRef(false);
   playingRef.current = playing;
+  const position = useRef({ playingIn, index });
+  position.current = { playingIn, index };
 
   const album = library?.albums[shown];
   const source = library?.albums[playingIn];
@@ -45,7 +51,17 @@ export default function MusicRoom() {
     let cancelled = false;
     fetch('/music/library.json')
       .then(response => { if (!response.ok) throw new Error(`ALBUM_UNAVAILABLE: HTTP ${response.status}`); return response.json(); })
-      .then(json => { if (!cancelled) { setLibrary(parseLibrary(json)); setStatus('Pick a track.'); } })
+      .then(json => {
+        if (cancelled) return;
+        const loaded = parseLibrary(json);
+        setLibrary(loaded);
+        const shared = findSharedTrack(location.hash, loaded);
+        if (!shared) { setStatus(location.hash.startsWith('#music/') ? 'That shared track was not found. Pick a track.' : 'Pick a track.'); return; }
+        // Cue the shared track. It is resolved from chain when the listener presses play.
+        setShown(shared.album); setPlayingIn(shared.album); setIndex(shared.track);
+        setLength(loaded.albums[shared.album].tracks[shared.track].duration);
+        setStatus('Press play to start.');
+      })
       .catch(e => { if (!cancelled) { setError(formatDiagnostic(e)); setStatus('The music could not be loaded.'); } });
     return () => { cancelled = true; };
   }, []);
@@ -90,6 +106,7 @@ export default function MusicRoom() {
     const chosen = library.albums[from].tracks[next];
     const id = ++request.current;
     setPlayingIn(from); setIndex(next); setError(''); setTime(0); setLength(chosen.duration);
+    history.replaceState(null, '', trackHash(library.albums[from].id, chosen.n));   // the address bar is now a link to this track
     audio.current.pause();
     connectAnalyser();
     context.current?.resume().catch(() => undefined);
@@ -111,6 +128,7 @@ export default function MusicRoom() {
   function toggle() {
     if (!audio.current || !library) return;
     if (index < 0) { void select(shown, 0); return; }
+    if (!audio.current.getAttribute('src')) { void select(playingIn, index); return; }   // cued from a shared link, not loaded yet
     if (audio.current.paused) { context.current?.resume().catch(() => undefined); audio.current.play().catch(e => setError(formatDiagnostic(e))); }
     else audio.current.pause();
   }
@@ -118,6 +136,40 @@ export default function MusicRoom() {
     if (!source) return;
     const next = stepIndex(index, delta, source.tracks.length);
     if (next !== null) void select(playingIn, next);
+  }
+
+  // A track link opened while the room is already showing (pasted, or back/forward).
+  useEffect(() => {
+    if (!library) return;
+    const onHash = () => {
+      const shared = findSharedTrack(location.hash, library);
+      if (!shared || (shared.album === position.current.playingIn && shared.track === position.current.index)) return;
+      setShown(shared.album);
+      void select(shared.album, shared.track);
+    };
+    addEventListener('hashchange', onHash);
+    return () => removeEventListener('hashchange', onHash);
+  }, [library, select]);
+
+  useEffect(() => {
+    if (!notice) return;
+    const timer = setTimeout(() => setNotice(''), 6000);
+    return () => clearTimeout(timer);
+  }, [notice]);
+
+  /** Hand a track's link to the device's share sheet, or copy it where there is none. */
+  async function share(from: number, which: number) {
+    if (!library) return;
+    const entry = library.albums[from], shared = entry.tracks[which];
+    const url = `${location.origin}/${trackHash(entry.id, shared.n)}`;
+    try {
+      if (typeof navigator.share === 'function') { await navigator.share({ title: `${shared.title} · ${entry.artist}`, text: `${shared.title} by ${entry.artist}, from ${entry.album}`, url }); return; }
+      await navigator.clipboard.writeText(url);
+      setNotice(`Link to “${shared.title}” copied.`);
+    } catch (e) {
+      if (e instanceof DOMException && e.name === 'AbortError') return;   // the listener closed the share sheet
+      setNotice(url);   // no share sheet and no clipboard: show the link so it can be copied by hand
+    }
   }
 
   useEffect(() => {
@@ -179,8 +231,10 @@ export default function MusicRoom() {
         </div>
         <div className="switches">
           <button type="button" aria-pressed={lyrics} disabled={!track} onClick={() => setLyrics(v => !v)}>Lyrics</button>
+          <button type="button" disabled={!track} onClick={() => void share(playingIn, index)}>Share</button>
           <button type="button" aria-pressed={lightShow} onClick={() => setLightShow(v => !v)}>{lightShow ? 'Show player' : 'Light show'}</button>
         </div>
+        {notice && <p className="notice" role="status">{notice}</p>}
       </section>
 
       {lyrics && track && <section className="lyrics" aria-label={`Lyrics for ${track.title}`}><pre>{track.lyrics}</pre></section>}
@@ -192,6 +246,9 @@ export default function MusicRoom() {
             <span className="tile" aria-hidden="true">{pad(entry.n)}</span>
             <span className="name">{entry.title}<small>{entry.style} · {trackOrigin(entry) === 'ckbfs' ? 'on chain' : 'hosted'}</small></span>
             <span className="len">{formatTime(entry.duration)}</span>
+          </button>
+          <button type="button" className="share" aria-label={`Share ${entry.title}`} title="Share this song" onClick={() => void share(shown, i)}>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 15V3m0 0L8 7m4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
           </button>
         </li>)}
       </ol>

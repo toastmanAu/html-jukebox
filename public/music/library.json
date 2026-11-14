@@ -1301,6 +1301,223 @@
      }
     }
    ]
+  },
+  {
+   "id": "vol-7",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 7",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Throw It All Away",
+     "style": "honky-tonk country",
+     "duration": 165.6,
+     "source": "RFC 11 Motivation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0011-transaction-filter-protocol/0011-transaction-filter-protocol.md",
+     "lyrics": "[Verse]\nI've got a little phone and a little bit of room\nA browser tab, a board no bigger than a spoon\nI only care about a handful of my own\nBut they send me every transaction ever known\n\n[Chorus]\nAnd I throw it all away\nMost of what you send me, every single day\nDownload the whole block, keep a line or two\nThen I throw it all away, what else can I do\n\n[Verse]\nIt slows me down, it eats my data plan\nFills up my memory faster than I can stand\nI'm not here to check the whole chain through\nJust to know for sure about a thing or two\n\n[Chorus]\nAnd I throw it all away\nMost of what you send me, every single day\nDownload the whole block, keep a line or two\nThen I throw it all away, what else can I do\n\n[Bridge]\nSo let me set a filter on the line\nA bloom of bits to say which ones are mine\nSend me only what comes close to matching\nAnd I'll quit all of this fetching and this scrapping\n\n[Chorus]\nNo more throwing it away\nJust the ones I asked for, every single day\nHigh assurance on the things I need to know\nAnd the rest of it can stay where it should go",
+     "cover": "/music/covers/v7/01.jpg",
+     "ckbfs": {
+      "typeId": "0xdb256f1d9244e8b2bd2f07dfc9edffc4dd07114085eb0552ab90c8efde38e66d",
+      "contentHash": "0x84a7dffad4c8e5a94baac2274ee45c604606f67b0bd92509a8b5b9fac3f5b441",
+      "bytes": 1131981,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Trust the Headers",
+     "style": "roots reggae",
+     "duration": 220.9,
+     "source": "RFC 11 Motivation and filter matching algorithm",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0011-transaction-filter-protocol/0011-transaction-filter-protocol.md",
+     "lyrics": "[Verse]\nI am a small one, low capacity\nI cannot carry the whole chain with me\nI do not verify it block by block\nI watch the headers, see how they lock\n\n[Chorus]\nTrust the headers, see them connect\nOne to the next one, I and I check\nThe block of the highest difficulty\nI trust the transactions inside to be\n\n[Verse]\nGive me a filter, give me a sign\nTest every transaction down the line\nFirst test the hash of the transaction\nIf that one matches, no more action\n\n[Verse]\nThen every input, test where it's from\nThe previous output, the hash of that one\nThen every output, the lock and the type\nThe hash of each script, see if it's right\n\n[Chorus]\nTrust the headers, see them connect\nOne to the next one, I and I check\nThe block of the highest difficulty\nI trust the transactions inside to be\n\n[Bridge]\nOnce a match is found, the search is done\nOtherwise no match, move on, move on\nFiltered blocks they can serve to me\nJust what I need, and proof it's in the tree\n\n[Chorus]\nTrust the headers, see them connect\nOne to the next one, I and I check\nThe block of the highest difficulty\nI trust the transactions inside to be",
+     "cover": "/music/covers/v7/02.jpg",
+     "ckbfs": {
+      "typeId": "0xb13ee8369d7abeddbd310c361c88d5e5de5e0e60a1ec36c1aff74c51a4d99b2b",
+      "contentHash": "0x833b1893c4be162dcaf15ca32d07d579e78c3955d6f17f1014844210cfa1d5d7",
+      "bytes": 1545060,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Don't Lean on the Seeds",
+     "style": "bluegrass",
+     "duration": 177.3,
+     "source": "RFC 12 Discovery methods",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0012-node-discovery/0012-node-discovery.md",
+     "lyrics": "[Verse]\nFirst time waking with an empty book\nNo one to call and nowhere to look\nSo I ask the names that I was given\nA list of hosts, and I start to listen\n\n[Verse]\nIf the names don't answer, if the lookups fail\nI've got some numbers written down as well\nHard-coded seeds I can fall back on\nNodes that stay up, been around so long\n\n[Chorus]\nBut don't lean on the seeds\nTake what you need and then you leave\nOnce you've got addresses enough\nClose that connection up\nDon't lean on the seeds\n\n[Verse]\nThey've got high uptime, they know a crowd\nBut everybody leaning's gonna wear them down\nLearn your neighbours, write them in your store\nYou won't need to bother them no more\n\n[Chorus]\nDon't lean on the seeds\nTake what you need and then you leave\nOnce you've got addresses enough\nClose that connection up\nDon't lean on the seeds\n\n[Bridge]\nEvery time I start again\nIf the book's still empty, ask the names again\nAnd only if the names won't come\nFall back on the hard-coded ones\n\n[Chorus]\nDon't lean on the seeds\nTake what you need and then you leave\nOnce you've got addresses enough\nClose that connection up\nDon't lean on the seeds",
+     "cover": "/music/covers/v7/03.jpg",
+     "ckbfs": {
+      "typeId": "0x4a92fc94caaf95327de29eb3bf249ed98330c6e3a40fd376a917d0e5d1fbe519",
+      "contentHash": "0xb4d10a13ebdaa61277d6bba0555c79f66836683368b4265f4d02902579747d09",
+      "bytes": 1314156,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Three Addresses",
+     "style": "dancehall",
+     "duration": 129.6,
+     "source": "RFC 12 Nodes message rules",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0012-node-discovery/0012-node-discovery.md",
+     "lyrics": "[Verse]\nAsk me get nodes, me answer you one time\nOne time only, don't you step out of line\nFirst time you ask and you came in to me\nAnnounce set false, that's the reply you see\n\n[Verse]\nThen every so often me broadcast the crew\nAll who's connected, announce set true\nYou hear that message, relay what you can\nOnly the routable, that is the plan\n\n[Chorus]\nThree addresses, no more than three\nEvery node that you send to me\nTen in the first one, then keep it small\nToo many nodes and your score ago fall\n\n[Verse]\nOnly the first broadcast can carry more\nThan the threshold of ten, that's what it's for\nAfter that keep it under the line\nIn case a peer want to flood the sign\n\n[Verse]\nWrite the address in the multi-address way\nBut leave out the p two p, hear what me say\nPut it in and that's misbehaviour\nA low score, and nobody a go save you\n\n[Chorus]\nThree addresses, no more than three\nEvery node that you send to me\nTen in the first one, then keep it small\nToo many nodes and your score ago fall\n\n[Bridge]\nAnnounce tell me which kind it is\nA reply or a broadcast, different rules for this\nSo when somebody break the law\nMe know which rule to punish them for\n\n[Chorus]\nThree addresses, no more than three\nEvery node that you send to me\nTen in the first one, then keep it small\nToo many nodes and your score ago fall",
+     "cover": "/music/covers/v7/04.jpg",
+     "ckbfs": {
+      "typeId": "0xccbf785fb5655d5323bc1d4ccbdc071c7f10d2bbdb73499e1c4f774383768598",
+      "contentHash": "0x1975de9a1f7de672ac48221955321172d85cebb02ce550c679b3455f2655f510",
+      "bytes": 974579,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Kept in the Dark",
+     "style": "outlaw country",
+     "duration": 191.4,
+     "source": "RFC 13 Motivation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0013-get-block-template/0013-get-block-template.md",
+     "lyrics": "[Verse]\nThey used to hand me a header and say dig\nNever told me what was in it, small or big\nJust solve it, boy, and send it on back\nI was a mule with a blindfold and a pack\n\n[Chorus]\nI won't be kept in the dark no more\nSend me the whole block, lay it on the floor\nI'll look it over, change it if I choose\nPut it together before I hash it through\nI won't be kept in the dark\n\n[Verse]\nGet work was the old way, that's a fact\nA miner had no say in how a block was stacked\nNow the template comes with everything inside\nAnd building it is my job, and my pride\n\n[Chorus]\nI won't be kept in the dark no more\nSend me the whole block, lay it on the floor\nI'll look it over, change it if I choose\nPut it together before I hash it through\nI won't be kept in the dark\n\n[Bridge]\nWhen every miner makes a block their own\nNo single hand decides what gets shown\nThat's how the network stays secure\nDecentralised blocks, that's the cure\n\n[Chorus]\nI won't be kept in the dark no more\nSend me the whole block, lay it on the floor\nI'll look it over, change it if I choose\nPut it together before I hash it through\nI won't be kept in the dark",
+     "cover": "/music/covers/v7/05.jpg",
+     "ckbfs": {
+      "typeId": "0xeed080ca65f78ca51c14622f128480d59febb5ef6783f8a189cc8ad672d2488c",
+      "contentHash": "0xbf78bd1fa1103e02b0580abe914fc83416df5a44006999a71e79e02d875c6246",
+      "bytes": 1281592,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Check It Yourself",
+     "style": "ska",
+     "duration": 165.0,
+     "source": "RFC 13 Block template request and block submission",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0013-get-block-template/0013-get-block-template.md",
+     "lyrics": "[Verse]\nThree things I can ask for when I call\nA cycles limit, a bytes limit, that's not all\nThe highest version that I understand\nLeave them out, you get the default plan\n\n[Verse]\nThe server ought to keep to what I say\nBut nobody can make it play that way\nAsk for more than consensus will permit\nIt hands you back the consensus limit\n\n[Chorus]\nCheck it yourself, check it yourself\nDon't take the template off the shelf\nThe server should, but it doesn't have to\nCheck it yourself, it's up to you\n\n[Verse]\nThen when the work is done and the block is found\nSubmit block is how you send it round\nThe block in hex, in molecule bytes\nAnd the work I D, to keep it right\n\n[Chorus]\nCheck it yourself, check it yourself\nDon't take the template off the shelf\nThe server should, but it doesn't have to\nCheck it yourself, it's up to you\n\n[Bridge]\nCycles, bytes and version\nCycles, bytes and version\nDoes it fit what you were needing?\nCheck before you start the mining\n\n[Chorus]\nCheck it yourself, check it yourself\nDon't take the template off the shelf\nThe server should, but it doesn't have to\nCheck it yourself, it's up to you",
+     "cover": "/music/covers/v7/06.jpg",
+     "ckbfs": {
+      "typeId": "0x94734f688da8280d3cb7a92b0963b0e45ae6130392a7dd8d4ddc7267e89a0097",
+      "contentHash": "0xd7e340177eb485290b23a7b68cb77355f88c72a9dddb2f9326c810b3e22e060d",
+      "bytes": 1160834,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Every Script Must Halt",
+     "style": "dub reggae",
+     "duration": 235.0,
+     "source": "RFC 14 Introduction and consensus change",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0014-vm-cycle-limits/0014-vm-cycle-limits.md",
+     "lyrics": "[Verse]\nA flexible machine, free to branch and loop\nFree to run in circles if you let it through\nSomebody could write one that never ends\nRound and round forever, my friend\n\n[Chorus]\nEvery script must halt\nEvery script must halt\nIt finish or it fail, it cannot run on\nEvery script must halt\n\n[Verse]\nSo every instruction pay a little toll\nEvery system call, cycles from the whole\nAdd them all together through the block\nAnd there's a number where it have to stop\n\n[Verse]\nMax block cycles, written in the spec\nA rule of consensus, every node will check\nGo above the limit, the block rejected\nThat's how the network stay protected\n\n[Chorus]\nEvery script must halt\nEvery script must halt\nIt finish or it fail, it cannot run on\nEvery script must halt\n\n[Bridge]\nNo limit on a single script\nNo limit on a single transaction\nTake what you want, as long as the block\nStay under the line, that's the only lock\n\n[Chorus]\nEvery script must halt\nEvery script must halt\nIt finish or it fail, it cannot run on\nEvery script must halt",
+     "cover": "/music/covers/v7/07.jpg",
+     "ckbfs": {
+      "typeId": "0xa768cd2bca547bd83e55ab80e3473c4680526c8a259e4af4a32001597142a665",
+      "contentHash": "0xb246aade7b21a153a4d63b5073e589a6b3400597b7785ac82ab213d91c147294",
+      "bytes": 1557357,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Real Hardware",
+     "style": "country rock",
+     "duration": 193.5,
+     "source": "RFC 14 Cycle measures and guidelines",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0014-vm-cycle-limits/0014-vm-cycle-limits.md",
+     "lyrics": "[Verse]\nWhere'd we get the numbers for the price?\nDidn't pull them from the air or roll the dice\nWe looked at real machines that run this code\nAnd charged it like the silicon is slowed\n\n[Chorus]\nIt's priced like real hardware\nWhat it costs out here is what it costs in there\nA plain instruction, that's a single one\nThe harder work costs more to get it done\nPriced like real hardware\n\n[Verse]\nA branch costs more than going straight ahead\nReaching into memory costs more instead\nMultiply, divide, now those are steep\nMuch more than the simple ones, they don't come cheap\n\n[Verse]\nIt's a sixty-four bit system, so you'll find\nLoading sixty-four is cheaper than the smaller kind\nAnd a system call's five hundred at the door\nFor the bookkeeping, then a little more\n\n[Chorus]\nIt's priced like real hardware\nWhat it costs out here is what it costs in there\nA plain instruction, that's a single one\nThe harder work costs more to get it done\nPriced like real hardware\n\n[Bridge]\nA quarter cycle for a byte you copy in\nCopying's cheap, so the charge is thin\nThe system calls we timed them on the bench\nReal numbers from the running client\n\n[Chorus]\nIt's priced like real hardware\nWhat it costs out here is what it costs in there\nA plain instruction, that's a single one\nThe harder work costs more to get it done\nPriced like real hardware",
+     "cover": "/music/covers/v7/08.jpg",
+     "ckbfs": {
+      "typeId": "0xdc6754f7ae540a9d35505b65587fea7308bc4f0c41cf4227480baa5269d6b985",
+      "contentHash": "0xbc9eb517aad72f1d765bd722ebc38cb2850328f371039d59ad8b68637a96d401",
+      "bytes": 1361545,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Three Questions",
+     "style": "americana",
+     "duration": 175.7,
+     "source": "RFC 15 §1 The objectives of a token economics design",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Verse]\nIt's an open door, and anyone can come\nAll kinds of people, wanting different sums\nNobody in charge to tell them what to do\nSo what they want has got to pull it through\n\n[Chorus]\nThree questions, before you build a thing\nThree questions, and an answer each to bring\nWill it be secure? Will it last?\nWill everybody pull the same way when you ask?\nThree questions\n\n[Verse]\nGive them a reason, and let each one chase\nTheir own good fortune, in their own place\nAnd if you've set the incentives true\nWhat's good for one is good for the whole crew\n\n[Chorus]\nThree questions, before you build a thing\nThree questions, and an answer each to bring\nWill it be secure? Will it last?\nWill everybody pull the same way when you ask?\nThree questions\n\n[Bridge]\nSecurity for now\nSustainability for the long, long run\nAnd all the different actors\nGrowing the worth of the network as one\n\n[Chorus]\nThree questions, before you build a thing\nThree questions, and an answer each to bring\nWill it be secure? Will it last?\nWill everybody pull the same way when you ask?\nThree questions",
+     "cover": "/music/covers/v7/09.jpg",
+     "ckbfs": {
+      "typeId": "0x54e7a51b2d28ffb0a9de752451bce5aa84e44212c129df921ab83528797202d6",
+      "contentHash": "0xc4880e141542b06b4bbe7f42fc57234bf74ed15f93cc583f1d801a8baecdb189",
+      "bytes": 1241015,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "Moment in Time",
+     "style": "lovers rock",
+     "duration": 235.7,
+     "source": "RFC 15 §3 Preservational and transactional smart contract platforms",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Verse]\nSome come by for just a moment\nIn and out and on their way\nThey want it cheap, they want it quick\nThey've got no reason to stay\n\n[Verse]\nA little risk, they don't mind it\nThey're only there a moment in time\nAnd if somebody turns them back\nThey'll take it somewhere else, that's fine\n\n[Chorus]\nBut I'm not here for a moment in time\nI want a place to keep what's mine\nSafe and open, year on year\nThat's a different thing, my dear\nNot a moment in time\n\n[Verse]\nA transaction uses what renews\nComputation, bandwidth, there's more tomorrow\nBut keeping means I hold my place\nIn the global state, and that's not borrowed\n\n[Verse]\nYou can't build one for both of us\nWhat's best for them's not best for me\nSo let the fast ones run their trade\nAnd settle back here, securely\n\n[Chorus]\nI'm not here for a moment in time\nI want a place to keep what's mine\nSafe and open, year on year\nThat's a different thing, my dear\nNot a moment in time\n\n[Bridge]\nSo charge me for the room I take\nFor as long as I am there\nNot for the moment that I move\nThat's the model that is fair\n\n[Chorus]\nI'm not here for a moment in time\nI want a place to keep what's mine\nSafe and open, year on year\nThat's a different thing, my dear\nNot a moment in time",
+     "cover": "/music/covers/v7/10.jpg",
+     "ckbfs": {
+      "typeId": "0x38a68d939a9740ce6a92f90523aee6ffb3ed1e315fb045bef0144c6b28ce5a22",
+      "contentHash": "0xf210add168b67037e2fdbc5f3055c27b1713e293ab5af083ada7375c9820f485",
+      "bytes": 1701138,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Hard Capped to Me",
+     "style": "rocksteady",
+     "duration": 207.9,
+     "source": "RFC 15 §6 Token issuance and the NervosDAO",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Verse]\nThere's two kinds of issue, let me tell you how\nThe base one's finite, and it's halving down\nAbout every four years, till it's all mined out\nAnd every bit to the miners, no doubt\n\n[Verse]\nThe second one's steady, the same each time\nIt never stops, it's the rent on the line\nIf you're storing state, that's the way you pay\nYour share gets a little thinner every day\n\n[Chorus]\nBut it's hard capped to me\nLocked in the DAO, it's hard capped to me\nThe second issue comes, and I get my part\nLike it was never there from the start\nHard capped to me\n\n[Verse]\nIt wouldn't be fair to take the rent\nFrom the ones whose bytes were never spent\nSo lock them up, and you're made whole\nIn proportion to the share you hold\n\n[Chorus]\nIt's hard capped to me\nLocked in the DAO, it's hard capped to me\nThe second issue comes, and I get my part\nLike it was never there from the start\nHard capped to me\n\n[Bridge]\nThe inflation's only in the name\nFor the long-term holder, it's all the same\nAnd when the base issue's finally gone\nThe second one keeps carrying on\n\n[Chorus]\nIt's hard capped to me\nLocked in the DAO, it's hard capped to me\nThe second issue comes, and I get my part\nLike it was never there from the start\nHard capped to me",
+     "cover": "/music/covers/v7/11.jpg",
+     "ckbfs": {
+      "typeId": "0xdd714f4079e0a2148a59b209716214a4d1a60f0f191525dd8605ec5e7a2e2475",
+      "contentHash": "0x0f859d05b780ca58357c2320d4f23f1fa8f02c175d466ecd2afcf756e32850e4",
+      "bytes": 1504658,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "When the Base Runs Dry",
+     "style": "cowboy ballad",
+     "duration": 194.4,
+     "source": "RFC 15 §6 Miner compensation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Verse]\nI've been mining out here since the early days\nFor the block reward and the fees it pays\nAll of the base, it comes to me\nBut I know that well won't always be\n\n[Chorus]\nWhen the base runs dry\nThere'll still be something coming by\nThe rent on all the state they hold\nIs mine to keep when the rest is sold\nWhen the base runs dry\n\n[Verse]\nIt doesn't hang on how much trade goes through\nA quiet day, the rent's still due\nIt grows with every thing they store\nThe more they keep, I'm paid the more\n\n[Chorus]\nWhen the base runs dry\nThere'll still be something coming by\nThe rent on all the state they hold\nIs mine to keep when the rest is sold\nWhen the base runs dry\n\n[Bridge]\nAnd the higher that it climbs\nThe more of us will work these mines\nMore of us to guard the store\nWorth more to keep, and so they keep more\n\n[Chorus]\nWhen the base runs dry\nThere'll still be something coming by\nThe rent on all the state they hold\nIs mine to keep when the rest is sold\nWhen the base runs dry",
+     "cover": "/music/covers/v7/12.jpg",
+     "ckbfs": {
+      "typeId": "0x2b2fe3637f0169af9c0c9d7ae9fa5e5d917ee77e3c3cdc71f29df830ad194e2c",
+      "contentHash": "0x36ea07c7ee33ee918b9348cb327e3c168599444844c16ba944f2c5c654c106f0",
+      "bytes": 1336812,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Pay in Any Token",
+     "style": "country pop",
+     "duration": 166.1,
+     "source": "RFC 15 §6 Paying for transaction fees",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0015-ckb-cryptoeconomics/0015-ckb-cryptoeconomics.md",
+     "lyrics": "[Verse]\nThere's only so much room in every block\nSo there's a market, and a line around the clock\nLeave a little more going in than coming out\nThe difference is the fee, that's what it's about\n\n[Verse]\nThe miner counts the cycles and the fee\nSorts us out by what we pay per cycle, see\nBest income for the work he's got to do\nThat's how he picks me, and that's how he picks you\n\n[Chorus]\nYou can pay in any token, honey\nStable coins or any kind of money\nThe way to pay ain't written in the deal\nAnd we ain't scared of that, that's how we feel\nPay in any token\n\n[Verse]\nOn other chains that's trouble at the door\nIf paying fees is all the coin is for\nBut ours is worth the space it lets you hold\nSo pay in what you like, we won't go cold\n\n[Chorus]\nYou can pay in any token, honey\nStable coins or any kind of money\nThe way to pay ain't written in the deal\nAnd we ain't scared of that, that's how we feel\nPay in any token\n\n[Bridge]\nStill, most folks are gonna pay in ours\nIt's the one that everybody's got\nIf you own a thing, you own the bytes\nFor the room that thing has got\n\n[Chorus]\nYou can pay in any token, honey\nStable coins or any kind of money\nThe way to pay ain't written in the deal\nAnd we ain't scared of that, that's how we feel\nPay in any token",
+     "cover": "/music/covers/v7/13.jpg",
+     "ckbfs": {
+      "typeId": "0xfcc12bbdb85a4557bf8f6a606633f5a2148405a0e65250f5e133844974e79d04",
+      "contentHash": "0xb07b8f46fab1383c5c0342970f7996bef8b845f34868cc8a2f9984ba56343c8d",
+      "bytes": 1147088,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
   }
  ]
 }

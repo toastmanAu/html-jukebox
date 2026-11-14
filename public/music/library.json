@@ -867,6 +867,440 @@
      }
     }
    ]
+  },
+  {
+   "id": "vol-5",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 5",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Different Layers",
+     "style": "power ballad",
+     "duration": 259.9,
+     "source": "RFC 1 §3 Core principles of the Nervos Network",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Verse]\nDecentralised or built to scale\nNeutral ground or by the rules\nPrivate rooms or open doors\nA store of value or a cheaper toll\nEvery one of them pulls two ways\nWhen a single chain must carry all\n\n[Chorus]\nDifferent layers, different loads\nDon't make one chain walk every road\nLayer one stands secure and free\nLayer two runs wild for you and me\nDifferent layers, different loads\n\n[Verse]\nThe base is where the value stays\nOpen, public, proof of work\nHard to censor, built to last\nA custodian for what we hold\nThe layers up above it lean\nOn that security below\n\n[Chorus]\nDifferent layers, different loads\nDon't make one chain walk every road\nLayer one stands secure and free\nLayer two runs wild for you and me\nDifferent layers, different loads\n\n[Bridge]\nA store of value by design\nComplement, don't compete\nA generic model you can shape\nAnd state that someone has to own\nAn ongoing cost for the space you take\n\n[Chorus]\nDifferent layers, different loads\nDon't make one chain walk every road\nLayer one stands secure and free\nLayer two runs wild for you and me\nDifferent layers, different loads",
+     "cover": "/music/covers/v5/01.jpg",
+     "ckbfs": {
+      "typeId": "0x8bcad545c76bf900d442f659dfb406a21edf70684588983e52d74b3cf9556741",
+      "contentHash": "0x3df6634db694cc5f5fa66622f56042b2a7da990bcb25c5e31a8eb3e173e30e02",
+      "bytes": 1732915,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Full Node",
+     "style": "folk rock",
+     "duration": 181.8,
+     "source": "RFC 1 §2.2.1 Decentralization",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Verse]\nThere's a threat that grows up slow\nA higher wall for those who'd know\nThe cost to run a node at home\nTo check the history on your own\n\n[Verse]\nA full node lets you verify\nThe state, the past, with your own eyes\nAnd hold the miners to account\nRefuse the blocks that don't work out\n\n[Chorus]\nKeep the full node running\nKeep it in the people's hands\nWhen the numbers fall, we lean on someone else\nAnd the trust we built on sand\nKeep the full node running\n\n[Verse]\nIt needs the power to validate\nThe bandwidth to receive it straight\nAnd storage for the global state\nThree resources, three to rate\n\n[Verse]\nMost chains bound the first two things\nBut few will bound the state it brings\nAnd as they grow in size and years\nThe cost goes up and never clears\n\n[Chorus]\nKeep the full node running\nKeep it in the people's hands\nWhen the numbers fall, we lean on someone else\nAnd the trust we built on sand\nKeep the full node running\n\n[Outro]\nBound all three\nBound all three\nAnd keep the full node running",
+     "cover": "/music/covers/v5/02.jpg",
+     "ckbfs": {
+      "typeId": "0x0ab19e3f2a995eac716440c13f6ae63be9d608e827ea03bb9d5e73bc11127fd0",
+      "contentHash": "0x6c40eda8ec2c844b0949d91ee690721ac25dfa66c4e23f3a4d3eca638faf3851",
+      "bytes": 1246983,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Bridges",
+     "style": "alt rock",
+     "duration": 233.2,
+     "source": "RFC 1 §2.3 Interoperability",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Verse]\nBitcoin and Litecoin made the first exchange\nA swap with no one in between\nNot by a rule inside the chain\nA shared hash function was the key\n\n[Verse]\nSome networks let their own chains talk\nBuilt from the same framework, same design\nBut to reach the ones outside the walls\nThey need a bridge, and trust the line\n\n[Chorus]\nBridges, bridges\nAnother layer of trust to cross\nCross-chain is a weakness, not a strength\nLatency, and something lost\nBridges, bridges\n\n[Verse]\nYou lose the all-or-nothing deal\nYou lose the way the pieces fit\nAnd apps that need each other close\nEnd up on one chain, that's just it\n\n[Bridge]\nSo here the layers make the net\nA cell model and a low-level machine\nBring your own cryptography\nReach across to different chains\nAnd the value gathers at the root\nNot the messages we pass\nAs more is secured, the budget grows\n\n[Chorus]\nBridges, bridges\nAnother layer of trust to cross\nCross-chain is a weakness, not a strength\nLatency, and something lost\nBridges, bridges",
+     "cover": "/music/covers/v5/03.jpg",
+     "ckbfs": {
+      "typeId": "0x923d39dc44b83bc499c635d5b53d9d15904a2922aabd38e67c36da86d4a219ed",
+      "contentHash": "0x501061b2d1b0f0024ed50540bc5008a1c9ad2f1d96917a79e5943656917d85de",
+      "bytes": 1506138,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Belongs to the Owner",
+     "style": "piano rock",
+     "duration": 219.5,
+     "source": "RFC 1 §4.3 Cell model",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Verse]\nSomething of the account, something of the old\nUnspent outputs, bought and sold\nKeeps the ownership, keeps the proof\nA new construction, that's the truth\n\n[Verse]\nA cell can carry any data\nA token amount and an owner's name\nOr code that says when a transfer's fair\nAnd the scripts run to keep it straight\n\n[Chorus]\nIt belongs to the owner\nNot locked inside a contract's walls\nA cell is yours to hold and pass along\nIt belongs to the owner, after all\n\n[Verse]\nA cell can point to another cell\nSo the asset and the logic part\nOn other chains the state's inside\nReached through a contract from the start\n\n[Verse]\nInputs leave the active set\nThe outputs join, and that's the proof\nAnd once a cell is made, it stays\nUnchanged, immutable, the truth\n\n[Chorus]\nIt belongs to the owner\nNot locked inside a contract's walls\nA cell is yours to hold and pass along\nIt belongs to the owner, after all\n\n[Outro]\nAdaptable, sustainable, flexible\nA generalised U T X O\nIt belongs to the owner",
+     "cover": "/music/covers/v5/04.jpg",
+     "ckbfs": {
+      "typeId": "0x7959e2d933e089396f34cdb5d38c1f949f01ce2d54bdf053d71a980792dd02ee",
+      "contentHash": "0x932840418d79fc925cfb5cb4f2ffb5233a0a8457a2c160810211eff36cb27c2e",
+      "bytes": 1455176,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "One Hundred and Two",
+     "style": "prog rock",
+     "duration": 327.4,
+     "source": "RFC 1 §4.4 Virtual machine",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Verse]\nOthers chose a different way\nWe built on risk five instead\nOpen source since twenty ten\nFree of royalties, widely read\n\n[Verse]\nThe core is finished, frozen now\nIt'll never need to change\nCompilers know it, G C C\nAnd L L V M, in range\n\n[Chorus]\nOne hundred and two instructions\nSimple as it needs to be\nIt runs on a real machine\nSo the price is what you see\nOne hundred and two\n\n[Verse]\nSixty-four bit integers\nAnd room to add what you may need\nVectors, or a wider word\nFor cryptography at speed\n\n[Verse]\nAny language that compiles\nTo the instruction set is in\nAn E L F file, low level\nTuring complete, begin\n\n[Bridge]\nOther chains are fixed once they're live\nChange a primitive, that takes years\nSo we moved them out to cells\nLoad the new one, change the reference\nEven another machine entire\nCompiled down to run inside\n\n[Chorus]\nOne hundred and two instructions\nSimple as it needs to be\nIt runs on a real machine\nSo the price is what you see\nOne hundred and two",
+     "cover": "/music/covers/v5/05.jpg",
+     "ckbfs": {
+      "typeId": "0xb8dd5bf7397da595d3850e1799341284a480d5ec5adb18de228aa68b00a9da98",
+      "contentHash": "0xa89ed9cbe7b52ef2914c0f0eef4167bae1880ea8573172f7be1177e3dff84836",
+      "bytes": 2269044,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Three Things That Never Change",
+     "style": "heartland rock",
+     "duration": 240.5,
+     "source": "RFC 1 §4.7 Governance",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Verse]\nEverybody's got a stake in this\nUsers, holders, miners too\nResearchers and developers\nWallets, pools, and exchanges, who\nCould line them up to want the same?\nTen years on and no one knows\n\n[Verse]\nSome trust a single guiding hand\nEfficient, sure, and people love a hero\nBut that's not what we came here for\nSome vote on chain and let the code decide\nBut only holders get a voice\nAnd most of them don't show\n\n[Chorus]\nThree things that never change\nThe issuance stays the way it's set\nWhat's stored in a cell is never touched\nAnd what a script means, it will always mean\nThree things that never change\n\n[Verse]\nA hard fork is the last resort\nFor everyone, and always there\nYou can't put that to an on-chain vote\nThe data's wide, the door stays open\n\n[Verse]\nSo we'll let it grow the natural way\nAs more is mined and more hands build\nThe power spreads a little more\nBuilt to last a hundred years or more\n\n[Chorus]\nThree things that never change\nThe issuance stays the way it's set\nWhat's stored in a cell is never touched\nAnd what a script means, it will always mean\nThree things that never change",
+     "cover": "/music/covers/v5/06.jpg",
+     "ckbfs": {
+      "typeId": "0x4ae31ff7c8544a05ed2c6eb8afccd8789f08fad60696670e882680dce0562cb3",
+      "contentHash": "0xbaa80cd4ef4b481a92ed615cf8207af6a6fddb69ea0c5dd0bb2c87e9d67546c1",
+      "bytes": 1664184,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Bar Tab",
+     "style": "southern rock",
+     "duration": 204.9,
+     "source": "RFC 1 §5.2 Payment and state channels",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0001-positioning/0001-positioning.md",
+     "lyrics": "[Verse]\nTwo of us, we trade a lot\nSo we open up a line\nFast as talking, paid right now\nLike the chain could never be\n\n[Verse]\nIt's like a tab down at the bar\nKeep on ordering all night\nSettle up when you head home\nPay the total, that's all right\n\n[Chorus]\nPut it on the tab\nSign it, pass it back to me\nUpdate it any number of times\nThen settle on the chain when we leave\nPut it on the tab\n\n[Verse]\nOne way, you put the money down\nThe most that you might spend\nSign it over, bit by bit\nAs the goods come in, my friend\n\n[Verse]\nBoth ways and the funds can flow\nBack and forth and through a friend\nNo direct line from me to you\nJust a path with open ends\n\n[Bridge]\nAnd it doesn't have to be a payment\nAny state that we agree\nA game of chess with no one watching\nSignatures across the table\nHand the final state to the contract\nAnd it settles by the rules\n\n[Chorus]\nPut it on the tab\nSign it, pass it back to me\nUpdate it any number of times\nThen settle on the chain when we leave\nPut it on the tab",
+     "cover": "/music/covers/v5/07.jpg",
+     "ckbfs": {
+      "typeId": "0xc3bd423b0be5db044d8c5cd25459f669162afd7921c4798a69784b291c97183d",
+      "contentHash": "0x5c5adbb208cbdeca3d5cf0fc3cbccf84082d9b84bcbc1c84bd6a723a0a6c4fa7",
+      "bytes": 1375514,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Common Knowledge",
+     "style": "symphonic rock",
+     "duration": 174.9,
+     "source": "RFC 2 §1 Motivation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0002-ckb/0002-ckb.md",
+     "lyrics": "[Verse]\nWe want a network, peer to peer\nWhere people work together and have a reason to\nDefine and issue, transfer, own\nThe chain's the last piece of the puzzle\n\n[Verse]\nOne was built as peer-to-peer cash\nOne a platform, general purpose\nBoth proved the future could be real\nAnd both ran into the same wall\n\n[Chorus]\nMake it common knowledge\nOnly when it has to be\nMost of what we do is ours alone\nUntil we settle, finally\nMake it common knowledge\n\n[Verse]\nConsensus is slow, almost by definition\nMessages on an open network, wait and try again\nScale it up and lose the many\nScale it out and the shards won't blend\n\n[Verse]\nGlobal consensus costs the most\nSo use it wisely, use it well\nSend the work to the layers above\nNo limit there, as far as we can tell\n\n[Bridge]\nBut no chain was designed for this\nOne was held back by its own rules\nOne prices computation\nWhen what we need is custody\nA place to keep our assets safe\nAnd move them by the final state\n\n[Chorus]\nMake it common knowledge\nOnly when it has to be\nMost of what we do is ours alone\nUntil we settle, finally\nMake it common knowledge",
+     "cover": "/music/covers/v5/08.jpg",
+     "ckbfs": {
+      "typeId": "0xb5b6d51ef693451ca52b5a6d5dd96b4df46d46c1c572dc7f2643fe227d9b13b7",
+      "contentHash": "0x4bba7d6d9347b657ecae547bc6a74ec224bd1113781b09111d4a7d2afb3a8b94",
+      "bytes": 1207559,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "All or Nothing",
+     "style": "grunge",
+     "duration": 182.0,
+     "source": "RFC 2 §4.4 Transaction",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0002-ckb/0002-ckb.md",
+     "lyrics": "[Verse]\nA transaction is a change of state\nA cell gets moved, a cell gets changed\nOr both of them at once\nOne or more, in a single frame\n\n[Chorus]\nAll or nothing\nEvery change succeeds or every change fails\nAll or nothing\nAtomic, there's no in between\nAll or nothing\n\n[Verse]\nDeps are cells it only reads\nAnd they've got to be alive\nInputs point to living cells\nWith the proof that you've the right\n\n[Verse]\nA signature, to show it's yours\nTo transfer or to change\nOutputs are the cells made new\nIn this transition, rearranged\n\n[Chorus]\nAll or nothing\nEvery change succeeds or every change fails\nAll or nothing\nAtomic, there's no in between\nAll or nothing\n\n[Bridge]\nAll the state is in the blocks\nSync the blocks and you've synced the state\nLight clients need nothing more\nNo extra work, no extra weight\nDeps and inputs show what touches what\nSo nodes can run them side by side\n\n[Chorus]\nAll or nothing\nEvery change succeeds or every change fails\nAll or nothing\nAtomic, there's no in between\nAll or nothing",
+     "cover": "/music/covers/v5/09.jpg",
+     "ckbfs": {
+      "typeId": "0xcd3e6679e17c7a2510f1a0355e1fc36aeba8ea7074450bf1968113ea6b5db82a",
+      "contentHash": "0xe6ae972b495d6dcf52ed1ca016823c3986120438370e97fff9c35df56bcecf81",
+      "bytes": 1154732,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "Light Node",
+     "style": "soft rock",
+     "duration": 229.8,
+     "source": "RFC 2 §6 Network",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0002-ckb/0002-ckb.md",
+     "lyrics": "[Verse]\nThree kinds of nodes on this network\nThe miners gather what is new\nPack the blocks and find the proof\nThey only keep the current cells\n\n[Verse]\nThe full nodes check each block and deal\nRelay them on, and choose the fork\nThey are the ones who verify\nThe watchers of it all\n\n[Chorus]\nI'm a light node\nI only keep the cells I need\nI trust the full nodes with the rest\nA little phone is all I've got\nI'm a light node\n\n[Verse]\nWhen every node must do the same\nThe cost is high and few will stay\nA light node trades a little trust\nFor a far, far cheaper way\n\n[Verse]\nOne day we'll be the largest crowd\nThen full nodes, then the ones who mine\nBut we depend on them for state\nMany of us need many of them\n\n[Bridge]\nSo keep the cost of a full node low\nThe computing and the storing too\nLow barriers, and more will serve\nAnd the network stays with many hands\n\n[Chorus]\nI'm a light node\nI only keep the cells I need\nI trust the full nodes with the rest\nA little phone is all I've got\nI'm a light node",
+     "cover": "/music/covers/v5/10.jpg",
+     "ckbfs": {
+      "typeId": "0x7c44086e74a6ca0499fd3af0a6ff441ef80325660a070048e040d04baa32a892",
+      "contentHash": "0x5d9f5b30e9a0b749c006716716e76f651f72a01785fa29029b2ae8f5d663cbe9",
+      "bytes": 1610990,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Any Language",
+     "style": "blues rock",
+     "duration": 254.2,
+     "source": "RFC 3 Libraries, languages and runtime cost",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0003-ckb-vm/0003-ckb-vm.md",
+     "lyrics": "[Verse]\nWe only made the low machine\nLeft the rest for you to choose\nAny language with a back end there\nIs one that you can use\n\n[Verse]\nWrite it in C, or C plus plus\nWith the standard compilers, as they are\nWhat comes out can run as is\nA contract, near or far\n\n[Chorus]\nAny language, any language\nIf it compiles, then it can stay\nAny language, any language\nBring your own and find your way\n\n[Verse]\nAnother chain's machine in C\nCompiled and kept in common cells\nLoad it up and run their code\nTheir contracts here as well\n\n[Verse]\nJavascript or Ruby too\nA small machine inside to run\nAnd Rust is coming up the road\nThere's room for every one\n\n[Bridge]\nLibraries live in system cells\nLinked in when you need them\nTo keep the contract small and lean\nA custom bootloader trims it more\nSix hundred and twenty-eight bytes\nFor the smallest one in C\n\n[Outro]\nCount the cycles as it runs\nEvery instruction, one by one\nThe total when the work is done\nThat's the cost\nAny language",
+     "cover": "/music/covers/v5/11.jpg",
+     "ckbfs": {
+      "typeId": "0xf0d9f0148fb351cc58e1f1e8c2373d77bb08cc44754788de3592d5c302351f36",
+      "contentHash": "0x02db390936062fe33ee1d0f998478dfe0171b704a20d574bc77ed00716d72365",
+      "bytes": 1794150,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Best Chain",
+     "style": "hard rock",
+     "duration": 175.3,
+     "source": "RFC 4 Block synchronization stages",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0004-ckb-block-sync/0004-ckb-block-sync.md",
+     "lyrics": "[Verse]\nStart from the block we share\nGenesis, the root of all\nEverything else is still unknown\nUntil the headers call\n\n[Verse]\nFirst I connect the header\nCheck the format and the work\nFive percent of all the effort\nNinety-five percent it's sure\n\n[Chorus]\nShow me your best chain\nI'll show you mine\nUnknown, connected, downloaded, accepted\nOne stage at a time\nShow me your best chain\n\n[Verse]\nI send a sample of my hashes\nThe latest ten, then further back\nTwo and four and eight between\nUntil we find the common track\n\n[Verse]\nThen I download the whole block\nEarliest first, a sliding window\nMany peers at once, full bandwidth\nAnd the window moves along\n\n[Bridge]\nThen accept it in the context of the chain\nEvery rule, the history too\nThe heaviest work of all the stages\nAnd if one block fails the test\nEvery block that follows falls\nInvalid, all the rest\n\n[Chorus]\nShow me your best chain\nI'll show you mine\nUnknown, connected, downloaded, accepted\nOne stage at a time\nShow me your best chain\n\n[Outro]\nThe most work wins\nThe most work wins\nThat's my best chain",
+     "cover": "/music/covers/v5/12.jpg",
+     "ckbfs": {
+      "typeId": "0xeaa621ba8c8ab13a438e5d806e745466588d172029c3b34678c09474774d41dd",
+      "contentHash": "0xab53bb78a27b5f05c3102bf509ebfeac5e019d5470e3800aa1bd7918e9eba0c8",
+      "bytes": 1165269,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Closed by Default",
+     "style": "gothic rock",
+     "duration": 238.0,
+     "source": "RFC 5 Privileged architecture support",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0005-priviledged-mode/0005-priviledged-mode.md",
+     "lyrics": "[Verse]\nIt only runs one contract at a time\nIt doesn't need a privileged way\nBut a memory unit could be useful\nFor the ones who allocate\n\n[Verse]\nStop the access that's not valid\nTrade some cycles to be sure\nFor the sophisticated contract\nOr the beginner at the door\n\n[Chorus]\nClosed by default\nIt's there if you want it\nClosed by default\nIgnore it if you don't\nCount your cycles, leave it sleeping\nClosed by default\n\n[Verse]\nJust enough of the control registers\nTo switch the mode you're in\nAnd install a function for the page fault\nExactly as the spec has been\n\n[Verse]\nTwo modes only, machine and user\nIn machine you're free to roam\nIn user mode the limits hold\nYou start in machine, alone\n\n[Bridge]\nSet up what you need to set\nThen step down with a single instruction\nNo control registers from there\nNo pages that belong above\nNo running what you've no permission for\n\n[Chorus]\nClosed by default\nIt's there if you want it\nClosed by default\nIgnore it if you don't\nCount your cycles, leave it sleeping\nClosed by default",
+     "cover": "/music/covers/v5/13.jpg",
+     "ckbfs": {
+      "typeId": "0xd96072c337ae9c7baba07447b24d13fc59ce028dcd434dee4addbb787c1a784c",
+      "contentHash": "0x28b6d060b5e4316f74b3f77a58dc56b2a14e58c554887caaa888e786afdd3c0c",
+      "bytes": 1516672,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
+  },
+  {
+   "id": "vol-6",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 6",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Drop to User Mode",
+     "style": "tech house",
+     "duration": 138.6,
+     "source": "RFC 5 Privileged mode support via CSR instructions",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0005-priviledged-mode/0005-priviledged-mode.md",
+     "lyrics": "[Verse]\nWhen the machine first loads\nIt wakes in machine mode\nFree to do anything\nNobody says no\n\n[Verse]\nSet up the metadata\nInstall the trap, then go\nOne instruction, m-ret\nAnd the limits start to show\n\n[Chorus]\nDrop to user mode\nDrop to user mode\nTwo modes only, machine and user\nDrop to user mode\n\n[Verse]\nNo status registers here\nNo pages that aren't your own\nNo running a page of memory\nWithout execute shown\n\n[Verse]\nRead a register we never built\nIllegal instruction, that's the call\nThe trap is just a function\nIn machine mode, after all\n\n[Chorus]\nDrop to user mode\nDrop to user mode\nTwo modes only, machine and user\nDrop to user mode\n\n[Bridge]\nDon't need it? Stay up high\nAct like it was never there\nMachine mode all the way\nMinimum cycles, no one cares\n\n[Chorus]\nDrop to user mode\nDrop to user mode\nTwo modes only, machine and user\nDrop to user mode",
+     "cover": "/music/covers/v6/01.jpg",
+     "ckbfs": {
+      "typeId": "0xde7ac8aedad8067ae75ef45061c16398b3610badbf44cd1d8bbc3eb1f88b8856",
+      "contentHash": "0x0551e838b40eb23512e16143ef4e7beb74ed9899d96badf6621cef40dee81f7b",
+      "bytes": 889380,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Sixty-Four Entries",
+     "style": "drum and bass",
+     "duration": 212.1,
+     "source": "RFC 5 TLB",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0005-priviledged-mode/0005-priviledged-mode.md",
+     "lyrics": "[Verse]\nA buffer for the lookups\nTo help the memory unit run\nSixty-four entries\nFour kilobytes, each one\n\n[Verse]\nOne page for every entry\nOne way to find your place\nThe last six bits decide it\nWho stays and who's replaced\n\n[Chorus]\nSixty-four entries, one way in\nSame six bits, one of us wins\nYou evict me, I evict you\nSixty-four entries, flush it through\n\n[Verse]\nIt isn't there to start with\nIt waits for the first fault\nThe first page trap creates it\nAnd then it can't be stopped\n\n[Verse]\nStay in machine mode\nAnd you may never meet\nOnce it's made, it stays\nFor the life of the machine\n\n[Chorus]\nSixty-four entries, one way in\nSame six bits, one of us wins\nYou evict me, I evict you\nSixty-four entries, flush it through\n\n[Bridge]\nSwitch the level\nFlush it all\nSwitch the level\nFlush it all\nEvery change of privilege\nEvery entry falls\n\n[Chorus]\nSixty-four entries, one way in\nSame six bits, one of us wins\nYou evict me, I evict you\nSixty-four entries, flush it through",
+     "cover": "/music/covers/v6/02.jpg",
+     "ckbfs": {
+      "typeId": "0x1c833db15de7321818c13ff6a80a1369ee5bd0414aaf9ca0c084403a2adc1057",
+      "contentHash": "0xb4275d499b3a364c13ccc5c677bd09d3847dc3542410ef6c54d1340e50150f35",
+      "bytes": 1454003,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Two N Minus One",
+     "style": "liquid drum and bass",
+     "duration": 234.4,
+     "source": "RFC 6 Nodes organization and tree struct",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0006-merkle-tree/0006-merkle-tree.md",
+     "lyrics": "[Verse]\nEvery level filled\nExcept maybe the last\nAnd every node leans left\nAs far as it can pass\n\n[Verse]\nCount from top to bottom\nCount from left to right\nThe root is number zero\nThe items fall in line\n\n[Chorus]\nTwo n minus one\nThat's all the room I need\nA tree inside an array\nNothing in between\nTwo n minus one\nTwo n minus one\n\n[Verse]\nItem i, you'll find it\nAt i plus n, less one\nThe parent's half way back\nTake one, divide, it's done\n\n[Verse]\nMy children sit at double\nPlus one and then plus two\nMy sibling's just a flip away\nOne bit, and I'm with you\n\n[Chorus]\nTwo n minus one\nThat's all the room I need\nA tree inside an array\nNothing in between\nTwo n minus one\nTwo n minus one\n\n[Bridge]\nNo items, no tree\nThe root is only zeros\nThe least hashing you can do\nThe smallest proof to show\n\n[Chorus]\nTwo n minus one\nThat's all the room I need\nA tree inside an array\nNothing in between\nTwo n minus one\nTwo n minus one",
+     "cover": "/music/covers/v6/03.jpg",
+     "ckbfs": {
+      "typeId": "0x6b6c97fcc60582d6e5476b4232a9cfeb72e25f58ca90948a4f938da67d5ea237",
+      "contentHash": "0x82365507e0f64d270ead31f4eec710531fae0337b72aa603459bb3b768fafe80",
+      "bytes": 1614950,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Only the Siblings",
+     "style": "uk garage",
+     "duration": 130.0,
+     "source": "RFC 6 Merkle proof",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0006-merkle-tree/0006-merkle-tree.md",
+     "lyrics": "[Verse]\nYou want to know I'm in there\nOne of many in the list\nYou don't need all the others\nTo prove that I exist\n\n[Verse]\nWalk from the leaf to the root\nThe path you make yourself\nJust bring the ones beside it\nYou don't need nothing else\n\n[Chorus]\nOnly the siblings\nOnly the ones along the way\nOnly the siblings\nLeave out what the path already made\nOnly the siblings\n\n[Verse]\nHand them over high to low\nDescending, keep it neat\nIt makes it simple to build\nAnd simple to check for me\n\n[Verse]\nAnd tell me where I'm standing\nThe index isn't mine to know\nSort them by the hash they carry\nAscending as they go\n\n[Chorus]\nOnly the siblings\nOnly the ones along the way\nOnly the siblings\nLeave out what the path already made\nOnly the siblings\n\n[Bridge]\nMerge the left and the right\nClimb another level higher\nWhen there's nowhere left to climb\nDoes it match the root? That's the answer\n\n[Chorus]\nOnly the siblings\nOnly the ones along the way\nOnly the siblings\nLeave out what the path already made\nOnly the siblings",
+     "cover": "/music/covers/v6/04.jpg",
+     "ckbfs": {
+      "typeId": "0x1a62fdbade9a5ac4622307962d2092d8fbe1c59f120cd9a9d3b6dda2f41090ef",
+      "contentHash": "0x1e31933b67566b2ea2c84c2627f3bfd68e1a741c2366101c89d021673e508086",
+      "bytes": 949199,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Feeler",
+     "style": "deep house",
+     "duration": 200.0,
+     "source": "RFC 7 Feeler connection",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0007-scoring-system-and-network-security/0007-scoring-system-and-network-security.md",
+     "lyrics": "[Verse]\nAll my outbound slots are full\nEveryone I need is here\nEvery few minutes, though\nI reach for someone new\n\n[Verse]\nI pick a name at random\nOne I've never called before\nJust to know if you would answer\nIf I came knocking at your door\n\n[Chorus]\nIt's just a feeler\nI connect, we shake hands\nIt's just a feeler\nI disconnect, that's the plan\nI only want to know you're there\nIt's just a feeler\n\n[Verse]\nI keep a store of peers\nAs many as it holds\nThe last time we connected\nAnd a score for what I'm told\n\n[Verse]\nSo if the ones I trust go quiet\nI've got somewhere left to turn\nAddresses that I've tested\nNot just rumours that I've heard\n\n[Chorus]\nIt's just a feeler\nI connect, we shake hands\nIt's just a feeler\nI disconnect, that's the plan\nI only want to know you're there\nIt's just a feeler\n\n[Bridge]\nDon't expect me to stay long\nA feeler's gone before the song\nConnect, handshake, disconnect\nConnect, handshake, disconnect\n\n[Chorus]\nIt's just a feeler\nI connect, we shake hands\nIt's just a feeler\nI disconnect, that's the plan\nI only want to know you're there\nIt's just a feeler",
+     "cover": "/music/covers/v6/05.jpg",
+     "ckbfs": {
+      "typeId": "0xb1d81ea5f7ad680cedb56aa30193126edb39a1ace39d729a84a8169a0b579ae2",
+      "contentHash": "0x2461b1530690b0f04f20476ebf78bb6ca82f11d4a2e136592a5c0ceb569ed5ee",
+      "bytes": 1340851,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Maybe Stale",
+     "style": "melodic dubstep",
+     "duration": 189.6,
+     "source": "RFC 7 Extra outbound peers and eviction",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0007-scoring-system-and-network-security/0007-scoring-system-and-network-security.md",
+     "lyrics": "[Verse]\nNo new block for a while now\nLonger than it ought to take\nThe tip hasn't moved\nIs it the network, or is it me?\n\n[Verse]\nEvery fifteen minutes\nI check the time gone by\nIf nothing's getting through\nI've got to open up the line\n\n[Chorus]\nMaybe I'm stale\nMaybe they've shut me in\nTry a new outbound peer\nLet somebody else in\nMaybe I'm stale\nMaybe I'm stale\n\n[Verse]\nExtra connections\nPast the most I'm meant to hold\nLooking for one voice\nWith a block I haven't known\n\n[Verse]\nAnd when the sync comes back\nI can't keep them all around\nThe one who's told me nothing longest\nIs the one I let down\n\n[Chorus]\nMaybe I'm stale\nMaybe they've shut me in\nTry a new outbound peer\nLet somebody else in\nMaybe I'm stale\nMaybe I'm stale\n\n[Bridge]\nNot if you only just arrived\nNot while I'm downloading from you\nBut the oldest announcement goes\nToo many peers is a danger too\n\n[Chorus]\nMaybe I'm stale\nMaybe they've shut me in\nTry a new outbound peer\nLet somebody else in\nMaybe I'm stale\nMaybe I'm stale",
+     "cover": "/music/covers/v6/06.jpg",
+     "ckbfs": {
+      "typeId": "0x2803534840ebcfa34129851fa7f4eeb586013b8cb129c3d49aab999ed3b01c48",
+      "contentHash": "0x1443bf8602a7204b70a09f45c5c38874eeeb9f50b480bc529b9bd0a4a93894e1",
+      "bytes": 1365616,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Slow Credit",
+     "style": "speed garage",
+     "duration": 120.6,
+     "source": "RFC 7 Scoring system",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0007-scoring-system-and-network-security/0007-scoring-system-and-network-security.md",
+     "lyrics": "[Verse]\nYou connected, that's a ten\nYou sent a block, I'll score it too\nBut I'm not handing out the big points\nTo someone new\n\n[Verse]\nA bad one plays it nice\nRight before the hit\nSo good behaviour pays out small\nAnd you build it bit by bit\n\n[Chorus]\nSlow credit, slow credit\nEarn it over time\nSlow credit, slow credit\nA little for every right\nGo under the ban score\nAnd you're off my line\n\n[Verse]\nYou dropped out, you timed out\nCould be the network, I can't tell\nA little off, I stay tolerant\nI've had bad days as well\n\n[Verse]\nBut send me broken encoding\nAn invalid block, a fake\nNow I'm sure, and it costs you\nMore than you can make\n\n[Chorus]\nSlow credit, slow credit\nEarn it over time\nSlow credit, slow credit\nA little for every right\nGo under the ban score\nAnd you're off my line\n\n[Bridge]\nAsked for the same block again and again\nThat's minus fifty, friend\nThe numbers aren't consensus\nEach node tunes them in the end\n\n[Chorus]\nSlow credit, slow credit\nEarn it over time\nSlow credit, slow credit\nA little for every right\nGo under the ban score\nAnd you're off my line",
+     "cover": "/music/covers/v6/07.jpg",
+     "ckbfs": {
+      "typeId": "0xb78fc3e241c6b478d73312da8d66046d68801d54cb8b3eb1db5908b0182179cd",
+      "contentHash": "0x402bbb83223f2e54e4792fc3239ebb72f3bad1b5024669dca5ceb670e18140fd",
+      "bytes": 821477,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Little Endian",
+     "style": "jump-up drum and bass",
+     "duration": 190.0,
+     "source": "RFC 8 Molecule memory layout and array",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0008-serialization/0008-serialization.md",
+     "lyrics": "[Verse]\nEvery number in the header\nThirty-two bits, unsigned\nAnd the little end goes first\nEvery single time\n\n[Verse]\nZero one, zero two\nZero three, zero four\nWrite it down and turn it round\nNow the four is at the door\n\n[Chorus]\nLittle end first\nZero four, zero three, zero two, zero one\nLittle end first\nSmallest byte is where it's begun\nLittle end first\n\n[Verse]\nA fixed vector counts its items\nThen the items in a row\nEmpty? Four zeros\nThat's the count, there's nothing more\n\n[Verse]\nA dynamic one says its full size\nThen an offset for each part\nAn empty one is four bytes long\nJust the size, and that's the start\n\n[Chorus]\nLittle end first\nZero four, zero three, zero two, zero one\nLittle end first\nSmallest byte is where it's begun\nLittle end first\n\n[Bridge]\nCanonical, one way to write it\nZero copy, read it where it lies\nA byte is a byte\nThe rest is built from that, in line\n\n[Chorus]\nLittle end first\nZero four, zero three, zero two, zero one\nLittle end first\nSmallest byte is where it's begun\nLittle end first",
+     "cover": "/music/covers/v6/08.jpg",
+     "ckbfs": {
+      "typeId": "0xe3bccb80b781714a6bc3974d873f074e95d266da16b9468963c7e8d4663255c6",
+      "contentHash": "0x7e42cd191aaddfeea879ea6bcea498f20440076a466630ff0744c693f3959052",
+      "bytes": 1306068,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Nothing in Between",
+     "style": "piano house",
+     "duration": 187.0,
+     "source": "RFC 8 Array and struct",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0008-serialization/0008-serialization.md",
+     "lyrics": "[Verse]\nA fixed size and a fixed length\nYou always know how long I'll be\nThe size of one, times how many\nThat's all there is to me\n\n[Verse]\nSide by side, we're stored together\nOne after one in a row\nNo extra space around us\nNo header up front to show\n\n[Chorus]\nThere's nothing in between us\nNo overhead at all\nNothing in between us\nItem next to item, wall to wall\nNothing in between\n\n[Verse]\nA struct is fields of fixed size\nA fixed number, nothing strange\nAdd them up and that's the total\nAnd the order doesn't change\n\n[Verse]\nThe way that you declared us\nIs the way we'll always stay\nA byte and then a number\nLaid down the very same way\n\n[Chorus]\nThere's nothing in between us\nNo overhead at all\nNothing in between us\nItem next to item, wall to wall\nNothing in between\n\n[Bridge]\nOne, two, three\nZero one, zero two, zero three\nThree bytes in, three bytes out\nWhat you store is what you see\n\n[Chorus]\nThere's nothing in between us\nNo overhead at all\nNothing in between us\nItem next to item, wall to wall\nNothing in between",
+     "cover": "/music/covers/v6/09.jpg",
+     "ckbfs": {
+      "typeId": "0x83971d17181cb8bbd922cc471a8fb39c1f5788faeeba9688589006bd0e7bc36f",
+      "contentHash": "0xacd0797c7f8fae103cf6e7270a02e2fecab9e62633713a8d70ab497c1ea165bf",
+      "bytes": 1271489,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "Ninety-Three",
+     "style": "uk garage",
+     "duration": 171.5,
+     "source": "RFC 9 Syscall specifications and Exit",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0009-vm-syscalls/0009-vm-syscalls.md",
+     "lyrics": "[Verse]\nSix arguments, six registers\nA zero through A five\nThe number of the call\nGoes in A seven, on the side\n\n[Verse]\nYou don't have to fill them all\nJust the ones you need\nThen one instruction hands control\nTo what's underneath\n\n[Chorus]\nNinety-three, that's the exit\nThe only right way out\nNinety-three, that's the exit\nGive a code and it shuts down\nThere's no coming back from ninety-three\n\n[Verse]\nThe answer comes in A zero\nIf there's one to give\nOr it's written into memory\nWhere you told it it should live\n\n[Verse]\nNo custom instructions\nWe kept the standard clean\nSo everything the industry builds\nStill runs on this machine\n\n[Chorus]\nNinety-three, that's the exit\nThe only right way out\nNinety-three, that's the exit\nGive a code and it shuts down\nThere's no coming back from ninety-three\n\n[Bridge]\nLoad ten in A zero\nNinety-three in A seven\nE-call\nAnd the script is gone, code ten\n\n[Chorus]\nNinety-three, that's the exit\nThe only right way out\nNinety-three, that's the exit\nGive a code and it shuts down\nThere's no coming back from ninety-three",
+     "cover": "/music/covers/v6/10.jpg",
+     "ckbfs": {
+      "typeId": "0x055bdb6d10b95a186310b7f7f36809371abae63a321ade863e4ffb84d2c3b668",
+      "contentHash": "0x8934a127956174d71999aaf92254b207f9e3960a1a1b81c9b4f954b2d0c880fb",
+      "bytes": 1160533,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "As Code",
+     "style": "dubstep",
+     "duration": 185.1,
+     "source": "RFC 9 Load Cell Data As Code",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0009-vm-syscalls/0009-vm-syscalls.md",
+     "lyrics": "[Verse]\nThere's a cell in this transaction\nAnd its data isn't just to read\nFind it by the source and index\nLoad it in, that's what I need\n\n[Verse]\nNot a copy in a buffer\nNot the partial loading way\nStraight in to the memory\nAnd mark the page\n\n[Chorus]\nLoad it as code\nNow it can run\nLoad it as code\nAnd it can't be undone\nExecutable stays executable\nLoad it as code\n\n[Verse]\nThe address has to line up\nOn a four kilobyte line\nThe memory a multiple of four\nOr the machine stops every time\n\n[Verse]\nThe content can't be bigger\nThan the room you set aside\nOut of bounds on the offset\nAnd the execution dies\n\n[Chorus]\nLoad it as code\nNow it can run\nLoad it as code\nAnd it can't be undone\nExecutable stays executable\nLoad it as code\n\n[Bridge]\nJump to the page\nRun what you found\nCode from another cell\nDynamic linking, underground\n\n[Chorus]\nLoad it as code\nNow it can run\nLoad it as code\nAnd it can't be undone\nExecutable stays executable\nLoad it as code",
+     "cover": "/music/covers/v6/11.jpg",
+     "ckbfs": {
+      "typeId": "0x3a43e25167c3456d348a945d5b38cfb69a4321a97bcb0d40e1471993b8c38eb5",
+      "contentHash": "0xb6481637f39856ea67f33a9ea2c775d64e259efbc138740c8ee5df7a6a284788",
+      "bytes": 1313368,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Add Rotate Xor",
+     "style": "drum and bass",
+     "duration": 165.0,
+     "source": "RFC 10 ARX and round function",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0010-eaglesong/0010-eaglesong.md",
+     "lyrics": "[Verse]\nThree operations\nThat's the family, that's the lot\nThirty-two bit words\nNothing else is what we've got\n\n[Verse]\nSixteen numbers in the state\nAnd four steps in a round\nBit matrix first\nSays which ones get bound\n\n[Chorus]\nAdd, rotate, xor\nAdd, rotate, xor\nThree moves and nothing more\nAdd, rotate, xor\n\n[Verse]\nThen every word is turned\nAnd mixed back with its own\nTwo rotations each\nA different pair for every one\n\n[Verse]\nA constant for each word\nA new one every round\nThen pair them up in eights\nFor the only adding to be found\n\n[Chorus]\nAdd, rotate, xor\nAdd, rotate, xor\nThree moves and nothing more\nAdd, rotate, xor\n\n[Bridge]\nRight on to the left\nEight bits, opposite ways\nLeft on to the right\nAnd the pair is rearranged\n\n[Chorus]\nAdd, rotate, xor\nAdd, rotate, xor\nThree moves and nothing more\nAdd, rotate, xor",
+     "cover": "/music/covers/v6/12.jpg",
+     "ckbfs": {
+      "typeId": "0xa4bde99c3f7492ca6f18fc95c9757404bf7b9f5b685ab45c721fc2bcf6d3e148",
+      "contentHash": "0x12759ca2fe002faca8f6e6c97cb1c3f80b5fef98a631d947bf6677c73b57b9f1",
+      "bytes": 1122988,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Dispersed",
+     "style": "progressive house",
+     "duration": 323.7,
+     "source": "RFC 10 Injection of constants",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0010-eaglesong/0010-eaglesong.md",
+     "lyrics": "[Verse]\nEvery round needs a number\nFor every word in the state\nWhere they come from matters\nNothing hidden, nothing fake\n\n[Verse]\nSo they took a line of writing\nAbout how people come to know\nAnd ran it through a sponge\nTo make the constants flow\n\n[Chorus]\nKnowledge is dispersed\nAmong all the people\nNo one holds it all\nAmong all the people\nHow to use what's scattered\nThat's the problem\nKnowledge is dispersed\n\n[Verse]\nThe plans that people make\nRest on what they've learned\nHow it's passed between them\nIs where the question turns\n\n[Verse]\nIt's written in the mining\nEvery hash that's ever tried\nAn economist's old sentence\nFolded up inside\n\n[Chorus]\nKnowledge is dispersed\nAmong all the people\nNo one holds it all\nAmong all the people\nHow to use what's scattered\nThat's the problem\nKnowledge is dispersed\n\n[Bridge]\nXor it in\nRound by round\nYou can run the script yourself\nAnd see where they were found\n\n[Chorus]\nKnowledge is dispersed\nAmong all the people\nNo one holds it all\nAmong all the people\nHow to use what's scattered\nThat's the problem\nKnowledge is dispersed",
+     "cover": "/music/covers/v6/13.jpg",
+     "ckbfs": {
+      "typeId": "0x7451d207296ccf873ff7c2e3880ce32a83f4235df31e2479a0766ba65183ca75",
+      "contentHash": "0x717bb779188af8d03adaed6a96c676ce5cd0da7cdde81285ca8bdb7cb141bbea",
+      "bytes": 2408151,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
   }
  ]
 }

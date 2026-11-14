@@ -1735,6 +1735,223 @@
      }
     }
    ]
+  },
+  {
+   "id": "vol-9",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 9",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Eight Zeros",
+     "style": "disco funk",
+     "duration": 141.8,
+     "source": "RFC 23 Deposit",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0023-dao-deposit-withdraw/0023-dao-deposit-withdraw.md",
+     "lyrics": "[Verse]\nYou can come on in at any time\nThe door was there from the genesis block\nBring your bytes and make a brand new cell\nThere's just two rules before you knock\n\n[Chorus]\nEight zeros, eight zeros\nEight bytes of nothing in the data\nEight zeros, eight zeros\nWith the DAO for a type, see you later\nThat's a deposit cell\nEight zeros\n\n[Verse]\nNumber one, the type script has to be\nThe Nervos DAO and nothing more\nNumber two, the data's eight bytes long\nAll filled with zeros, that's for sure\n\n[Verse]\nPoint your cell deps at the script\nSo the validation passes through\nPut in one or put in ten\nThere's no limit on how many you do\n\n[Chorus]\nEight zeros, eight zeros\nEight bytes of nothing in the data\nEight zeros, eight zeros\nWith the DAO for a type, see you later\nThat's a deposit cell\nEight zeros\n\n[Bridge]\nSecondary issuance keeps on coming\nThe same amount every epoch\nBut I get my proportion of it\nSo nobody's watering me down\nOnly the hard cap touches me now\n\n[Chorus]\nEight zeros, eight zeros\nEight bytes of nothing in the data\nEight zeros, eight zeros\nWith the DAO for a type, see you later\nThat's a deposit cell\nEight zeros",
+     "cover": "/music/covers/v9/01.jpg",
+     "ckbfs": {
+      "typeId": "0x6a16a1760c5908550d865d00db1738485c765a99052006a281cc8c543a02ca72",
+      "contentHash": "0xf931eea3e54c307f09d25a1aa502f5de0de1a2b2331967abc6ac0c9ff6190882",
+      "bytes": 965182,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "One Eighty",
+     "style": "synth-pop",
+     "duration": 215.7,
+     "source": "RFC 23 Withdraw",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0023-dao-deposit-withdraw/0023-dao-deposit-withdraw.md",
+     "lyrics": "[Verse]\nI put it in at epoch five\nI can ask for it back any day\nBut asking isn't getting, baby\nThere's two phases on the way\n\n[Chorus]\nOne eighty, one eighty\nA hundred and eighty epochs round\nOne eighty, one eighty\nThat's when the lock comes down\nOne eighty-five, three sixty-five\nFive forty-five, and on and on\nOne eighty\n\n[Verse]\nPhase one, my deposit cell\nTurns into a withdrawing cell\nSame capacity, same type script\nAt the same index as well\n\n[Verse]\nAnd where the eight zeros used to be\nIt writes the block where I came in\nSixty-four bits, little-endian\nSo the counting can begin\n\n[Chorus]\nOne eighty, one eighty\nA hundred and eighty epochs round\nOne eighty, one eighty\nThat's when the lock comes down\nOne eighty-five, three sixty-five\nFive forty-five, and on and on\nOne eighty\n\n[Bridge]\nPhase two, I set the since field\nAn absolute epoch, nothing else\nI can build it now but I have to wait\nAnd if I miss the day, it rolls itself\nInto another period\n\n[Chorus]\nOne eighty, one eighty\nA hundred and eighty epochs round\nOne eighty, one eighty\nThat's when the lock comes down\nOne eighty-five, three sixty-five\nFive forty-five, and on and on\nOne eighty",
+     "cover": "/music/covers/v9/02.jpg",
+     "ckbfs": {
+      "typeId": "0x872538c0e830ab3a30f435d0670c8b37367490b3ea88543cada12e8097aada55",
+      "contentHash": "0xee22ea2eec2ae5511ee152ab56687d5bb34255fff3fbc4357eae8ae35124e3bc",
+      "bytes": 1501723,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Accumulated Rate",
+     "style": "p-funk",
+     "duration": 199.3,
+     "source": "RFC 23 Calculation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0023-dao-deposit-withdraw/0023-dao-deposit-withdraw.md",
+     "lyrics": "[Verse]\nThere's a field inside the header\nThirty-two bytes called the dao\nFour numbers packed together\nLet me tell you what they are now\n\n[Chorus]\nA R n over A R m\nThat's the accumulated rate\nA R n over A R m\nWhere I left over where I came\nMultiply it by what's free\nAnd that's what's coming back to me\nAccumulated rate\n\n[Verse]\nC is the total issuance\nUp to and including this block\nS is the secondary unissued\nU is the occupied stock\n\n[Verse]\nAnd A R starts at ten to the sixteen\nAt genesis, to keep it precise\nEvery block it grows a little\nBy the secondary over C, that's nice\n\n[Chorus]\nA R n over A R m\nThat's the accumulated rate\nA R n over A R m\nWhere I left over where I came\nMultiply it by what's free\nAnd that's what's coming back to me\nAccumulated rate\n\n[Bridge]\nTake the total, take away the occupied\nThat's the only part that earns\nThe bytes that hold the cell itself\nCome back the same, no more returns\nFree times the rate, plus occupied\nThat's the most you can withdraw\n\n[Chorus]\nA R n over A R m\nThat's the accumulated rate\nA R n over A R m\nWhere I left over where I came\nMultiply it by what's free\nAnd that's what's coming back to me\nAccumulated rate",
+     "cover": "/music/covers/v9/03.jpg",
+     "ckbfs": {
+      "typeId": "0xcd2cead9bdddad5b0d3fa8ff2922cd376dc5d170a3d63fe101d6ec36dd691546",
+      "contentHash": "0xfb25c65092e6ad283d5cbd0924c18b47479dbc62d8f282a1e72b318a2232a6fc",
+      "bytes": 1266746,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Since the Genesis",
+     "style": "bubblegum pop",
+     "duration": 136.8,
+     "source": "RFC 24 List of Genesis Scripts",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0024-ckb-genesis-script-list/0024-ckb-genesis-script-list.md",
+     "lyrics": "[Verse]\nBefore there was a single wallet\nBefore the first dapp came along\nThe team put some scripts in block zero\nAnd they've been there all along\n\n[Chorus]\nSince the genesis, since the genesis\nTwo locks, two types, that's the list\nSince the genesis, since the genesis\nYou've been right there and never missed\nCode hash, hash type, out point, dep type\nSince the genesis\n\n[Verse]\nLock number one checks a signature\nSecp two five six k one\nWith blake one sixty, it's the default\nIt's where everybody's begun\n\n[Verse]\nLock number two is the multisig\nType number one is the Nervos DAO\nType number two is the Type ID\nAnd that's all four of them now\n\n[Chorus]\nSince the genesis, since the genesis\nTwo locks, two types, that's the list\nSince the genesis, since the genesis\nYou've been right there and never missed\nCode hash, hash type, out point, dep type\nSince the genesis\n\n[Bridge]\nOn Lina, on Aggron\nThe addresses aren't the same\nSo here's a handy reference\nWith every hash and every name\nFor every wallet, every dapp\nI'm writing it all down\n\n[Chorus]\nSince the genesis, since the genesis\nTwo locks, two types, that's the list\nSince the genesis, since the genesis\nYou've been right there and never missed\nCode hash, hash type, out point, dep type\nSince the genesis",
+     "cover": "/music/covers/v9/04.jpg",
+     "ckbfs": {
+      "typeId": "0xd82751de1358212889aa5412a2c8dfd30f28163cb73bf5844921e0286fe430b0",
+      "contentHash": "0x944fb9ce4018b3cc4c2b546346969e9d48677bde68edd40c6cf79d47be8fa9a0",
+      "bytes": 918489,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Not in the VM",
+     "style": "minneapolis funk",
+     "duration": 172.2,
+     "source": "RFC 24 Type ID",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0024-ckb-genesis-script-list/0024-ckb-genesis-script-list.md",
+     "lyrics": "[Verse]\nStrictly speaking, I'm not like the others\nThey were written in C and compiled\nI was built straight into the node in Rust\nI never ran in the machine, not once\n\n[Chorus]\nI'm not in the VM, not in the VM\nBut you can use me just the same\nNot in the VM, not in the VM\nType ID is my name\nUnique and immutable\nNot in the VM\n\n[Verse]\nYou want a reference that never changes\nOne that only points to one\nI've been here since the genesis\nSame as any other one\n\n[Verse]\nMy code hash is mostly zeros\nWith my own name spelled at the end\nThe same on Lina, the same on Aggron\nAnd the hash type is type, my friend\n\n[Chorus]\nI'm not in the VM, not in the VM\nBut you can use me just the same\nNot in the VM, not in the VM\nType ID is my name\nUnique and immutable\nNot in the VM\n\n[Bridge]\nNo dep type, there's no need\nNo cell to point at, nothing to load\nI'm on the list with all the rest\nThough I live inside the code\nUse me like a genesis script\nThat's what I am to you\n\n[Chorus]\nI'm not in the VM, not in the VM\nBut you can use me just the same\nNot in the VM, not in the VM\nType ID is my name\nUnique and immutable\nNot in the VM",
+     "cover": "/music/covers/v9/05.jpg",
+     "ckbfs": {
+      "typeId": "0x232612f69e3c05968efc35da9446ef15375c70850cd5fca8b4b7a933a351aaa1",
+      "contentHash": "0x19c7862fab012f54465e6d7996eb4ab2341a0b379d0fa441384e9a0625536ace",
+      "bytes": 1173792,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "First Sixteen Bytes",
+     "style": "funk pop",
+     "duration": 174.9,
+     "source": "RFC 25 SUDT Cell",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0025-simple-udt/0025-simple-udt.md",
+     "lyrics": "[Verse]\nYou want to make a token of your own\nWe kept it simple, that's the plan\nJust what's absolutely needed\nThe rest is up to you, understand\n\n[Chorus]\nFirst sixteen bytes, that's the amount\nFirst sixteen bytes, that's how we count\nLittle-endian, one twenty-eight bits\nFirst sixteen bytes and that's it\nKeep it simple\nFirst sixteen bytes\n\n[Verse]\nRule one, the amount goes up the front\nOf the data, nowhere else\nEven if you stack more scripts on top\nThose sixteen bytes stay on the shelf\n\n[Verse]\nRule two, thirty-two bytes of args\nThe hash of the owner's lock\nRule three, the same type script\nMeans the same token on the block\n\n[Chorus]\nFirst sixteen bytes, that's the amount\nFirst sixteen bytes, that's how we count\nLittle-endian, one twenty-eight bits\nFirst sixteen bytes and that's it\nKeep it simple\nFirst sixteen bytes\n\n[Bridge]\nAnd the lock, well that's all yours\nUse any lock you like\nWe don't say who holds the key\nWe only say what the data looks like\nA minimal standard\nNothing more\n\n[Chorus]\nFirst sixteen bytes, that's the amount\nFirst sixteen bytes, that's how we count\nLittle-endian, one twenty-eight bits\nFirst sixteen bytes and that's it\nKeep it simple\nFirst sixteen bytes",
+     "cover": "/music/covers/v9/06.jpg",
+     "ckbfs": {
+      "typeId": "0x53e611260e00bc0c6bdf4ec9065a15fd38fd783a225ebba555fd754056f44332",
+      "contentHash": "0x8b04eb85b69dc8558d33e6de22506775e9f4396ad07ca6865ec97e8717c048eb",
+      "bytes": 1173091,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "More In Than Out",
+     "style": "dance-pop",
+     "duration": 239.2,
+     "source": "RFC 25 Operations",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0025-simple-udt/0025-simple-udt.md",
+     "lyrics": "[Verse]\nSend it from one holder to another\nFrom many hands to many more\nAdd up everything going in\nAdd up everything going out the door\n\n[Chorus]\nMore in than out, that's alright\nMore in than out, let it burn tonight\nThe inputs have to be greater or the same\nMore in than out, that's the game\nYou can lose a little\nBut you can't make more\nMore in than out\n\n[Verse]\nRule four, the sum of all the inputs\nIs larger than or equal to the outs\nIf a few go missing on the way\nThat's a burn, and it's allowed\n\n[Verse]\nBut if you want to make new tokens\nYou'd better have the owner's key\nRule five, one input in there\nHas to use the owner lock, you see\n\n[Chorus]\nMore in than out, that's alright\nMore in than out, let it burn tonight\nThe inputs have to be greater or the same\nMore in than out, that's the game\nYou can lose a little\nBut you can't make more\nMore in than out\n\n[Bridge]\nIssue, mint, that's governance\nThe owner lock decides\nWe don't tell it how to behave\nJust keep it safe on every side\nSo only the owner\nGets to print\n\n[Chorus]\nMore in than out, that's alright\nMore in than out, let it burn tonight\nThe inputs have to be greater or the same\nMore in than out, that's the game\nYou can lose a little\nBut you can't make more\nMore in than out",
+     "cover": "/music/covers/v9/07.jpg",
+     "ckbfs": {
+      "typeId": "0xa9d0c23d1e9dde0577490798564176bb7c08c122f83d3288680b612c413e7290",
+      "contentHash": "0x037de120c15cd9a9fcea0c564ee7c450a2f7fc54589bc92dd91a7a50af7751e6",
+      "bytes": 1697063,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Sixty-One",
+     "style": "power pop",
+     "duration": 156.1,
+     "source": "RFC 26 Anyone-Can-Pay Lock",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0026-anyone-can-pay/0026-anyone-can-pay.md",
+     "lyrics": "[Verse]\nI only wanted to send you a little\nBut the default lock said no\nYou need a whole new cell to hold it\nAnd a cell needs room to grow\n\n[Chorus]\nSixty-one, sixty-one\nAt least sixty-one bytes to send you some\nSixty-one, sixty-one\nUntil the anyone-can-pay lock came along\nNow any amount will do\nAny amount to you\n\n[Verse]\nAnd when the tokens came, it got worse\nI had the tokens you were owed\nBut I needed the bytes as well\nJust to keep them in a cell, a heavy load\n\n[Verse]\nSo here's a lock that opens two ways\nWith a signature, like before\nOr with a payment, any payment\nDropped in through the door\n\n[Chorus]\nSixty-one, sixty-one\nAt least sixty-one bytes to send you some\nSixty-one, sixty-one\nUntil the anyone-can-pay lock came along\nNow any amount will do\nAny amount to you\n\n[Bridge]\nNo new cell, I pay into yours\nThe one you already own\nIt comes out with a little more inside\nAnd you never had to pick up the phone\nSign it and it's the same old lock\nDon't sign and it only goes up\n\n[Chorus]\nSixty-one, sixty-one\nAt least sixty-one bytes to send you some\nSixty-one, sixty-one\nUntil the anyone-can-pay lock came along\nNow any amount will do\nAny amount to you",
+     "cover": "/music/covers/v9/08.jpg",
+     "ckbfs": {
+      "typeId": "0x763766a37b6504f6716fbf328ba9641490d03404bad5d73b673a092fb50cd277",
+      "contentHash": "0xe02fe7db36bc1c3d5ee6768d2c17fe3f396d14a7d2e19192b5226ae36aee818b",
+      "bytes": 1042848,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Ten to the X",
+     "style": "electro-funk",
+     "duration": 198.3,
+     "source": "RFC 26 Script Structure",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0026-anyone-can-pay/0026-anyone-can-pay.md",
+     "lyrics": "[Verse]\nSomebody keeps on paying me\nOne shannon at a time\nEvery time I reach for my cell\nIt's been spent, it's a brand new line\n\n[Chorus]\nTen to the x, ten to the x\nPut a number in the args and raise the price\nTen to the x, ten to the x\nA three means a thousand, think twice\nOne byte is all it takes\nTen to the x\n\n[Verse]\nTwenty bytes for the public key hash\nThen one byte for the CKByte floor\nThen one byte for the token floor\nYou can have them both or ask for neither one\n\n[Verse]\nA four in the token minimum\nMeans ten thousand base units or more\nLeave them out, the minimum's zero\nAnd anything walks through the door\n\n[Chorus]\nTen to the x, ten to the x\nPut a number in the args and raise the price\nTen to the x, ten to the x\nA three means a thousand, think twice\nOne byte is all it takes\nTen to the x\n\n[Bridge]\nIt won't stop every kind of flood\nBut it stops the cheap ones cold\nAnd a different minimum\nIs a different lock script, so I'm told\nIf both are set\nYou only need to meet the one\n\n[Chorus]\nTen to the x, ten to the x\nPut a number in the args and raise the price\nTen to the x, ten to the x\nA three means a thousand, think twice\nOne byte is all it takes\nTen to the x",
+     "cover": "/music/covers/v9/09.jpg",
+     "ckbfs": {
+      "typeId": "0xeca955cbb0ba6418f7e5412b92ad6da0f10e4e7081f7cd672bc04af50cdeb55a",
+      "contentHash": "0x8675cae25f314e5a37762006f7155f9c64dbb642cf887fa2824af2efd9eac441",
+      "bytes": 1293348,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "No Merging, No Splitting",
+     "style": "new jack swing",
+     "duration": 178.9,
+     "source": "RFC 26 Unlock Rules",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0026-anyone-can-pay/0026-anyone-can-pay.md",
+     "lyrics": "[Verse]\nNo signature? Then listen close\nI'm going to loop through every cell\nThe ones going in, the ones coming out\nWith my lock on them, and I can tell\n\n[Chorus]\nNo merging, no splitting\nOne in, one out, that's how I'm living\nNo merging, no splitting\nMatch them up by type, no kidding\nAnd nothing ever comes out with less\nNo merging, no splitting\n\n[Verse]\nTwo inputs with the same type script\nOr two with none at all, that's an error\nSame goes for the outputs too\nI pair them off, one for each other\n\n[Verse]\nNo type but data set, that's an error\nA type with under sixteen bytes, the same\nAn input with no matching output\nAnd I return with an error state\n\n[Chorus]\nNo merging, no splitting\nOne in, one out, that's how I'm living\nNo merging, no splitting\nMatch them up by type, no kidding\nAnd nothing ever comes out with less\nNo merging, no splitting\n\n[Bridge]\nAn exchange makes hundreds of cells\nSo the deposits don't collide\nMerge them and they're gone\nSplit them and there's more to carry on the miner's side\nMore inputs when the owner claims\nMore size, more cycles, more to pay\n\n[Chorus]\nNo merging, no splitting\nOne in, one out, that's how I'm living\nNo merging, no splitting\nMatch them up by type, no kidding\nAnd nothing ever comes out with less\nNo merging, no splitting",
+     "cover": "/music/covers/v9/10.jpg",
+     "ckbfs": {
+      "typeId": "0xb88154d68929c58f048a83c0c894032d1f4b4f50d5e04a6e25e3597dd2e766f3",
+      "contentHash": "0x54a3e7d53094010edcae61b6aa9dcb41556d133c4c5dfb0edca757505452d28f",
+      "bytes": 1122474,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Mantissa",
+     "style": "synth funk",
+     "duration": 159.3,
+     "source": "RFC 27 compact_target",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0027-block-structure/0027-block-structure.md",
+     "lyrics": "[Verse]\nI've got a number far too big to carry\nThe threshold every hash must beat\nSo I fold it into thirty-two bits\nA little like a floating point, compact and neat\n\n[Chorus]\nMantissa, mantissa\nThe lower twenty-four bits\nMantissa, mantissa\nTimes two fifty-six to the exponent minus three\nThe top eight bits tell you how many bytes\nMantissa\n\n[Verse]\nIn Bitcoin they called it n bits\nAnd it came from a signed kind of class\nIt could go negative, and that was useless\nA hash is unsigned, so that can't pass\n\n[Verse]\nSo here it's unsigned all the way\nThe exponent is base two fifty-six\nThink of it as the number of bytes\nAnd the first three are the mantissa, that's the trick\n\n[Chorus]\nMantissa, mantissa\nThe lower twenty-four bits\nMantissa, mantissa\nTimes two fifty-six to the exponent minus three\nThe top eight bits tell you how many bytes\nMantissa\n\n[Bridge]\nI don't change inside an epoch\nI hold steady all the way\nWhen the new one comes, I get adjusted\nBy the headers and the uncles of the old one, they say\nAnd at the genesis\nI was hardcoded\n\n[Chorus]\nMantissa, mantissa\nThe lower twenty-four bits\nMantissa, mantissa\nTimes two fifty-six to the exponent minus three\nThe top eight bits tell you how many bytes\nMantissa",
+     "cover": "/music/covers/v9/11.jpg",
+     "ckbfs": {
+      "typeId": "0x67452f2fc6d2209f4e9e4e0cefd85890a34dca9ade3defa30b42286c07296bed",
+      "contentHash": "0x8fb07ff4e6767f9e02dda8d560a8856c1404f4b1a14c9f3081a2c10ba369bc85",
+      "bytes": 1082595,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Call Me Uncle",
+     "style": "go-go funk",
+     "duration": 205.5,
+     "source": "RFC 27 Uncles",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0027-block-structure/0027-block-structure.md",
+     "lyrics": "[Verse]\nI did the work, I found a block\nBut somebody else's made the chain\nI'm not forgotten, I'm still family\nIf four conditions are the same\n\n[Chorus]\nCall me uncle, call me uncle\nI didn't make it but I'm kin\nCall me uncle, call me uncle\nSame epoch, same difficulty, let me in\nBe the first one to name me\nCall me uncle\n\n[Verse]\nOne, we're in the same epoch\nSharing the same difficulty\nTwo, your block number\nHas got to be larger than me\n\n[Verse]\nThree, my parent is your ancestor\nOr an uncle somewhere back up your line\nFour, you're the first block in your chain\nTo ever mention this name of mine\n\n[Chorus]\nCall me uncle, call me uncle\nI didn't make it but I'm kin\nCall me uncle, call me uncle\nSame epoch, same difficulty, let me in\nBe the first one to name me\nCall me uncle\n\n[Bridge]\nYou only keep my header\nAnd my proposal I Ds\nThe header shows the proof of work\nIt shows I passed the rules, you see\nAnd the I Ds are there because\nYou can commit what I proposed\n\n[Chorus]\nCall me uncle, call me uncle\nI didn't make it but I'm kin\nCall me uncle, call me uncle\nSame epoch, same difficulty, let me in\nBe the first one to name me\nCall me uncle",
+     "cover": "/music/covers/v9/12.jpg",
+     "ckbfs": {
+      "typeId": "0x2511df1ce2a211de923c6a1f978d3ae12c0a0b5de94823fa7d88c5de744b2997",
+      "contentHash": "0xd143af65bd9877d089092d016449a454fb0cb13c353d9df6bc2c74ddb868c23e",
+      "bytes": 1344136,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "T and W",
+     "style": "anthemic pop",
+     "duration": 178.2,
+     "source": "RFC 27 transactions_root",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0027-block-structure/0027-block-structure.md",
+     "lyrics": "[Verse]\nA block is just a container\nA header and a body inside\nAnd somewhere in the header\nThere's a promise it can't hide\n\n[Chorus]\nT and W, T and W\nTwo roots hashed into one\nT and W, T and W\nA commitment to everything that's done\nEvery transaction, every witness\nT and W\n\n[Verse]\nT is the root of a merkle tree\nOf every transaction hash in the block\nW is the root of another tree\nOf the witness hashes, under lock\n\n[Verse]\nPut them side by side, T then W\nAnd run them through the C K B hash\nThat's the transactions root\nThirty-two bytes, and it's built to last\n\n[Chorus]\nT and W, T and W\nTwo roots hashed into one\nT and W, T and W\nA commitment to everything that's done\nEvery transaction, every witness\nT and W\n\n[Bridge]\nAnd the first one in the list\nIs always the cellbase\nThe uncles have a hash, the proposals have a hash\nAll zeros when there's nothing in their place\nThe number is the parent's plus one\nAnd the parent's hash is how we hold on\n\n[Chorus]\nT and W, T and W\nTwo roots hashed into one\nT and W, T and W\nA commitment to everything that's done\nEvery transaction, every witness\nT and W",
+     "cover": "/music/covers/v9/13.jpg",
+     "ckbfs": {
+      "typeId": "0x9da6b4b2dca86ff40055191dc4ac7ea09f0e285b1d6062198b0e957073f82459",
+      "contentHash": "0x6a1d122a944303799bdc7899952e4d3b5d28a59b8ebadf46fd4fbb2d641e3eab",
+      "bytes": 1217713,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
   }
  ]
 }

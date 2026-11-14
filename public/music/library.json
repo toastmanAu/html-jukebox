@@ -1518,6 +1518,223 @@
      }
     }
    ]
+  },
+  {
+   "id": "vol-8",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 8",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "The Median of Thirty-Seven",
+     "style": "cool jazz",
+     "duration": 155.8,
+     "source": "RFC 17 Step 3. Derive target value and compare",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0017-tx-valid-since/0017-tx-valid-since.md",
+     "lyrics": "[Verse]\nYou ask me what time it is\nI don't look at just one clock\nOne block could tell me anything\nSo I look back down the block\n\n[Chorus]\nThe median of thirty-seven\nThe middle of the ones before\nNot the earliest, not the latest\nThe median, nothing more\nThat's the time I'm going by\nThe median of thirty-seven\n\n[Verse]\nIf you're counting it in blocks\nTake the last one mined, plus one\nIf you're counting it in epochs\nThe next index, and it's done\n\n[Verse]\nI'm the block that isn't mined yet\nThe one you're waiting to be in\nCompare me with your threshold\nAnd we'll see if you begin\n\n[Chorus]\nThe median of thirty-seven\nThe middle of the ones before\nNot the earliest, not the latest\nThe median, nothing more\nThat's the time I'm going by\nThe median of thirty-seven\n\n[Bridge]\nEqual to or greater than\nThat's all you need from me\nReach the threshold, darling\nAnd the precondition's free\n\n[Chorus]\nThe median of thirty-seven\nThe middle of the ones before\nNot the earliest, not the latest\nThe median, nothing more\nThat's the time I'm going by\nThe median of thirty-seven",
+     "cover": "/music/covers/v8/01.jpg",
+     "ckbfs": {
+      "typeId": "0x1389024691108b2a50352e1ce92cfea8c142001bdb818b6b1219c42a816c0c8a",
+      "contentHash": "0x00efe5d33cfb3ca1d8cbe50be952797d5a42be023f692dcfeaaa34ee5c83f82b",
+      "bytes": 1065902,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Since You Were Committed",
+     "style": "motown soul",
+     "duration": 216.0,
+     "source": "RFC 17 Step 2. Compute threshold value",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0017-tx-valid-since/0017-tx-valid-since.md",
+     "lyrics": "[Verse]\nThere's two ways I can tell you when\nAn absolute, a number, plain as day\nJust copy it across, no working out\nThat's the threshold, nothing more to say\n\n[Verse]\nBut the other way begins with you\nWith the block that took you in\nI find the block where you were committed\nAnd that's where I begin\n\n[Chorus]\nSince you were committed, baby\nI've been counting from that day\nTake your base and add my value\nThat's how long I've got to wait\nSince you were committed\nSince you were committed\n\n[Verse]\nAn input points back to an output\nFrom a transaction gone before\nSo the block that committed that one\nIs the block I'm looking for\n\n[Verse]\nCount in blocks, I take its number\nCount in epochs, take that too\nCount in time, I read its timestamp\nAll from the block that carried you\n\n[Chorus]\nSince you were committed, baby\nI've been counting from that day\nTake your base and add my value\nThat's how long I've got to wait\nSince you were committed\nSince you were committed\n\n[Bridge]\nAbsolute don't need nobody\nRelative, it leans on you\nBase plus value, that's my threshold\nNow I know what I've got to do\n\n[Chorus]\nSince you were committed, baby\nI've been counting from that day\nTake your base and add my value\nThat's how long I've got to wait\nSince you were committed\nSince you were committed",
+     "cover": "/music/covers/v8/02.jpg",
+     "ckbfs": {
+      "typeId": "0xd8b9a44af59d1bbd8d9af7257ea36d8ad29f09d3bb7f9089a0c39aae10aef692",
+      "contentHash": "0x5e41e716424e6093ed4f5096d37253895fdb8910c7dff95eb3c68aa5332c1dc8",
+      "bytes": 1472018,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Previous Output",
+     "style": "bossa nova",
+     "duration": 159.9,
+     "source": "RFC 19 CellInput and OutPoint",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0019-data-structures/0019-data-structures.md",
+     "lyrics": "[Verse]\nEverything I bring to you\nWas someone's gift before\nMy inputs are the outputs\nOf a transaction gone before\n\n[Chorus]\nPrevious output\nThat's the name they give to me\nA hash and then a number\nIs the only way to me\nPrevious output\n\n[Verse]\nThe hash of the transaction\nThat the cell belonged to then\nAnd the index in its outputs\nWhere you'll find it once again\n\n[Verse]\nTwo small things, an out point\nThirty-two bytes and a count\nAnd you can reach across the chain\nTo any cell's amount\n\n[Chorus]\nPrevious output\nThat's the name they give to me\nA hash and then a number\nIs the only way to me\nPrevious output\n\n[Bridge]\nAnd with it comes a since\nTo guard the one you chose\nWhat I make becomes an input\nFor somebody else, who knows\n\n[Chorus]\nPrevious output\nThat's the name they give to me\nA hash and then a number\nIs the only way to me\nPrevious output",
+     "cover": "/music/covers/v8/03.jpg",
+     "ckbfs": {
+      "typeId": "0xe975da9f2848de2c4edf461115ff8f2c9652d0b496066b29a25ee56c9b0bb181",
+      "contentHash": "0xf0af98b3852f696ad970b35dfa2bda3e1c9809ca6b078f1ca1d7505123635bd1",
+      "bytes": 1071808,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Bring a Witness",
+     "style": "southern soul",
+     "duration": 184.8,
+     "source": "RFC 19 Transaction",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0019-data-structures/0019-data-structures.md",
+     "lyrics": "[Verse]\nYou say that cell is yours to spend\nWell, the lock don't take your word\nYou've got to bring it something\nBefore your case is heard\n\n[Chorus]\nBring a witness\nBring a witness\nSomething to make that lock script pass\nBring a witness\nA signature will do, if that's what it asks\nBring a witness\n\n[Verse]\nA version at the top, in case of a fork\nCell deps you can read but never change\nOnly live cells listed there\nCode or data, in your range\n\n[Verse]\nHeader deps, a list of hashes\nInputs, and the outputs new\nAnd the data for each output\nKept apart, to help it through\n\n[Chorus]\nBring a witness\nBring a witness\nSomething to make that lock script pass\nBring a witness\nA signature will do, if that's what it asks\nBring a witness\n\n[Bridge]\nOutputs here and data there\nEasier for the scripts that way\nRoom to make it better later\nThat's what the designers say\n\n[Chorus]\nBring a witness\nBring a witness\nSomething to make that lock script pass\nBring a witness\nA signature will do, if that's what it asks\nBring a witness",
+     "cover": "/music/covers/v8/04.jpg",
+     "ckbfs": {
+      "typeId": "0xc9f0ed1039c17766e2c46d3d6bbeda1178058beefc33d4bdfbf5ee86457f6fad",
+      "contentHash": "0x7c1ca6f1a716c59e0039fce5a387546b78f0091771bd25493607fad45b998ef5",
+      "bytes": 1237301,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Two-Step",
+     "style": "swing",
+     "duration": 189.9,
+     "source": "RFC 20 Two-step transaction confirmation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Verse]\nYou can't just walk on in, my friend\nThere's a way that it gets done\nFirst they've got to say your name\nThen they let you join the fun\n\n[Chorus]\nIt's a two-step, a two-step\nProposed and then committed\nA two-step, a two-step\nThat's how you get admitted\nNot too close and not too far\nThe two-step\n\n[Verse]\nStep one, you're in the proposal zone\nA main chain block, or an uncle will do\nMaybe you were named before\nMaybe malformed, the block's still true\n\n[Verse]\nStep two, the commitment zone\nBut mind the gap between\nNo closer than w close\nNo farther than w far, I mean\n\n[Chorus]\nIt's a two-step, a two-step\nProposed and then committed\nA two-step, a two-step\nThat's how you get admitted\nNot too close and not too far\nThe two-step\n\n[Bridge]\nClose enough to keep in memory\nFar enough to get around\nTime to reach the whole wide network\nBefore the second step comes down\nAnd don't you conflict with anyone\nWho was committed before you, son\n\n[Chorus]\nIt's a two-step, a two-step\nProposed and then committed\nA two-step, a two-step\nThat's how you get admitted\nNot too close and not too far\nThe two-step",
+     "cover": "/music/covers/v8/05.jpg",
+     "ckbfs": {
+      "typeId": "0x0fbb7bf640e66bc8c2771e1ee10ecfcadb1c912f48f37905d3381b9643b61590",
+      "contentHash": "0xeade63e3e43d5ae2f4475c9c2e30f56b94814efbd210412909cd36192f16dd3b",
+      "bytes": 1295744,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "Just the First Few Bits",
+     "style": "bebop",
+     "duration": 161.9,
+     "source": "RFC 20 Definition 1, proposal id",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Verse]\nMy whole name is long, so long\nThirty-two bytes, it takes all day\nBut you only need to pick me out\nFrom the few who came this way\n\n[Chorus]\nJust the first few bits\nThat's all you need of me\nJust the first few bits\nOf my I D\nCall it my proposal I D\nJust the first few bits\n\n[Verse]\nIt doesn't have to be unique\nAcross the whole wide world\nOnly in the neighbouring blocks\nWhere the names are being heard\n\n[Verse]\nIt's in the block, and the compact block\nSo short names save the line\nLess to send across the wire\nEvery single time\n\n[Chorus]\nJust the first few bits\nThat's all you need of me\nJust the first few bits\nOf my I D\nCall it my proposal I D\nJust the first few bits\n\n[Bridge]\nAnd if two of us should share one\nThen both of us are proposed\nMake it long enough that finding\nA collision is hard to do, heaven knows\n\n[Chorus]\nJust the first few bits\nThat's all you need of me\nJust the first few bits\nOf my I D\nCall it my proposal I D\nJust the first few bits",
+     "cover": "/music/covers/v8/06.jpg",
+     "ckbfs": {
+      "typeId": "0x68eb3a58941dd39ce1037944ce124d0feca16cabc425531679040b2b06b35fa0",
+      "contentHash": "0xc6cc0c2310b7f1bc5c7a1dd29f660feb4893bd8d8b5e9cc231319a658491f9c8",
+      "bytes": 1134074,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Keep the Merits",
+     "style": "philadelphia soul",
+     "duration": 209.8,
+     "source": "RFC 20 Abstract",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Verse]\nThere was something good about the old way\nIt was simple, and it didn't talk too much\nBut it couldn't carry all we asked it\nAnd the selfish ones could game it, such as\n\n[Verse]\nHold a block back, break the rules\nAnd walk away with more than your share\nTwo things wrong with a beautiful thing\nAnd we weren't going to leave it there\n\n[Chorus]\nKeep the merits\nLose the rest\nKeep what made it great\nAnd fix what failed the test\nA shorter interval, and still secure\nKeep the merits\n\n[Verse]\nWe found what slowed the blocks from travelling\nTook it out, and now they fly\nSo the gap between them can be shorter\nAnd nothing's given up to try\n\n[Verse]\nMore gets through, and you wait less\nFor the word that you are in\nShorter blocks, a higher throughput\nQuicker to confirm, that's the win\n\n[Chorus]\nKeep the merits\nLose the rest\nKeep what made it great\nAnd fix what failed the test\nA shorter interval, and still secure\nKeep the merits\n\n[Bridge]\nCount every valid block\nWhen you set how hard it is\nAnd selfish mining doesn't pay\nFor a wide, wide range of this\n\n[Chorus]\nKeep the merits\nLose the rest\nKeep what made it great\nAnd fix what failed the test\nA shorter interval, and still secure\nKeep the merits",
+     "cover": "/music/covers/v8/07.jpg",
+     "ckbfs": {
+      "typeId": "0x58ca6a150f65640ecbe621e7fef1ead94d1abeeb497d21b2c704d2d60abd1946",
+      "contentHash": "0x15c827b204212b324186cdbadfc9f116c1bf164db945a71e1e37fd94a8213556",
+      "bytes": 1488151,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Wait a Little Longer",
+     "style": "quiet storm",
+     "duration": 232.3,
+     "source": "RFC 20 Definition 4, committed transactions and confirmations",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0020-ckb-consensus-protocol/0020-ckb-consensus-protocol.md",
+     "lyrics": "[Verse]\nYou sent it out, and now you want to know\nHow long before it's safe to say it's so\nIt isn't in the chain until it's committed\nUntil then, darling, don't you count it\n\n[Chorus]\nWait a little longer\nW close, and then your confirmations\nWait a little longer\nThat's the only way to have some patience\nAt least that many blocks from when you sent it\nWait a little longer\n\n[Verse]\nHowever many you would ask for\nAdd the closest gap on top\nThat's the proposal waiting\nBefore the second step can drop\n\n[Verse]\nBut the blocks come quicker here\nThe interval is short\nSo the extra that you're waiting\nIs made up for, as it ought\n\n[Chorus]\nWait a little longer\nW close, and then your confirmations\nWait a little longer\nThat's the only way to have some patience\nAt least that many blocks from when you sent it\nWait a little longer\n\n[Bridge]\nThe proposed ones stay in memory\nThere's a limit on how many\nSo when one is committed\nThere's no fetching it from the disk, not any\n\n[Chorus]\nWait a little longer\nW close, and then your confirmations\nWait a little longer\nThat's the only way to have some patience\nAt least that many blocks from when you sent it\nWait a little longer",
+     "cover": "/music/covers/v8/08.jpg",
+     "ckbfs": {
+      "typeId": "0x00b01168d4c3577e273692f3d64d61d6443c014edbec19336c330a830d5659da",
+      "contentHash": "0xee9c24ad89ebf67adf36789486c46847a7a93d979a72cdc7412d452a0ed112a1",
+      "bytes": 1580730,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Last Six Characters",
+     "style": "gypsy jazz",
+     "duration": 209.5,
+     "source": "RFC 21 Wrap to address",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0021-ckb-address-format/0021-ckb-address-format.md",
+     "lyrics": "[Verse]\nThree parts make an address, friend\nThe part that you can read\nA separator, then the data\nThat is all you need\n\n[Verse]\nC K B if it's the main net\nC K T if it's the test\nThe separator's always one\nAnd base thirty-two the rest\n\n[Chorus]\nAnd the last six characters\nThe last six are the sum\nThe last six characters\nCheck them and you're done\nOne letter wrong, they won't agree\nThe last six characters\n\n[Verse]\nThe old rule said ninety long\nNo more than that, they'd say\nWe took the limit off the top\nIt was getting in the way\n\n[Verse]\nPast ninety it won't fix mistakes\nAnd we never wanted that\nA wrong correction's worse than none\nSo we only check, and that is that\n\n[Chorus]\nAnd the last six characters\nThe last six are the sum\nThe last six characters\nCheck them and you're done\nOne letter wrong, they won't agree\nThe last six characters\n\n[Bridge]\nA lock script in a single line\nCode hash, hash type, and the args\nSomething people can read and check\nNot a string of hex, at large\n\n[Chorus]\nAnd the last six characters\nThe last six are the sum\nThe last six characters\nCheck them and you're done\nOne letter wrong, they won't agree\nThe last six characters",
+     "cover": "/music/covers/v8/09.jpg",
+     "ckbfs": {
+      "typeId": "0xb207dff8091f9989134c65483e51c0556f021d49461565b892bc597b77772064",
+      "contentHash": "0x81bd0883dbdc3e047be74096d032381d936633ed4e7b976a7dca1594247995b4",
+      "bytes": 1460847,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "Short Form",
+     "style": "neo-soul",
+     "duration": 142.6,
+     "source": "RFC 21 Full and deprecated short payload formats",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0021-ckb-address-format/0021-ckb-address-format.md",
+     "lyrics": "[Verse]\nWe used to have a shorthand\nFor the ones we knew so well\nOne byte for the code hash\nAn index, and you could tell\n\n[Verse]\nInstead of thirty-two bytes\nJust a number in a table\nShort and sweet, the popular ones\nFor as long as we were able\n\n[Chorus]\nBut the short form's deprecated now\nWe write the whole thing out\nZero zero, then the code hash\nHash type, args, no doubt\nNothing left to look up\nThe short form's deprecated now\n\n[Verse]\nThe full one carries everything\nEvery field the lock script holds\nAnd the hash type tells the machine\nWhich version, and which mould\n\n[Verse]\nZero, match the data hash\nAnd run on version zero\nOne, match by the type script hash\nTwo, the data hash, on version one, though\n\n[Chorus]\nThe short form's deprecated now\nWe write the whole thing out\nZero zero, then the code hash\nHash type, args, no doubt\nNothing left to look up\nThe short form's deprecated now\n\n[Bridge]\nOne byte at the very front\nTells you which format it's in\nAnd the full one's wrapped in bech thirty-two m\nThat's the newer way to begin\n\n[Chorus]\nThe short form's deprecated now\nWe write the whole thing out\nZero zero, then the code hash\nHash type, args, no doubt\nNothing left to look up\nThe short form's deprecated now",
+     "cover": "/music/covers/v8/10.jpg",
+     "ckbfs": {
+      "typeId": "0x49037cff4d6fc8c5de4a4340736f613e2f738c6f6af2ed8d3f77fcb7ff90ab9f",
+      "contentHash": "0xb87aef8ae403114232ad86090de87c6a7710ef37ad7a5c38f81456474ebb7d9c",
+      "bytes": 1009529,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Find the Code",
+     "style": "jazz-funk",
+     "duration": 226.4,
+     "source": "RFC 22 Code locating",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0022-transaction-structure/0022-transaction-structure.md",
+     "lyrics": "[Verse]\nA script is not the code itself\nA script is just a reference\nThe code's a binary in a cell\nAnd that's a real difference\n\n[Chorus]\nFind the code\nBefore you run it, find the code\nFind the code\nHash the data, there's your road\nLook in the cell deps, nowhere else\nFind the code\n\n[Verse]\nThe lock scripts run for every input\nThe type scripts, inputs, outputs too\nAnd each of them is pointing somewhere\nCode hash, hash type, that's your clue\n\n[Verse]\nWhen the hash type says it's data\nFind a cell whose data's hash\nEquals what the script is holding\nAnd you've got yourself a match\n\n[Chorus]\nFind the code\nBefore you run it, find the code\nFind the code\nHash the data, there's your road\nLook in the cell deps, nowhere else\nFind the code\n\n[Bridge]\nDeploy the code cell first\nThen use it any time\nThe deps must all be live\nBut using one don't kill it, it stays alive\n\n[Chorus]\nFind the code\nBefore you run it, find the code\nFind the code\nHash the data, there's your road\nLook in the cell deps, nowhere else\nFind the code",
+     "cover": "/music/covers/v8/11.jpg",
+     "ckbfs": {
+      "typeId": "0x9a92bb021c78468f6b7690fdfa47d1137dd067c1b7f48c9fef04e1e109fd27ba",
+      "contentHash": "0x22856c42a780616c588ad6e6b387e3d1dba5e1ee74abb89cb666e3458c6d4d23",
+      "bytes": 1570553,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Bring the Whole Group",
+     "style": "funk soul",
+     "duration": 185.9,
+     "source": "RFC 22 Dep group",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0022-transaction-structure/0022-transaction-structure.md",
+     "lyrics": "[Verse]\nSometimes one cell ain't enough\nThe code needs data by its side\nYou could list them one by one\nOr take them all in a single ride\n\n[Chorus]\nBring the whole group\nOne dep, and everybody's in\nBring the whole group\nA list of out points, that's the thing\nSame as adding every member\nBring the whole group\n\n[Verse]\nThe group cell holds a list inside\nEach out point is a member's name\nThe dep type tells you which is which\nCode direct, or a group to claim\n\n[Verse]\nIt opens up before the code is found\nBefore a single thing is run\nBy then you only see the members\nAnd the group itself is done\n\n[Chorus]\nBring the whole group\nOne dep, and everybody's in\nBring the whole group\nA list of out points, that's the thing\nSame as adding every member\nBring the whole group\n\n[Bridge]\nThe signature lock is split in two\nA code cell and a data cell\nThe code stays small, so it can be updated\nThe data's shared with another lock as well\n\n[Chorus]\nBring the whole group\nOne dep, and everybody's in\nBring the whole group\nA list of out points, that's the thing\nSame as adding every member\nBring the whole group",
+     "cover": "/music/covers/v8/12.jpg",
+     "ckbfs": {
+      "typeId": "0xe2c138faa47044dc4f65aeffc7ef149a2f4234697325970d1d349cdf29e64d18",
+      "contentHash": "0x8c7ac7eab735c80ba7bb97d054d17a88308d49c42bbec7dc9303bd41c90d0554",
+      "bytes": 1250028,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "First in Every Block",
+     "style": "torch ballad",
+     "duration": 232.4,
+     "source": "RFC 22 Exceptions and header deps",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0022-transaction-structure/0022-transaction-structure.md",
+     "lyrics": "[Verse]\nEvery rule has its exceptions\nAnd in this system there are two\nWhere the capacity in the outputs\nDidn't come the way the others do\n\n[Chorus]\nI'm the first in every block\nWith one input, and it's hollow\nIt points to nothing, nothing at all\nJust a special value to follow\nWhat I carry wasn't taken\nI'm the first in every block\n\n[Verse]\nMy since is set to the block number\nMy outputs are the pay\nThe reward and all the fees\nFor an older block, from another day\n\n[Verse]\nAnd the other one's a withdrawal\nFrom the DAO, where it was kept\nPart of it is interest\nFor the time the cells have slept\n\n[Chorus]\nI'm the first in every block\nWith one input, and it's hollow\nIt points to nothing, nothing at all\nJust a special value to follow\nWhat I carry wasn't taken\nI'm the first in every block\n\n[Bridge]\nTo know how long it waited\nIt reads the header of the block\nWhere the deposit first was made\nListed in the header deps, in the chain, on the clock\n\n[Chorus]\nI'm the first in every block\nWith one input, and it's hollow\nIt points to nothing, nothing at all\nJust a special value to follow\nWhat I carry wasn't taken\nI'm the first in every block",
+     "cover": "/music/covers/v8/13.jpg",
+     "ckbfs": {
+      "typeId": "0x5e35a5bfed743ff784554580eda543dc9c844d0b21809ed099007df050271289",
+      "contentHash": "0x4f7d2c4e0e80341449d0e555d273c0c1cfcddfec8bee89988c1832c9dd6e5857",
+      "bytes": 1623288,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
   }
  ]
 }

@@ -5,6 +5,7 @@ import { ModeToggle } from '../ModeToggle';
 import { findSharedTrack, formatTime, parseLibrary, stepIndex, trackHash, trackOrigin, type Library, type Track } from './catalog';
 import { sharePath } from './share';
 import { trackUrl } from './source';
+import { detectTap, pretendSpectrum, type TapMode } from './tap';
 import { createScope, type Scope } from './visualiser';
 import './music.css';
 
@@ -38,6 +39,8 @@ export default function MusicRoom() {
   const canvas = useRef<HTMLCanvasElement>(null);
   const analyser = useRef<AnalyserNode | null>(null);
   const context = useRef<AudioContext | null>(null);
+  const tap = useRef<TapMode | null>(null);            // how the light show listens; decided on first play
+  const tapped = useRef<AudioNode | null>(null);        // the current copy of the stream feeding the analyser
   const request = useRef(0);      // guards against a slow resolve landing after a newer selection
   const playingRef = useRef(false);
   playingRef.current = playing;
@@ -80,25 +83,53 @@ export default function MusicRoom() {
       if (document.hidden) return;
       if (reduced && now - last < 120) return;   // a still picture needs few updates
       last = now;
-      if (analyser.current) analyser.current.getByteFrequencyData(spectrum); else spectrum.fill(0);
+      if (analyser.current) analyser.current.getByteFrequencyData(spectrum);
+      else if (tap.current === 'none' && playingRef.current) pretendSpectrum(spectrum, now / 1000);
+      else spectrum.fill(0);
       scope.draw(spectrum, now / 1000, playingRef.current);
     };
     frame = requestAnimationFrame(loop);
     return () => { cancelAnimationFrame(frame); removeEventListener('resize', onResize); };
   }, [reduced]);
 
-  /** Route the audio element through an analyser. Needs a user gesture, so it runs on first play. */
+  /**
+   * Let the light show hear the music without getting between the music and the speaker (see tap.ts).
+   * Needs a user gesture, so it runs on first play.
+   */
   function connectAnalyser() {
-    if (context.current || !audio.current) return;
+    if (tap.current || !audio.current) return;
+    tap.current = detectTap(audio.current);
+    if (tap.current === 'none') return;
     try {
       const ctx = new AudioContext();
       const node = ctx.createAnalyser();
       node.fftSize = 512; node.smoothingTimeConstant = 0.8;
-      ctx.createMediaElementSource(audio.current).connect(node);
-      node.connect(ctx.destination);
+      if (tap.current === 'element') {
+        ctx.createMediaElementSource(audio.current).connect(node);
+        node.connect(ctx.destination);
+      } else {
+        // A muted path to the output keeps the graph running; nothing audible goes through it.
+        const silent = ctx.createGain();
+        silent.gain.value = 0;
+        node.connect(silent); silent.connect(ctx.destination);
+      }
       context.current = ctx; analyser.current = node;
     } catch {
-      // No Web Audio: the music still plays, the light show just idles.
+      // No Web Audio: the music still plays, the light show runs on a pretend spectrum.
+      tap.current = 'none';
+    }
+  }
+  /** In 'stream' mode every new track is a new stream track, so listen again each time playback starts. */
+  function listenToStream() {
+    if (tap.current !== 'stream' || !context.current || !analyser.current || !audio.current) return;
+    try {
+      const stream = (audio.current as HTMLAudioElement & { captureStream(): MediaStream }).captureStream();
+      if (stream.getAudioTracks().length === 0) return;
+      tapped.current?.disconnect();
+      tapped.current = context.current.createMediaStreamSource(stream);
+      tapped.current.connect(analyser.current);
+    } catch {
+      // The copy could not be taken; playback is unaffected.
     }
   }
 
@@ -188,7 +219,7 @@ export default function MusicRoom() {
     <canvas ref={canvas} className="scope" aria-hidden="true"/>
     <ModeToggle mode="music"/>
     <audio ref={audio} preload="none"
-      onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
+      onPlay={() => setPlaying(true)} onPlaying={listenToStream} onPause={() => setPlaying(false)}
       onTimeUpdate={e => setTime(e.currentTarget.currentTime)}
       onLoadedMetadata={e => { if (Number.isFinite(e.currentTarget.duration)) setLength(e.currentTarget.duration); }}
       onEnded={() => { if (atEnd) setPlaying(false); else step(1); }}

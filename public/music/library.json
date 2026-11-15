@@ -2386,6 +2386,223 @@
      }
     }
    ]
+  },
+  {
+   "id": "vol-12",
+   "artist": "Based Knowledge",
+   "album": "Requests for Comment vol. 12",
+   "year": "2026",
+   "note": "Lyrics written from the Nervos Network RFCs, linked on each track. Vocals and music generated with the YuE2 song model; cover art with FLUX 3 Klein. Free to listen to and share for non-commercial use (YuE2 weights are CC BY-NC 4.0).",
+   "tracks": [
+    {
+     "n": 1,
+     "title": "Six Epochs",
+     "style": "Contemporary gospel",
+     "duration": 176.1,
+     "source": "RFC 39 Summary",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0039-cheque/0039-cheque.md",
+     "lyrics": "[Verse]\nI had a token that I wanted to send your way\nBut you had no cell to hold it, nowhere for it to stay\nI won't buy your destination cell, you need no ACP\nI locked it in a cheque cell with your address there from me\n\n[Chorus]\nSix epochs, you've got six epochs\nAbout twenty-four hours, it is yours to claim\nSix epochs, oh, six epochs\nAnd my CKBytes come back home again\n\n[Verse]\nOnly the receiver can claim what is inside\nBring the CKBytes for a cell of your own to be its guide\nAnd when you move the asset out, the cheque cell's bytes return\nBack to the one who sent it, every one, that's what we learn\n\n[Verse]\nAnd if the hours go by and nobody comes\nSix epochs have passed and the claiming isn't done\nThe sender has the option to cancel and withdraw\nThe asset and the CKBytes, same as they were before\n\n[Chorus]\nSix epochs, you've got six epochs\nAbout twenty-four hours, it is yours to claim\nSix epochs, oh, six epochs\nAnd my CKBytes come back home again\n\n[Bridge]\nIt was made to work with the default lock\nSender and receiver on the default lock\nOther locks are not recommended\nSo stay with the default lock\n\n[Chorus]\nSix epochs, you've got six epochs\nAbout twenty-four hours, it is yours to claim\nSix epochs, oh, six epochs\nAnd my CKBytes come back home again",
+     "cover": "/music/covers/v12/01.jpg",
+     "ckbfs": {
+      "typeId": "0x4a3cd5fbab72d32410ad22d53f1a496f0ce9740fd72dbde886208030e487e398",
+      "contentHash": "0xd95e44ad5c456a63fc0dfac05de9db8d31ba2de949b0cd5602490c34a359f45f",
+      "bytes": 1247531,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 2,
+     "title": "Claim or Withdraw",
+     "style": "Salsa",
+     "duration": 240.0,
+     "source": "RFC 39 Unlock Rules",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0039-cheque/0039-cheque.md",
+     "lyrics": "[Verse]\nA signature in the witness, the lock checks who you are\nThe receiver or the sender, there are two hashes in the args\nIf the signature is neither one, it's an error on the spot\nIf it matches one of them, it reads the rule you've got\n\n[Chorus]\nReceiver, since is zero, claim it right away\nSender, since says six epochs, sender has to wait\nClaim or withdraw, claim or withdraw\nThe cheque lock knows which one you are\n\n[Verse]\nWhen the receiver comes to claim, add the capacity up\nOutputs with the sender's lock, the cheque inputs, sum to sum\nIf the two are not equal, the transaction's turned away\nWhat the sender put in the cheque cell is returned, the very same\n\n[Verse]\nNo signature in the witness? There's another way to go\nAn input cell whose lock hash matches, that will let it know\nThe receiver's own cell in the inputs, with a witness lock that's filled\nAnd the cheque cell opens up with no signature to give\n\n[Chorus]\nReceiver, since is zero, claim it right away\nSender, since says six epochs, sender has to wait\nClaim or withdraw, claim or withdraw\nThe cheque lock knows which one you are\n\n[Bridge]\nBatch them up, batch them up, many cheques in one transaction\nIdentical scripts run together, one execution group\nA different sender, a different receiver\nRuns in a separate group\n\n[Chorus]\nReceiver, since is zero, claim it right away\nSender, since says six epochs, sender has to wait\nClaim or withdraw, claim or withdraw\nThe cheque lock knows which one you are",
+     "cover": "/music/covers/v12/02.jpg",
+     "ckbfs": {
+      "typeId": "0xfb83dfdf1c50eb9e84badd4a106a0ac439aab7d582246690b573d7ed71f326d8",
+      "contentHash": "0x364c862845dfde8769d9390ee5426c5e88bfc7f90d045cd16ab61a5dc57b3d0b",
+      "bytes": 1710409,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 3,
+     "title": "Twenty Bytes Each",
+     "style": "Bolero",
+     "duration": 224.9,
+     "source": "RFC 39 Cheque Lock Script Structure",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0039-cheque/0039-cheque.md",
+     "lyrics": "[Verse]\nIn the lock of a cheque cell, two names lie side by side\nThe receiver's hash comes first, and the sender's hash behind\nNo more than that is written, in the args that's all you'll see\nWho can open up the cell is your lock hash and me\n\n[Chorus]\nTwenty bytes for the receiver\nTwenty bytes for the one who sends\nBlake two b, cut down to one sixty\nTwenty bytes each, side by side in the args\n\n[Verse]\nTake the lock script, fully written, turn it into bytes\nBlake two b two fifty-six gives thirty-two to hold it tight\nKeep the first twenty of them, let the other twelve go\nA hundred sixty bits is all the cheque lock needs to know\n\n[Verse]\nThe type script is the token's, a simple UDT\nThe data holds the amount in a hundred twenty-eight bit integer\nA hundred UDT waiting in the example on the page\nA hundred sixty-five CKBytes to keep it in its place\n\n[Chorus]\nTwenty bytes for the receiver\nTwenty bytes for the one who sends\nBlake two b, cut down to one sixty\nTwenty bytes each, side by side in the args\n\n[Bridge]\nI made the cell, I paid the bytes\nI wrote your hash beside mine\nUntil you come, it waits for you\nTwenty bytes yours, twenty bytes mine\n\n[Chorus]\nTwenty bytes for the receiver\nTwenty bytes for the one who sends\nBlake two b, cut down to one sixty\nTwenty bytes each, side by side in the args",
+     "cover": "/music/covers/v12/03.jpg",
+     "ckbfs": {
+      "typeId": "0x49a2efdd6469a8bdd4ff4689b7eb73b7d72743aebb44cbc062a57c24c37c1e66",
+      "contentHash": "0x54a58bebb26136b7b2567952ecf1e658c0b019d7ef7ee08fc88cb2d95105f51a",
+      "bytes": 1572502,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 4,
+     "title": "Twenty-One Bytes",
+     "style": "Cumbia",
+     "duration": 174.0,
+     "source": "RFC 42 Authentication",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0042-omnilock/0042-omnilock.md",
+     "lyrics": "[Verse]\nFlag zero is a secp key, blake one sixty of the pub\nVerified the same way as the lock you already love\nFlag one unlocks like Ethereum, flag three unlocks like Tron\nThe message hash as a hex string with a zero x put on\n\n[Chorus]\nOne byte for the flag\nTwenty bytes for the content\nTwenty-one bytes of auth\nAnd Omnilock knows how to check you\n\n[Verse]\nFlag four is for Bitcoin, and the wallet shows it plain\nCKB Bitcoin Layer transaction, then the hash is in its frame\nNative segwit, nested segwit, legacy addresses too\nBut Taproot is not supported, and generic P2SH won't do\n\n[Verse]\nFlag five unlocks like Dogecoin, flag six is multisig\nF C is an owner lock hash, the owner's cell goes in\nOmnilock delegates to it, like pay to script hash\nF D hands off through exec, F E dynamic linking at last\n\n[Chorus]\nOne byte for the flag\nTwenty bytes for the content\nTwenty-one bytes of auth\nAnd Omnilock knows how to check you\n\n[Bridge]\nA lock made for interoperability\nSign it the way your own chain signs\nIt is extensible, more can be added\nTwenty-one bytes at the front of the args\n\n[Chorus]\nOne byte for the flag\nTwenty bytes for the content\nTwenty-one bytes of auth\nAnd Omnilock knows how to check you",
+     "cover": "/music/covers/v12/04.jpg",
+     "ckbfs": {
+      "typeId": "0xb77490e4970ce5bdcc998fa84ded8da474ecace7c713ab9dc7bd9f789513b5fb",
+      "contentHash": "0x660672d7193cb279e249611cc98ec471826848fc1620afc4934336e4b875b774",
+      "bytes": 1245411,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 5,
+     "title": "Four Flags",
+     "style": "Southern gospel quartet",
+     "duration": 179.4,
+     "source": "RFC 42 Omnilock args",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0042-omnilock/0042-omnilock.md",
+     "lyrics": "[Verse]\nAfter the auth there's a single byte, the Omnilock flags\nSet it all to zero and no mode is in the bag\nThen it's almost the same as the old secp lock you knew\nA traditional lock script with extra checks it can do\n\n[Chorus]\nOne, two, four, eight\nAdministrator, anyone can pay\nTime lock and supply\nFour flags in a single byte\n\n[Verse]\nAdministrator brings thirty-two bytes, an AdminList type ID\nAnyone can pay brings two bytes, minimum CKB and UDT\nTime lock brings eight bytes of since, and the since check is run\nSupply brings thirty-two bytes, a type script hash, and that's each one\n\n[Verse]\nBut when the administrator flag is on\nThe other three are ignored even if they're switched on\nThe user and the administrator both can unlock the cell\nAnd the time lock doesn't hold the administrator as well\n\n[Chorus]\nOne, two, four, eight\nAdministrator, anyone can pay\nTime lock and supply\nFour flags in a single byte\n\n[Bridge]\nThe administrator only unlocks existing cells\nCan't get around the supply limit\nCan't mint new tokens at will\nIt's still impossible, still impossible\n\n[Chorus]\nOne, two, four, eight\nAdministrator, anyone can pay\nTime lock and supply\nFour flags in a single byte",
+     "cover": "/music/covers/v12/05.jpg",
+     "ckbfs": {
+      "typeId": "0xec971ef6b89fc87836e6ddfe8cbc0f869e55b2f510bcf3be7c6f0f28ca04d8c6",
+      "contentHash": "0x4a204638f6f189417f997f89ecaa7b5df4bcecf0ea35a35c12ceb130b4893692",
+      "bytes": 1246394,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 6,
+     "title": "No More Than Max Supply",
+     "style": "Bachata",
+     "duration": 221.5,
+     "source": "RFC 42 Supply Mode",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0042-omnilock/0042-omnilock.md",
+     "lyrics": "[Verse]\nThere's an info cell that the type script hash points to\nOne byte of version, and for now it's zero, it's true\nSixteen bytes of current supply, little endian they lie\nSixteen bytes of max supply, and the sUDT script hash beside\n\n[Chorus]\nCurrent supply can go up\nBut no more than max supply\nIt's the only field that changes\nNo more than max supply\n\n[Verse]\nThe script walks every input and every output cell\nAdding the amounts the sUDT script hash can tell\nOutput amount minus input amount is what was issued new\nAdd it to the input current supply, the output must be true\n\n[Verse]\nTwo thousand was the supply in the example they wrote\nTen thousand was the maximum, the ceiling of the note\nOne thousand newly minted in a single cell that day\nThree thousand is the current supply the output has to say\n\n[Chorus]\nCurrent supply can go up\nBut no more than max supply\nIt's the only field that changes\nNo more than max supply\n\n[Bridge]\nOnly the current supply can be updated\nEverything else stays as it was\nIssued plus what was there before\nLess than or equal to the max\n\n[Chorus]\nCurrent supply can go up\nBut no more than max supply\nIt's the only field that changes\nNo more than max supply",
+     "cover": "/music/covers/v12/06.jpg",
+     "ckbfs": {
+      "typeId": "0x14597d93aa7c5ed1143b8631fabab4284b1a282c610a3d81caf54dc325990d38",
+      "contentHash": "0xd34a9a4c0e8e8780192fb3b4d0b8507b885432528f826601fe9d58626046a12f",
+      "bytes": 1601103,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 7,
+     "title": "Twenty-Nine Bits",
+     "style": "Mambo",
+     "duration": 142.6,
+     "source": "RFC 43 Bit Flags",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0043-ckb-softfork-activation/0043-ckb-softfork-activation.md",
+     "lyrics": "[Verse]\nThe version in the block header used to just sit still\nNow read it as a bit vector, every bit a job to fill\nA thirty-two bit integer, little endian it's read\nEach bit tracks a softfork, independent, like I said\n\n[Chorus]\nTwenty-nine bits, twenty-nine bits\nThe top three bits stay zero, zero, zero\nTwenty-nine bits, twenty-nine bits\nSoftforks deployed in parallel\n\n[Verse]\nOne shifted left by N is the mask to pick your bit\nThe number's chosen from zero up to twenty-eight, that's it\nBlocks in the started state set their bit to one\nMiners tallied every period till the counting's done\n\n[Verse]\nIn locked in the miners should keep that bit set\nSo everyone can see the uptake, though it changes no rule yet\nWhen the change succeeds or times out, there's a fallow pause\nThen the bit can be reused for another cause\n\n[Chorus]\nTwenty-nine bits, twenty-nine bits\nThe top three bits stay zero, zero, zero\nTwenty-nine bits, twenty-nine bits\nSoftforks deployed in parallel\n\n[Bridge]\nZero, zero, zero at the top\nKept for future upgrades, a different mechanism\nFrom zero to one F F F F F F F\nThat's the range a version can be\n\n[Chorus]\nTwenty-nine bits, twenty-nine bits\nThe top three bits stay zero, zero, zero\nTwenty-nine bits, twenty-nine bits\nSoftforks deployed in parallel",
+     "cover": "/music/covers/v12/07.jpg",
+     "ckbfs": {
+      "typeId": "0xf5f159d1ce04f17d574de61f092a3956f9fae7695cf7f9989e5406d7ce83a6e8",
+      "contentHash": "0xcd0c4400c26c52e47b47137f30a200c9ad5299b7c8240ef59b760cdfe3c1d126",
+      "bytes": 1000627,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 8,
+     "title": "Locked In",
+     "style": "Traditional gospel",
+     "duration": 161.7,
+     "source": "RFC 43 States",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0043-ckb-softfork-activation/0043-ckb-softfork-activation.md",
+     "lyrics": "[Verse]\nEvery softfork begins in the very same place\nThe blocks of epoch zero are defined, by definition, that's the case\nWe remain right there till the start epoch arrives\nReach it or pass it, and started comes alive\n\n[Chorus]\nDefined, started\nLocked in, active\nOr failed when the timeout comes\nDefined, started, locked in, active\n\n[Verse]\nAfter a period of started we tally up the bits\nIf the threshold of the blocks has set it, locked in is where it sits\nOne period locked in, then check the minimum activation epoch\nIf it's been reached we're active, if not, locked in keeps the watch\n\n[Verse]\nBut if the threshold is not met and the timeout epoch comes\nWe go directly to failed, and that deployment's done\nActive and failed are terminal, you stay there once you're in\nAnd the new consensus rules are enforced when active blocks begin\n\n[Chorus]\nDefined, started\nLocked in, active\nOr failed when the timeout comes\nDefined, started, locked in, active\n\n[Bridge]\nA block's state never depends on its own version\nOnly on the version of its ancestors\nNever on its own, never on its own\nOnly on its ancestors\n\n[Chorus]\nDefined, started\nLocked in, active\nOr failed when the timeout comes\nDefined, started, locked in, active",
+     "cover": "/music/covers/v12/08.jpg",
+     "ckbfs": {
+      "typeId": "0x9040424b7d9749b9fb91d4c371d8095dd82d04e3dbe30ac025133bb6f3150c24",
+      "contentHash": "0x5d509aac866cf1529d075fe16099adfad3750f42320d0677bb707d637bfd7baa",
+      "bytes": 1072150,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 9,
+     "title": "Forty-Two Epochs",
+     "style": "Merengue",
+     "duration": 169.2,
+     "source": "RFC 43 Selection Guidelines",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0043-ckb-softfork-activation/0043-ckb-softfork-activation.md",
+     "lyrics": "[Verse]\nPick a name for your softfork that nobody's used before\nNo two softforks ever share a name, concurrent or not, that's for sure\nPick a bit that no other running softfork has\nAnd a start epoch soon after the software's out at last\n\n[Chorus]\nForty-two epochs, about one week\nThat's the least a period should be\nNinety percent for the threshold\nSeventy-five on the testnet\n\n[Verse]\nThe timeout epoch should be when the whole economy's upgraded\nAt least two hundred seventy epochs after start, that's how it's stated\nA month and a half at the least for the signal to be heard\nEnough time for the periods, that's the guideline's word\n\n[Verse]\nMinimum activation, several epochs past the timeout line\nWhen the start is very soon after release, give it time\nOnce it's locked in it's guaranteed to activate one day\nBut not before that minimum epoch, so here's what you can say\n\n[Chorus]\nForty-two epochs, about one week\nThat's the least a period should be\nNinety percent for the threshold\nSeventy-five on the testnet\n\n[Bridge]\nPrepare the software\nPrepare the announcements\nPrepare the celebrations\nFor that event\n\n[Chorus]\nForty-two epochs, about one week\nThat's the least a period should be\nNinety percent for the threshold\nSeventy-five on the testnet",
+     "cover": "/music/covers/v12/09.jpg",
+     "ckbfs": {
+      "typeId": "0xd34a24845bacaa0bbaea0d560b9b9fbefd09e26cec0c8e191b32e3281b955f51",
+      "contentHash": "0x47ac8c503dd74deb2b65e80f8e95411a3bae63324417c97d27402f23e8077d9b",
+      "bytes": 1235407,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 10,
+     "title": "A Single Header",
+     "style": "Gospel ballad",
+     "duration": 212.6,
+     "source": "RFC 44 Motivation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0044-ckb-light-client/0044-ckb-light-client.md",
+     "lyrics": "[Verse]\nDownloading every block and verifying them all\nTakes hours of waiting, and the gigabytes aren't small\nBandwidth and storage, more than a little client owns\nSo it trusts the full nodes, it can't verify alone\n\n[Chorus]\nOnly a logarithmic number of headers to download\nOnly a single header to store\nBetween executions, a single block header\nA single header, nothing more\n\n[Verse]\nSome light clients only download the headers of the chain\nBut the storage and the bandwidth keep on growing all the same\nLinearly with the chain length, longer every day\nSo we propose a more efficient way\n\n[Verse]\nA FlyClient-based protocol, sampling as it goes\nTailored for the NC-Max difficulty adjustment that it knows\nIt verifies the chain is valid with limited resources\nIt doesn't need them all to know what the proof of work endorses\n\n[Chorus]\nOnly a logarithmic number of headers to download\nOnly a single header to store\nBetween executions, a single block header\nA single header, nothing more\n\n[Bridge]\nNot every block\nNot every header\nA sample is enough\nAnd one header to remember\n\n[Chorus]\nOnly a logarithmic number of headers to download\nOnly a single header to store\nBetween executions, a single block header\nA single header, nothing more",
+     "cover": "/music/covers/v12/10.jpg",
+     "ckbfs": {
+      "typeId": "0x78985a2ff4e01f336e7bc1cafd226decba628dc458af7071a0a2f5d6e78e432a",
+      "contentHash": "0x81790a58d2396a86f4baa412c417e797db7023dcbf53e9af4910cbae7de07c4c",
+      "bytes": 1582405,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 11,
+     "title": "Mountain Range",
+     "style": "Traditional spiritual",
+     "duration": 187.1,
+     "source": "RFC 44 Merkle Mountain Range",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0044-ckb-light-client/0044-ckb-light-client.md",
+     "lyrics": "[Verse]\nA Merkle mountain range is a binary hash tree\nNew leaves get appended, and the old nodes stay as they be\nInsert a leaf at the next position, look to the left side\nIf there's a left sibling, merge the two, and a parent node arrives\n\n[Chorus]\nBag the peaks from left to right\nThat's the root of the mountain range\nTwelve leaves, two peaks, fourteen and twenty-one\nBag the peaks from left to right\n\n[Verse]\nEleven leaves on the mountain, three peaks stand in the sky\nFourteen, seventeen, eighteen, counted left to right\nInsert at position nineteen, merge with eighteen, twenty is the node\nTwenty merges with seventeen, twenty-one, and no sibling's left to go\n\n[Verse]\nNow every block is a leaf, block number is its place\nEach node keeps total difficulty, the sum its children gave\nAfter the epoch that turns it on, in the block extension lies\nIn the first thirty-two bytes, the hash of the parent chain root inside\n\n[Chorus]\nBag the peaks from left to right\nThat's the root of the mountain range\nTwelve leaves, two peaks, fourteen and twenty-one\nBag the peaks from left to right\n\n[Bridge]\nThe proof goes from the leaf's sibling up to its peak\nOne hash that bags the right-hand peaks\nThe left-hand peaks from right to left\nAnd from the leaves and the proof you build the root again\n\n[Chorus]\nBag the peaks from left to right\nThat's the root of the mountain range\nTwelve leaves, two peaks, fourteen and twenty-one\nBag the peaks from left to right",
+     "cover": "/music/covers/v12/11.jpg",
+     "ckbfs": {
+      "typeId": "0x460d8bb1e714767e0de724cf17358b65d6ebd981e3f4f17f713f61bbed78f411",
+      "contentHash": "0x0e577b9988d730fd92754b2d8a394f9039a9126bd6bc8aeab8402bb31fc02af6",
+      "bytes": 1279448,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 12,
+     "title": "Lock and Type",
+     "style": "Son cubano",
+     "duration": 172.3,
+     "source": "RFC 45 Filter Data Generation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0045-client-block-filter/0045-client-block-filter.md",
+     "lyrics": "[Verse]\nWe follow BIP one five eight to build the filter data\nThe same Golomb-coded sets, the same P and M parameters\nThere's only one difference in the way that it is done\nScript hashes of the cells are the elements, the only ones\n\n[Chorus]\nThe lock script hash goes in the filter\nAnd the type script hash, if there's a type\nThat's all we use for the filter data\nLock and type, lock and type\n\n[Verse]\nFilters are deterministic, built one time and no more\nWhen a new block joins the chain, on disk is where they're stored\nFull nodes may opt to support it, an additional index they hold\nMissing filters, reindex from genesis to the tip, they're told\n\n[Verse]\nNodes should not make filters dynamically on request\nA small filter from a large block puts the disk to the test\nA malicious peer could ask and ask, a denial of service attack\nAnd after storing all the filters, a node may prune the block data back\n\n[Chorus]\nThe lock script hash goes in the filter\nAnd the type script hash, if there's a type\nThat's all we use for the filter data\nLock and type, lock and type\n\n[Bridge]\nIf the filter matches what you're watching for\nDownload the entire block\nIf it doesn't match, keep moving\nA compact, probabilistic filter\n\n[Chorus]\nThe lock script hash goes in the filter\nAnd the type script hash, if there's a type\nThat's all we use for the filter data\nLock and type, lock and type",
+     "cover": "/music/covers/v12/12.jpg",
+     "ckbfs": {
+      "typeId": "0xef1128ee35901ebdb29bf004d338c7c649684624c6f6fc548b4801e166730c39",
+      "contentHash": "0xe340b720238c7e531e35497fbfecee6405ed08996eacca5df24b9130805c1434",
+      "bytes": 1267970,
+      "contentType": "audio/webm"
+     }
+    },
+    {
+     "n": 13,
+     "title": "Every Two Thousand",
+     "style": "Uptempo gospel praise",
+     "duration": 180.0,
+     "source": "RFC 45 Client Operation",
+     "link": "https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0045-client-block-filter/0045-client-block-filter.md",
+     "lyrics": "[Verse]\nFirst verify the best chain tip through the fly-client protocol\nBefore you download any filters or filter hashes at all\nDisconnect the outbound peers whose best chain has much less work\nThan the longest chain you know of, that's the first part of the work\n\n[Chorus]\nEvery two thousand blocks, a checkpoint\nA filter hash where the height is a multiple of two thousand\nVerify each range of two thousand\nAgainst the checkpoints, every two thousand\n\n[Verse]\nThen download the filter hashes, for every block they're stored\nCheckpoints let you fetch them from many peers, in parallel, more and more\nConnect to multiple outbound peers unless you trust the one\nIf the filter hashes conflict, interrogate them till it's done\n\n[Verse]\nFind the first hash they disagree on, download the full block there\nDerive the correct filter and its hash, and then compare\nBan any peer whose filter hash doesn't match the one you made\nAnd fetch full blocks from outbound peers at random, for privacy's sake\n\n[Chorus]\nEvery two thousand blocks, a checkpoint\nA filter hash where the height is a multiple of two thousand\nVerify each range of two thousand\nAgainst the checkpoints, every two thousand\n\n[Bridge]\nTest that each filter links to its filter hash\nBan the peers that send incorrect filters\nDownload many filters at once\nTo increase the throughput\n\n[Chorus]\nEvery two thousand blocks, a checkpoint\nA filter hash where the height is a multiple of two thousand\nVerify each range of two thousand\nAgainst the checkpoints, every two thousand",
+     "cover": "/music/covers/v12/13.jpg",
+     "ckbfs": {
+      "typeId": "0x6d8d0efd0658e5b313cdef871b75245d17b3bac61d61eb3ec4ca19df3854adac",
+      "contentHash": "0xed0dc574ce419bd1f187b690eada68ccb29327cf0ef3062aef689fff84dbde4c",
+      "bytes": 1213587,
+      "contentType": "audio/webm"
+     }
+    }
+   ]
   }
  ]
 }
